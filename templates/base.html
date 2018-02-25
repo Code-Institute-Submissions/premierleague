@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Premier League Dashboard | Premier League Top Six | Minesh Kothari</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+    <nav>
+
+    </nav>
+
+    <section class="page-content container-fluid">
+        {% block content %}
+        {% endblock %}
+    </section>
+
+    <footer>
+        <hr />
+        <p class="small text-muted footer-text">Premier League Analysis by Minesh Kothari</p>
+    </footer>
+
+
+
+
+    <script src="{{ url_for ('static', filename='lib/js/crossfilter.js')}}"></script>
+    <script src="{{ url_for ('static', filename='lib/js/d3.js')}}"></script>
+    <script src="{{ url_for ('static', filename='lib/js/dc.js')}}"></script>
+    <script src="{{ url_for ('static', filename='lib/js/queue.js')}}"></script>
+    <script src="{{ url_for ('static', filename='lib/js/keen.min.js')}}"></script>
+    <script src="{{ url_for ('static', filename='js/graph.js')}}"></script>
+</body>
+</html>
