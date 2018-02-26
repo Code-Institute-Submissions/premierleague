@@ -1773,3 +1773,14 @@ input[type="submit"].btn-block,
 input[type="reset"].btn-block,
 input[type="button"].btn-block {
   width: 100%; }
+
+.clearfix,
+section::after,
+header::after,
+footer::before {
+  content: '';
+  display: block;
+  clear: both; }
+
+body {
+  font-family: "Roboto", sans-serif; }

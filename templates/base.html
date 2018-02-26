@@ -4,31 +4,39 @@
     <meta charset="UTF-8">
     <title>Premier League Dashboard | Premier League Top Six | Minesh Kothari</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/dc.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ url_for ('static', filename='css/style.css') }}">
 </head>
 <body>
-    <nav>
+    <header>
+        <nav>
 
-    </nav>
+        </nav>
+    </header>
+
 
     <section class="page-content container-fluid">
         {% block content %}
         {% endblock %}
     </section>
 
-    <footer>
+    <footer class="clearfix">
         <hr />
         <p class="small text-muted footer-text">Premier League Analysis by Minesh Kothari</p>
     </footer>
 
 
 
-
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
     <script src="{{ url_for ('static', filename='lib/js/crossfilter.js')}}"></script>
     <script src="{{ url_for ('static', filename='lib/js/d3.js')}}"></script>
     <script src="{{ url_for ('static', filename='lib/js/dc.js')}}"></script>
     <script src="{{ url_for ('static', filename='lib/js/queue.js')}}"></script>
     <script src="{{ url_for ('static', filename='lib/js/keen.min.js')}}"></script>
     <script src="{{ url_for ('static', filename='js/graph.js')}}"></script>
+    <script src="{{ url_for ('static', filename='js/script.js')}}"></script>
 </body>
 </html>
