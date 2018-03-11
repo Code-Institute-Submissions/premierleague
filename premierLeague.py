@@ -14,6 +14,34 @@ COLLECTION_NAME = 'projects'
 def index():
     return render_template("index.html")
 
+@app.route("/teams/manchesterunited")
+def manchesterunited():
+    return render_template("manchesterunited.html")
+
+@app.route("/teams/manchestercity")
+def manchestercity():
+    return render_template("manchestercity.html")
+
+@app.route("/teams/chelsea")
+def chelsea():
+    return render_template("chelsea.html")
+
+@app.route("/teams/arsenal")
+def arsenal():
+    return render_template("arsenal.html")
+
+@app.route("/teams/tottenhamhotspur")
+def spurs():
+    return render_template("tottenhamhotspur.html")
+
+@app.route("/teams/liverpool")
+def liverpool():
+    return render_template("liverpool.html")
+
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
 
 @app.route("/premierleague/data")
 def premierleague_data():
