@@ -9,12 +9,74 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for ('static', filename='css/style.css') }}">
 </head>
 <body>
-    <header>
-        <nav>
-
+    <header class="site-header">
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+            <a class="navbar-brand rounded-right" href="#">
+                <img class="premier_league_logo" src="https://www.premierleague.com/resources/ver/i/elements/premier-league-logo-header.png" alt="">
+                Top Six Dashboard
+            </a>
+            <button class="navbar-toggler menu-toggle" data-toggle="collapse" data-target="#navbarMenu">
+                <span class="line line01"></span>
+                <span class="line line02"></span>
+                <span class="line line03"></span>
+            </button>
+            <div id="navbarMenu" class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item top-layer-nav-item"><a href="#" class="nav-link">Home</a></li>
+                    <li class="nav-item top-layer-nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Teams</a>
+                        <div class="teams-list-container dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <ul class="teams-list">
+                                <li class="teams-list-item"><a class="dropdown-item" href="#">Man United</a></li>
+                                <li class="teams-list-item"><a class="dropdown-item" href="#">Man City</a></li>
+                                <li class="teams-list-item"><a class="dropdown-item" href="#">Chelsea</a></li>
+                                <li class="teams-list-item"><a class="dropdown-item" href="#">Arsenal</a></li>
+                                <li class="teams-list-item"><a class="dropdown-item" href="#">Spurs</a></li>
+                                <li class="teams-list-item"><a class="dropdown-item" href="#">Liverpool</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item top-layer-nav-item"><a href="#" class="nav-link">About</a></li>
+                </ul>
+{#                <div class="teams-list-div">#}
+{#                    <ul class="teams-list">#}
+{#                        <li class="teams-list-elem"><a class="teams-link" href="#">Dropdown 1</a></li>#}
+{#                        <li class="teams-list-elem"><a class="teams-link" href="#">Dropdown 2</a></li>#}
+{#                        <li class="teams-list-elem"><a class="teams-link" href="#">Dropdown 3</a></li>#}
+{#                        <li class="teams-list-elem"><a class="teams-link" href="#">Dropdown 4</a></li>#}
+{#                    </ul>#}
+{#                </div>#}
+            </div>
         </nav>
-    </header>
 
+
+
+{#        <a href="/" class="home-link rounded-right">#}
+{#            <img class="premier_league_logo" src="https://www.premierleague.com/resources/ver/i/elements/premier-league-logo-header.png" alt="" >#}
+{#            <span class="site-title">Top Six Dashboard</span>#}
+{#        </a>#}
+{#        <div class="menu-toggle">#}
+{#            <span class="line line01"></span>#}
+{#            <span class="line line02"></span>#}
+{#            <span class="line line03"></span>#}
+{#        </div>#}
+{#        <nav class="main-nav">#}
+{#            <ul class="main-menu-list">#}
+{#                <li><a href="">Home</a></li>#}
+{#                <li><a class="teams-nav-link" href="">Teams</a></li>#}
+{#                <li><a href="">About</a></li>#}
+{#            </ul>#}
+{#        </nav>#}
+{#        <div class="teams-list">#}
+{#            <ul>#}
+{#                <li><a href="">Man United</a></li>#}
+{#                <li><a href="">Man City</a></li>#}
+{#                <li><a href="">Chelsea</a></li>#}
+{#                <li><a href="">Arsenal</a></li>#}
+{#                <li><a href="">Spurs</a></li>#}
+{#                <li><a href="">Liverpool</a></li>#}
+{#            </ul>#}
+{#        </div>#}
+    </header>
 
     <section class="page-content container-fluid">
         {% block content %}
