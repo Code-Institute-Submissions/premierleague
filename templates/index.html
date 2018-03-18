@@ -1,29 +1,31 @@
 {% extends 'base.html' %}
 {% block content %}
-    <section class="main-header">
-        <h1>Welcome to the Premier League 'Top Six' Dashboard!</h1>
-        <p>Dive into the statistics of the most illustrious teams in English football.</p>
+    <section class="hero index-hero">
+        <div class="hero-title-container">
+            <h1>Welcome to the Premier League 'Top Six' Dashboard!</h1>
+            <p>Dive into the statistics of the most illustrious teams in English football.</p>
+        </div>
     </section>
 
-{#    <section class="main-selectors">#}
-{#        <div class="team-selector">#}
-{#            <div id="teamSelector"></div>#}
-{#            <div class="chart-title">Team Selector</div>#}
-{#        </div>#}
-{#        <div class="year-selector">#}
-{#            <div id="yearSelector"></div>#}
-{#            <div class="chart-title">Year Selector</div>#}
-{#        </div>#}
-{#    </section>#}
-{##}
-{#    <section class="points-chart">#}
-{#        <div id="pointsChart"></div>#}
-{#        <div class="chart-title">Points Chart</div>#}
-{#    </section>#}
-{##}
-{#    <section class="position-chart">#}
-{#        <div id="positionChart"></div>#}
-{#        <div class="chart-title">Position Chart</div>#}
-{#    </section>#}
+    <section class="main-selectors">
+        <div class="team-selector">
+            <div class="chart-title"><h4>Team Selector</h4></div>
+            <div id="teamSelector"></div>
+        </div>
+        <div class="year-selector">
+            <div class="chart-title"><h4>Year Selector</h4></div>
+            <div id="yearSelector"></div>
+        </div>
+    </section>
+
+    <section class="points-chart">
+        <div class="chart-title"><h4>Points Chart</h4></div>
+        <div id="pointsChart"></div>
+    </section>
+
+    <section class="position-chart">
+        <div class="chart-title"><h4>Position Chart</h4></div>
+        <div id="positionChart"></div>
+    </section>
 
 {% endblock %}

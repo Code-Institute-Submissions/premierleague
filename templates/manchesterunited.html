@@ -1,4 +1,25 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h2>Manchester United</h2>
+    <section class="man-united-header">
+        <div class="badge-container">
+            <img class="team-badge float-left" src="/static/assets/badges/manchester-united-logo-vector.png" alt="">
+        </div>
+        <h1 class="page-title man-united-title">Manchester United</h1>
+    </section>
+
+    <section class="main-selectors">
+        <div class="team-selector">
+            <div class="chart-title"><h4>Team Selector</h4></div>
+            <div id="teamSelector"></div>
+        </div>
+        <div class="year-selector">
+            <div class="chart-title"><h4>Year Selector</h4></div>
+            <div id="yearSelectorManUnited"></div>
+        </div>
+    </section>
+
+    <section class="goals-chart">
+        <div class="chart-title"><h4>Goals scored per season</h4></div>
+        <div id="goalsChartManUnited"></div>
+    </section>
 {% endblock %}

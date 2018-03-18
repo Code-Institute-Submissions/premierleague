@@ -23,8 +23,8 @@
             <div id="navbarMenu" class="collapse navbar-collapse">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item top-layer-nav-item"><a href="/" class="nav-link">Home</a></li>
-                    <li class="nav-item top-layer-nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Teams</a>
-                        <div class="teams-list-container dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li class="nav-item top-layer-nav-item dropdown navbar-team-list"><a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="false" aria-expanded="true">Teams</a>
+                        <div class="teams-list-container dropdown-menu d-md-none d-lg-none d-xl-none" aria-labelledby="navbarDropdownMenuLink">
                             <ul class="teams-list">
                                 <li class="teams-list-item"><a class="dropdown-item" href="/teams/manchesterunited">Man United</a></li>
                                 <li class="teams-list-item"><a class="dropdown-item" href="/teams/manchestercity">Man City</a></li>
@@ -36,52 +36,25 @@
                         </div>
                     </li>
                     <li class="nav-item top-layer-nav-item"><a href="/about" class="nav-link">About</a></li>
-                </ul>
-{#                <div class="teams-list-div">#}
-{#                    <ul class="teams-list">#}
-{#                        <li class="teams-list-elem"><a class="teams-link" href="#">Dropdown 1</a></li>#}
-{#                        <li class="teams-list-elem"><a class="teams-link" href="#">Dropdown 2</a></li>#}
-{#                        <li class="teams-list-elem"><a class="teams-link" href="#">Dropdown 3</a></li>#}
-{#                        <li class="teams-list-elem"><a class="teams-link" href="#">Dropdown 4</a></li>#}
-{#                    </ul>#}
-{#                </div>#}
+                  </ul>
             </div>
         </nav>
-
-
-
-{#        <a href="/" class="home-link rounded-right">#}
-{#            <img class="premier_league_logo" src="https://www.premierleague.com/resources/ver/i/elements/premier-league-logo-header.png" alt="" >#}
-{#            <span class="site-title">Top Six Dashboard</span>#}
-{#        </a>#}
-{#        <div class="menu-toggle">#}
-{#            <span class="line line01"></span>#}
-{#            <span class="line line02"></span>#}
-{#            <span class="line line03"></span>#}
-{#        </div>#}
-{#        <nav class="main-nav">#}
-{#            <ul class="main-menu-list">#}
-{#                <li><a href="">Home</a></li>#}
-{#                <li><a class="teams-nav-link" href="">Teams</a></li>#}
-{#                <li><a href="">About</a></li>#}
-{#            </ul>#}
-{#        </nav>#}
-{#        <div class="teams-list">#}
-{#            <ul>#}
-{#                <li><a href="">Man United</a></li>#}
-{#                <li><a href="">Man City</a></li>#}
-{#                <li><a href="">Chelsea</a></li>#}
-{#                <li><a href="">Arsenal</a></li>#}
-{#                <li><a href="">Spurs</a></li>#}
-{#                <li><a href="">Liverpool</a></li>#}
-{#            </ul>#}
-{#        </div>#}
+        <div class="d-none d-md-block d-lg-block d-xl-block desktop-teams-list-container">
+            <ul class="d-flex justify-content-center align-items-center desktop-teams-list">
+                <li class="desktop-teams-list-item"><a class="desktop-team-links manunited-link d-flex align-items-center" href="/teams/manchesterunited">Man United</a></li>
+                <li class="desktop-teams-list-item"><a class="desktop-team-links mancity-link d-flex align-items-center" href="/teams/manchestercity">Man City</a></li>
+                <li class="desktop-teams-list-item"><a class="desktop-team-links chelsea-link d-flex align-items-center" href="/teams/chelsea">Chelsea</a></li>
+                <li class="desktop-teams-list-item"><a class="desktop-team-links arsenal-link d-flex align-items-center" href="/teams/arsenal">Arsenal</a></li>
+                <li class="desktop-teams-list-item"><a class="desktop-team-links spurs-link d-flex align-items-center" href="/teams/tottenhamhotspur">Spurs</a></li>
+                <li class="desktop-teams-list-item"><a class="desktop-team-links liverpool-link d-flex align-items-center" href="/teams/liverpool">Liverpool</a></li>
+            </ul>
+        </div>
     </header>
 
-    <section class="page-content container-fluid">
+    <main class="page-content">
         {% block content %}
         {% endblock %}
-    </section>
+    </main>
 
     <footer class="clearfix">
         <hr />

@@ -2359,21 +2359,21 @@ tbody.collapse.show {
   display: none;
   float: left;
   min-width: 10rem;
-  padding: 0.5rem 0;
-  margin: 0.125rem 0 0;
+  padding: 0 0;
+  margin: 0 0 0;
   font-size: 1rem;
   color: #212529;
   text-align: left;
   list-style: none;
-  background-color: #fff;
+  background-color: #FFFFFF;
   background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 0.25rem;
+  border: 0 solid rgba(0, 0, 0, 0.15);
+  border-radius: 0;
 }
 
 .dropup .dropdown-menu {
   margin-top: 0;
-  margin-bottom: 0.125rem;
+  margin-bottom: 0;
 }
 
 .dropup .dropdown-toggle::after {
@@ -2395,7 +2395,7 @@ tbody.collapse.show {
 
 .dropright .dropdown-menu {
   margin-top: 0;
-  margin-left: 0.125rem;
+  margin-left: 0;
 }
 
 .dropright .dropdown-toggle::after {
@@ -2420,7 +2420,7 @@ tbody.collapse.show {
 
 .dropleft .dropdown-menu {
   margin-top: 0;
-  margin-right: 0.125rem;
+  margin-right: 0;
 }
 
 .dropleft .dropdown-toggle::after {
@@ -2477,7 +2477,7 @@ tbody.collapse.show {
 }
 
 .dropdown-item:hover, .dropdown-item:focus {
-  color: #16181b;
+  color: #FFFFFF;
   text-decoration: none;
   background-color: #f8f9fa;
 }
@@ -2499,7 +2499,7 @@ tbody.collapse.show {
 
 .dropdown-header {
   display: block;
-  padding: 0.5rem 1.5rem;
+  padding: 0 1.5rem;
   margin-bottom: 0;
   font-size: 0.875rem;
   color: #6c757d;
@@ -5962,6 +5962,8 @@ a.text-dark:hover, a.text-dark:focus {
   -webkit-transition: background-color 350ms ease-in-out;
   -o-transition: background-color 350ms ease-in-out;
   transition: background-color 350ms ease-in-out;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
 }
 
 .navbar-brand:hover {
@@ -6095,34 +6097,81 @@ a.text-dark:hover, a.text-dark:focus {
   transition: all 350ms ease-in-out;
 }
 
+.teams-list-container {
+  border: 1px solid black;
+}
+
 .teams-list {
   list-style: none;
+}
+
+.dropdown-item:hover {
+  background: url("/static/assets/badges/manchester-united-logo-vector.png");
+  -webkit-box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.8);
+  background-position: center;
+  background-size: cover;
 }
 
 @media (min-width: 768px) {
   #navbarMenu {
     padding: 0 1em;
   }
-  .teams-list-container {
+  .navbar-team-list {
+    background-color: #38003c;
+  }
+  .desktop-teams-list-container {
     width: 100%;
-    position: fixed !important;
-    left: 0;
-    top: 56px;
-    padding: 0;
-    margin: 0;
-    border: none;
-    border-radius: 0;
+    height: 50px;
+    background-color: #38003c;
+    border-bottom: 1px solid #343a40;
   }
-  .teams-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+  .desktop-teams-list {
+    list-style: none;
+    height: 100%;
   }
-  .teams-list-item {
+  .desktop-teams-list-item {
     display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    height: 100%;
+  }
+  .desktop-team-links {
+    color: #FFFFFF !important;
+    display: block;
+    height: 100%;
+    padding: 0 1em;
+    -webkit-transition: all 350ms ease-in-out;
+    -o-transition: all 350ms ease-in-out;
+    transition: all 350ms ease-in-out;
+  }
+  .manunited-link:hover {
+    background: url("/static/assets/badges/manchester-united-logo-vector.png");
+  }
+  .mancity-link:hover {
+    background: url("/static/assets/badges/manchester-city-logo.png");
+  }
+  .chelsea-link:hover {
+    background: url("/static/assets/badges/chelsea-logo-vector.png");
+  }
+  .arsenal-link:hover {
+    background: url("/static/assets/badges/arsenal-logo-vector.png");
+  }
+  .spurs-link:hover {
+    background: url("/static/assets/badges/Tottenham_Hotspur_FC.png");
+  }
+  .liverpool-link:hover {
+    background: url("/static/assets/badges/liverpool-logo-vector.png");
+  }
+  .desktop-team-links:hover {
+    -webkit-box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    -webkit-transition: all 350ms ease-in-out;
+    -o-transition: all 350ms ease-in-out;
+    transition: all 350ms ease-in-out;
   }
 }
 
@@ -6156,7 +6205,132 @@ a:hover {
   text-decoration: none;
 }
 
-.main-header {
-  padding-top: 4em;
+.page-content {
+  padding-top: 2em;
+}
+
+.hero {
+  min-height: 35vh;
+}
+
+.index-hero {
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hero-title-container {
+  -ms-flex-item-align: center;
+  align-self: center;
+  justify-self: center;
+  width: 100%;
+}
+
+.badge-container {
+  margin-left: 100px;
+  margin-right: 25px;
+}
+
+.page-title {
+  -ms-flex-item-align: center;
+  align-self: center;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  display: inline-block;
+}
+
+.page-title::after {
+  content: '';
+  display: block;
+  height: 5px;
+  margin: 4% 0 0;
+  width: 100%;
+}
+
+.chart-title {
+  text-transform: uppercase;
+}
+
+.main-selectors {
+  background-color: ghostwhite;
+}
+
+.team-selector {
+  padding: 3%;
+  width: 50%;
+  float: left;
+  height: 350px;
+  text-align: center;
+}
+
+#teamSelector {
+  width: 100%;
+}
+
+.year-selector {
+  padding: 3%;
+  width: 50%;
+  float: right;
+  height: 350px;
+  text-align: center;
+}
+
+#yearSelector {
+  width: 100%;
+}
+
+#yearSelector svg {
+  margin-top: 5%;
+}
+
+.points-chart {
+  padding: 3%;
+  text-align: center;
+}
+
+.points-chart #pointsChart {
+  width: 100%;
+}
+
+.position-chart {
+  padding: 3%;
+  text-align: center;
+}
+
+.position-chart #positionChart {
+  width: 100%;
+}
+
+.man-united-header {
+  background-color: white;
+}
+
+.man-united-title::after {
+  background-color: #ed2d3a;
+}
+
+.team-badge {
+  width: 150px;
+  height: auto;
+}
+
+.man-city-title::after {
+  background-color: #83b4dd;
+}
+
+.chelsea-title::after {
+  background-color: #0f2c56;
+}
+
+.arsenal-title::after {
+  background-color: #f8d33a;
+}
+
+.spurs-title::after {
+  background-color: #431c77;
+}
+
+.liverpool-title::after {
+  background-color: #007430;
 }

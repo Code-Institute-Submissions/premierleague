@@ -14,6 +14,17 @@ function makeGraphs(error, premierleagueData) {
         return d["team"];
     });
 
+    var teamAbbrDim = ndx.dimension(function (d) {
+        return {
+            "MANCHESTER UNITED": "MU",
+            "MANCHESTER CITY": "MC",
+            "CHELSEA": "CH",
+            "ARSENAL": "AR",
+            "TOTTENHAM HOTSPUR": "TH",
+            "LIVERPOOL": "LI"
+        }[d["team"]];
+    });
+
     var yearDim = ndx.dimension(function (d) {
         return new Date(d["year"], 0, 1);
     });
@@ -22,7 +33,7 @@ function makeGraphs(error, premierleagueData) {
     var groupYear = yearDim.group();
     var groupTeam = teamDim.group();
 
-    var totalTeamsGroup = teamDim.group().reduceCount();
+    var totalTeamsGroup = teamAbbrDim.group().reduceCount();
 
     // TEAM POINTS BY YEAR
     var manUnitedPointsByYear = yearDim.group().reduceSum(function (d) {
@@ -123,15 +134,32 @@ function makeGraphs(error, premierleagueData) {
         }
     });
 
+    // TEAM GOALS BY YEAR
+
+    var manUnitedGoalsByYear = yearDim.group().reduceSum(function (d) {
+        if (d['team']=="MANCHESTER UNITED") {
+            return d['goals_for'];
+        } else {
+            return 0;
+        }
+    });
 
     //DATE VALUES USED IN CHARTS
     var minYear = new Date(yearDim.bottom(1)[0]["year"], 0,1);
     var maxYear = new Date(yearDim.top(1)[0]["year"], 0,1);
 
+    var minYearYearSelector = new Date(yearDim.bottom(1)[0]["year"]-1, 0,1);
+    var maxYearYearSelector = new Date(yearDim.top(1)[0]["year"]+1, 0,1);
+
+
+
     // CHARTS
     var teamSelector = dc.pieChart("#teamSelector");
+    var yearSelector = dc.barChart("#yearSelector");
     var pointsChart = dc.compositeChart("#pointsChart");
     var positionChart = dc.compositeChart("#positionChart");
+    var goalsChartManUnited = dc.barChart("#goalsChartManUnited");
+    var yearSelectorManUnited = dc.barChart("#yearSelectorManUnited");
 
     // AXIS SCALES
 
@@ -145,15 +173,27 @@ function makeGraphs(error, premierleagueData) {
     // CHART PROPERTIES
 
     teamSelector
-        .dimension(teamDim)
+        .dimension(teamAbbrDim)
         .group(totalTeamsGroup)
+        .ordinalColors(['#f8d33a','#0f2c56','#007430','#83b4dd','#ed2d3a','#431c77'])
         .width(250)
         .height(250)
         .minAngleForLabel(2)
         .radius(90)
         .innerRadius(40);
 
+    yearSelector
+        .dimension(yearDim)
+        .group(groupYear)
+        .width(500)
+        .height(150)
+        //.centerBar(true)
+        //.gap(10)
+        .x(d3.time.scale().domain([minYearYearSelector, maxYearYearSelector]));
+        //.alwaysUseRounding(true);
+
     pointsChart
+        .dimension(yearDim)
         .width(900)
         .height(500)
         .margins({top: 30, right: 50, bottom: 50, left: 50})
@@ -178,12 +218,16 @@ function makeGraphs(error, premierleagueData) {
                 .group(liverpoolPointsByYear, "Liverpool")
         ])
         .x(d3.time.scale().domain([minYear, maxYear]))
+        .elasticY(true)
+        .brushOn(false)
         .xAxisLabel("Year")
         .yAxisLabel("Points")
+        .rangeChart(yearSelector)
         .legend(dc.legend().x(780).y(300).itemHeight(15).gap(5))
         .yAxis().ticks(10);
 
     positionChart
+        .dimension(yearDim)
         .width(900)
         .height(500)
         .compose([
@@ -207,14 +251,31 @@ function makeGraphs(error, premierleagueData) {
                 .group(liverpoolPositionByYear, "Liverpool")
         ])
         .x(d3.time.scale().domain([minYear, maxYear]))
-       .elasticY(true)
-       .xAxisLabel("Year")
-       .yAxisLabel("Position")
-       .brushOn(false)
-       .legend(dc.legend().x(780).y(10).itemHeight(15).gap(5))
-       .yAxis(yAxis);
+        .elasticY(true)
+        .xAxisLabel("Year")
+        .yAxisLabel("Position")
+        .brushOn(false)
+        .rangeChart(pointsChart)
+        .legend(dc.legend().x(780).y(10).itemHeight(15).gap(5))
+        .yAxis(yAxis);
 
+    // goalsChartManUnited
+    //     .dimension(yearDim)
+    //     .group(manUnitedGoalsByYear)
+    //     .width(500)
+    //     .height(500)
+    //     .x(d3.time.scale().domain([minYearYearSelector, maxYearYearSelector]))
+    //     .yAxis(yAxis);
 
+    // yearSelectorManUnited
+    //     .dimension(yearDim)
+    //     .group(groupYear)
+    //     .width(500)
+    //     .height(150)
+    //     //.centerBar(true)
+    //     //.gap(10)
+    //     .x(d3.time.scale().domain([minYearYearSelector, maxYearYearSelector]));
+    //     //.alwaysUseRounding(true);
 
     dc.renderAll();
 
