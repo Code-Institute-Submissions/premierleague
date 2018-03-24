@@ -1,3 +1,13 @@
-.man-city-title
+.manchester-city-hero
+  border-bottom: 5px solid $man-city-accent
   &::after
-    background-color: $man-city-accent
+    background: linear-gradient(rgba(52,58,64,1),rgba(52,58,64,0.6)), url("/static/assets/badges/manchester-city-logo.png")
+    background-repeat: no-repeat
+    background-position: center top
+    background-size: contain
+
+@media (min-width: 768px)
+  .manchester-city-hero
+    &::after
+      background-position: center right
+      top: 4%

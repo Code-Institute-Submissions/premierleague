@@ -1,31 +1,52 @@
 {% extends 'base.html' %}
 {% block content %}
-    <section class="hero index-hero">
-        <div class="hero-title-container">
-            <h1>Welcome to the Premier League 'Top Six' Dashboard!</h1>
-            <p>Dive into the statistics of the most illustrious teams in English football.</p>
+    <section class="hero index-hero d-flex align-items-center justify-content-center">
+        <div class="row no-gutters">
+            <div class="col">
+                <div class="hero-title-container">
+                    <h1>Welcome to the Premier League 'Top Six' Dashboard!</h1>
+                    <p>Dive into the statistics of the most illustrious teams in English football.</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <section class="main-selectors">
-        <div class="team-selector">
-            <div class="chart-title"><h4>Team Selector</h4></div>
-            <div id="teamSelector"></div>
+        <div class="row no-gutters">
+            <div class="col-sm-12 col-md-4">
+                <div class="selector team-selector text-center shadow-box">
+                    <div class="chart-title"><h4>Team Selector</h4></div>
+                    <div id="teamSelector" class="custom-chart"></div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-8">
+                <div class="selector year-selector text-center shadow-box">
+                    <div class="chart-title"><h4>Year Selector</h4></div>
+                    <div id="yearSelector" class="custom-chart"></div>
+                </div>
+            </div>
         </div>
-        <div class="year-selector">
-            <div class="chart-title"><h4>Year Selector</h4></div>
-            <div id="yearSelector"></div>
+    </section>
+
+    <section class="main-charts">
+        <div class="row no-gutters">
+            <div class="col">
+                <div class="points-chart text-center">
+                    <div class="chart-title"><h4>Points Chart</h4></div>
+                    <div id="pointsChart" class="custom-chart"></div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="position-chart text-center">
+                    <div class="chart-title"><h4>Position Chart</h4></div>
+                    <div id="positionChart" class="custom-chart"></div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="points-chart">
-        <div class="chart-title"><h4>Points Chart</h4></div>
-        <div id="pointsChart"></div>
-    </section>
+{% endblock %}
 
-    <section class="position-chart">
-        <div class="chart-title"><h4>Position Chart</h4></div>
-        <div id="positionChart"></div>
-    </section>
-
+{% block page_specific_js %}
+    <script src="{{ url_for ('static', filename='js/graph.js')}}"></script>
 {% endblock %}

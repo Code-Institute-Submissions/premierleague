@@ -1,0 +1,58 @@
+.hero
+  min-height: 35vh
+  text-align: center
+  color: #FFFFFF
+  border-bottom: 5px solid $purple
+
+.team-page-hero
+  text-transform: uppercase
+  letter-spacing: 3px
+  &::after
+    content: ''
+    background: linear-gradient(rgba(52,58,64,1),rgba(52,58,64,0.6))
+    //background-repeat: no-repeat
+    //background-position: center top
+    //background-size: contain
+    position: absolute
+    top: -4%
+    bottom: 35vh
+    left: 0
+    right: 0
+    z-index: -1
+    min-height: 35vh
+
+.hero-title-container
+  padding: 0 16px
+
+.custom-chart
+  width: 100%
+
+.chart-title
+  text-transform: uppercase
+
+.main-selectors
+  background-color: ghostwhite
+
+.selector
+  padding: 3%
+  height: 350px
+
+.shadow-box
+  border: 0.5px solid rgba(0,0,0,0.05)
+  transition: box-shadow 350ms ease-in-out
+  &.shadow-box:hover
+    box-shadow: 0 30px 80px rgba(0,0,0,0.14), 0 20px 70px rgba(0,0,0,0.12)
+    transition: box-shadow 350ms ease-in-out
+
+.form-guide
+  padding-top: 5%
+  height: 500px //to remove once content exists
+
+.goals-analysis, .goals-analysis-2
+  background-color: ghostwhite
+
+.goals-analysis
+  padding: 5% 0
+
+.goals-analysis-2
+  padding-bottom: 5%

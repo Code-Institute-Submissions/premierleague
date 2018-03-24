@@ -1,3 +1,15 @@
-.spurs-title
+.tottenham-hotspur-hero
+  border-bottom: 5px solid $spurs-accent
   &::after
-    background-color: $spurs-accent
+    background: linear-gradient(rgba(52,58,64,1),rgba(52,58,64,0.6)), url("/static/assets/badges/Tottenham_Hotspur_FC.png")
+    background-repeat: no-repeat
+    background-position: center top
+    background-size: contain
+    top: 0
+    bottom: 35vh
+
+@media (min-width: 768px)
+  .tottenham-hotspur-hero
+    &::after
+      background-position: center right
+      top: 10%

@@ -1,6 +1,63 @@
 {% extends 'base.html' %}
 {% block content %}
-    <section class="main-header">
-        <h1 class="page-title arsenal-title">Arsenal</h1>
+    <section class="hero team-page-hero arsenal-hero d-flex align-items-center justify-content-center">
+        <div class="row no-gutters">
+            <div class="col">
+                <div class="hero-title-container">
+                    <h1>Arsenal</h1>
+                </div>
+            </div>
+        </div>
     </section>
+    <section class="main-selectors">
+        <div class="row no-gutters">
+            <div class="col-sm-12 col-md-4">
+                <div class="selector text-center shadow-box">
+                    <div class="chart-title"><h4>Position Selector</h4></div>
+                    <div id="positionSelectorArsenal" class="custom-chart"></div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-8">
+                <div class="selector text-center shadow-box">
+                    <div class="chart-title"><h4>Year Selector</h4></div>
+                    <div id="yearSelectorArsenal" class="custom-chart"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="form-guide">
+        <div class="row no-gutters">
+            <div class="col-12">
+                <div class="form-chart text-center">
+                    <div class="chart-title"><h4>Form Guide</h4></div>
+                    <div id="" class="custom-chart"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="goals-analysis">
+        <div class="row no-gutters">
+            <div class="col-sm-12 col-md-6">
+                <div class="goals-chart text-center">
+                    <div class="chart-title"><h4>Goals scored per season</h4></div>
+                    <div id="goalsChartArsenal" class="custom-chart"></div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <div class="goals-conc-chart text-center">
+                    <div class="chart-title"><h4>Goals conceded per season</h4></div>
+                    <div id="goalsConcChartArsenal" class="custom-chart"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="goals-analysis-2">
+        <div class="goals-diff-chart text-center">
+            <div class="chart-title"><h4>Goal Difference</h4></div>
+            <div id="goalDifferenceChartArsenal" class="custom-chart"></div>
+        </div>
+    </section>
+{% endblock %}
+{% block page_specific_js %}
+    <script src="{{ url_for ('static', filename='js/arsenal.js')}}"></script>
 {% endblock %}

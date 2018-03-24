@@ -32,134 +32,137 @@ function makeGraphs(error, premierleagueData) {
     // CALCULATE METRICS
     var groupYear = yearDim.group();
     var groupTeam = teamDim.group();
+    // var groupPosition = positionDim.group();
 
     var totalTeamsGroup = teamAbbrDim.group().reduceCount();
 
     // TEAM POINTS BY YEAR
-    var manUnitedPointsByYear = yearDim.group().reduceSum(function (d) {
-        if (d["team"]=="MANCHESTER UNITED"){
-            return d["points"];
-        } else {
-            return 0
-        }
-    });
-
-    var manCityPointsByYear = yearDim.group().reduceSum(function (d) {
-        if (d['team']=="MANCHESTER CITY"){
-            return d['points'];
-        } else {
-            return 0;
-        }
-    });
-
-    var chelseaPointsByYear = yearDim.group().reduceSum(function (d) {
-        if (d['team']=="CHELSEA"){
-            return d['points'];
-        } else {
-            return 0;
-        }
-    });
-
-    var arsenalPointsByYear = yearDim.group().reduceSum(function (d) {
-        if (d['team']=="ARSENAL"){
-            return d['points'];
-        } else {
-            return 0;
-        }
-    });
-
-    var spursPointsByYear = yearDim.group().reduceSum(function (d) {
-        if (d['team']=="TOTTENHAM HOTSPUR"){
-            return d['points'];
-        } else {
-            return 0;
-        }
-    });
-
-    var liverpoolPointsByYear = yearDim.group().reduceSum(function (d) {
-       if (d['team']=="LIVERPOOL"){
-           return d['points'];
-       } else {
-           return 0;
-       }
-    });
+    var manUnitedPointsByYear = createGroup(yearDim, "MANCHESTER UNITED", "points");
+    var manCityPointsByYear = createGroup(yearDim, "MANCHESTER CITY", "points");
+    var chelseaPointsByYear = createGroup(yearDim, "CHELSEA", "points");
+    var arsenalPointsByYear = createGroup(yearDim, "ARSENAL", "points");
+    var spursPointsByYear = createGroup(yearDim, "TOTTENHAM HOTSPUR", "points");
+    var liverpoolPointsByYear = createGroup(yearDim, "LIVERPOOL", "points");
 
     // TEAM POSITION BY YEAR
+    var manUnitedPositionByYear = createGroup(yearDim, "MANCHESTER UNITED", "position");
+    var manCityPositionByYear = createGroup(yearDim, "MANCHESTER CITY", "position");
+    var chelseaPositionByYear = createGroup(yearDim, "CHELSEA", "position");
+    var arsenalPositionByYear = createGroup(yearDim, "ARSENAL", "position");
+    var spursPositionByYear = createGroup(yearDim, "TOTTENHAM HOTSPUR", "position");
+    var liverpoolPositionByYear = createGroup(yearDim, "LIVERPOOL", "position");
 
-    var manUnitedPositionByYear = yearDim.group().reduceSum(function (d) {
-        if (d['team']=="MANCHESTER UNITED") {
-            return d['position'];
-        } else {
-            return 0;
-        }
-    });
-
-    var manCityPositionByYear = yearDim.group().reduceSum(function (d) {
-        if (d['team']=="MANCHESTER CITY") {
-            return d['position'];
-        } else {
-            return 0;
-        }
-    });
-
-    var chelseaPositionByYear = yearDim.group().reduceSum(function (d) {
-        if (d['team']=="CHELSEA") {
-            return d['position'];
-        } else {
-            return 0;
-        }
-    });
-
-    var arsenalPositionByYear = yearDim.group().reduceSum(function (d) {
-        if (d['team']=="ARSENAL") {
-            return d['position'];
-        } else {
-            return 0;
-        }
-    });
-
-    var spursPositionByYear = yearDim.group().reduceSum(function (d) {
-        if (d['team']=="TOTTENHAM HOTSPUR") {
-            return d['position'];
-        } else {
-            return 0;
-        }
-    });
-
-    var liverpoolPositionByYear = yearDim.group().reduceSum(function (d) {
-        if (d['team']=="LIVERPOOL") {
-            return d['position'];
-        } else {
-            return 0;
-        }
-    });
-
-    // TEAM GOALS BY YEAR
-
-    var manUnitedGoalsByYear = yearDim.group().reduceSum(function (d) {
-        if (d['team']=="MANCHESTER UNITED") {
-            return d['goals_for'];
-        } else {
-            return 0;
-        }
-    });
+    // var manCityPointsByYear = yearDim.group().reduceSum(function (d) {
+    //     if (d['team']=="MANCHESTER CITY"){
+    //         return d['points'];
+    //     } else {
+    //         return 0;
+    //     }
+    // });
+    //
+    // var chelseaPointsByYear = yearDim.group().reduceSum(function (d) {
+    //     if (d['team']=="CHELSEA"){
+    //         return d['points'];
+    //     } else {
+    //         return 0;
+    //     }
+    // });
+    //
+    // var arsenalPointsByYear = yearDim.group().reduceSum(function (d) {
+    //     if (d['team']=="ARSENAL"){
+    //         return d['points'];
+    //     } else {
+    //         return 0;
+    //     }
+    // });
+    //
+    // var spursPointsByYear = yearDim.group().reduceSum(function (d) {
+    //     if (d['team']=="TOTTENHAM HOTSPUR"){
+    //         return d['points'];
+    //     } else {
+    //         return 0;
+    //     }
+    // });
+    //
+    // var liverpoolPointsByYear = yearDim.group().reduceSum(function (d) {
+    //    if (d['team']=="LIVERPOOL"){
+    //        return d['points'];
+    //    } else {
+    //        return 0;
+    //    }
+    // });
+    //
+    // // TEAM POSITION BY YEAR
+    //
+    // var manUnitedPositionByYear = yearDim.group().reduceSum(function (d) {
+    //     if (d['team']=="MANCHESTER UNITED") {
+    //         return d['position'];
+    //     } else {
+    //         return 0;
+    //     }
+    // });
+    //
+    // var manCityPositionByYear = yearDim.group().reduceSum(function (d) {
+    //     if (d['team']=="MANCHESTER CITY") {
+    //         return d['position'];
+    //     } else {
+    //         return 0;
+    //     }
+    // });
+    //
+    // var chelseaPositionByYear = yearDim.group().reduceSum(function (d) {
+    //     if (d['team']=="CHELSEA") {
+    //         return d['position'];
+    //     } else {
+    //         return 0;
+    //     }
+    // });
+    //
+    // var arsenalPositionByYear = yearDim.group().reduceSum(function (d) {
+    //     if (d['team']=="ARSENAL") {
+    //         return d['position'];
+    //     } else {
+    //         return 0;
+    //     }
+    // });
+    //
+    // var spursPositionByYear = yearDim.group().reduceSum(function (d) {
+    //     if (d['team']=="TOTTENHAM HOTSPUR") {
+    //         return d['position'];
+    //     } else {
+    //         return 0;
+    //     }
+    // });
+    //
+    // var liverpoolPositionByYear = yearDim.group().reduceSum(function (d) {
+    //     if (d['team']=="LIVERPOOL") {
+    //         return d['position'];
+    //     } else {
+    //         return 0;
+    //     }
+    // });
+    //
+    // // TEAM GOALS BY YEAR
+    //
+    // var manUnitedGoalsByYear = yearDim.group().reduceSum(function (d) {
+    //     if (d['team']=="MANCHESTER UNITED") {
+    //         return d['goals_for'];
+    //     } else {
+    //         return 0;
+    //     }
+    // });
 
     //DATE VALUES USED IN CHARTS
     var minYear = new Date(yearDim.bottom(1)[0]["year"], 0,1);
     var maxYear = new Date(yearDim.top(1)[0]["year"], 0,1);
-
-    var minYearYearSelector = new Date(yearDim.bottom(1)[0]["year"]-1, 0,1);
-    var maxYearYearSelector = new Date(yearDim.top(1)[0]["year"]+1, 0,1);
-
-
+    var minYearBoundary = new Date(yearDim.bottom(1)[0]["year"]-1, 0,1);
+    var maxYearBoundary = new Date(yearDim.top(1)[0]["year"]+1, 0,1);
 
     // CHARTS
     var teamSelector = dc.pieChart("#teamSelector");
     var yearSelector = dc.barChart("#yearSelector");
     var pointsChart = dc.compositeChart("#pointsChart");
     var positionChart = dc.compositeChart("#positionChart");
-    var goalsChartManUnited = dc.barChart("#goalsChartManUnited");
-    var yearSelectorManUnited = dc.barChart("#yearSelectorManUnited");
 
     // AXIS SCALES
 
@@ -189,12 +192,12 @@ function makeGraphs(error, premierleagueData) {
         .height(150)
         //.centerBar(true)
         //.gap(10)
-        .x(d3.time.scale().domain([minYearYearSelector, maxYearYearSelector]));
+        .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]));
         //.alwaysUseRounding(true);
 
     pointsChart
         .dimension(yearDim)
-        .width(900)
+        .width($(window).width()*0.9)
         .height(500)
         .margins({top: 30, right: 50, bottom: 50, left: 50})
         .compose([
@@ -228,6 +231,7 @@ function makeGraphs(error, premierleagueData) {
 
     positionChart
         .dimension(yearDim)
+        //.width($(window).width()*0.9)
         .width(900)
         .height(500)
         .compose([
@@ -256,27 +260,19 @@ function makeGraphs(error, premierleagueData) {
         .yAxisLabel("Position")
         .brushOn(false)
         .rangeChart(pointsChart)
-        .legend(dc.legend().x(780).y(10).itemHeight(15).gap(5))
+        .legend(dc.legend().x($(window).width()*0.7).y(10).itemHeight(15).gap(5))
         .yAxis(yAxis);
-
-    // goalsChartManUnited
-    //     .dimension(yearDim)
-    //     .group(manUnitedGoalsByYear)
-    //     .width(500)
-    //     .height(500)
-    //     .x(d3.time.scale().domain([minYearYearSelector, maxYearYearSelector]))
-    //     .yAxis(yAxis);
-
-    // yearSelectorManUnited
-    //     .dimension(yearDim)
-    //     .group(groupYear)
-    //     .width(500)
-    //     .height(150)
-    //     //.centerBar(true)
-    //     //.gap(10)
-    //     .x(d3.time.scale().domain([minYearYearSelector, maxYearYearSelector]));
-    //     //.alwaysUseRounding(true);
 
     dc.renderAll();
 
+    $(window).resize(function() {
+        pointsChart
+            .width($(window).width()*0.9)
+            .legend(dc.legend().x($(window).width()*0.7).y(10).itemHeight(15).gap(5));
+        positionChart
+            .width($(window).width()*0.9)
+            .legend(dc.legend().x($(window).width()*0.7).y(10).itemHeight(15).gap(5));
+        dc.renderAll();
+    });
 }
+

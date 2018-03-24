@@ -6205,46 +6205,38 @@ a:hover {
   text-decoration: none;
 }
 
-.page-content {
-  padding-top: 2em;
+.hero {
+  min-height: 35vh;
+  text-align: center;
+  color: #FFFFFF;
+  border-bottom: 5px solid #38003c;
 }
 
-.hero {
+.team-page-hero {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.team-page-hero::after {
+  content: '';
+  background: -webkit-gradient(linear, left top, left bottom, from(#343a40), to(rgba(52, 58, 64, 0.6)));
+  background: -webkit-linear-gradient(#343a40, rgba(52, 58, 64, 0.6));
+  background: -o-linear-gradient(#343a40, rgba(52, 58, 64, 0.6));
+  background: linear-gradient(#343a40, rgba(52, 58, 64, 0.6));
+  position: absolute;
+  top: -4%;
+  bottom: 35vh;
+  left: 0;
+  right: 0;
+  z-index: -1;
   min-height: 35vh;
 }
 
-.index-hero {
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .hero-title-container {
-  -ms-flex-item-align: center;
-  align-self: center;
-  justify-self: center;
-  width: 100%;
+  padding: 0 16px;
 }
 
-.badge-container {
-  margin-left: 100px;
-  margin-right: 25px;
-}
-
-.page-title {
-  -ms-flex-item-align: center;
-  align-self: center;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  display: inline-block;
-}
-
-.page-title::after {
-  content: '';
-  display: block;
-  height: 5px;
-  margin: 4% 0 0;
+.custom-chart {
   width: 100%;
 }
 
@@ -6256,28 +6248,52 @@ a:hover {
   background-color: ghostwhite;
 }
 
-.team-selector {
+.selector {
   padding: 3%;
-  width: 50%;
-  float: left;
   height: 350px;
-  text-align: center;
 }
 
-#teamSelector {
-  width: 100%;
+.shadow-box {
+  border: 0.5px solid rgba(0, 0, 0, 0.05);
+  -webkit-transition: -webkit-box-shadow 350ms ease-in-out;
+  transition: -webkit-box-shadow 350ms ease-in-out;
+  -o-transition: box-shadow 350ms ease-in-out;
+  transition: box-shadow 350ms ease-in-out;
+  transition: box-shadow 350ms ease-in-out, -webkit-box-shadow 350ms ease-in-out;
 }
 
-.year-selector {
-  padding: 3%;
-  width: 50%;
-  float: right;
-  height: 350px;
-  text-align: center;
+.shadow-box.shadow-box:hover {
+  -webkit-box-shadow: 0 30px 80px rgba(0, 0, 0, 0.14), 0 20px 70px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.14), 0 20px 70px rgba(0, 0, 0, 0.12);
+  -webkit-transition: -webkit-box-shadow 350ms ease-in-out;
+  transition: -webkit-box-shadow 350ms ease-in-out;
+  -o-transition: box-shadow 350ms ease-in-out;
+  transition: box-shadow 350ms ease-in-out;
+  transition: box-shadow 350ms ease-in-out, -webkit-box-shadow 350ms ease-in-out;
 }
 
-#yearSelector {
-  width: 100%;
+.form-guide {
+  padding-top: 5%;
+  height: 500px;
+}
+
+.goals-analysis, .goals-analysis-2 {
+  background-color: ghostwhite;
+}
+
+.goals-analysis {
+  padding: 5% 0;
+}
+
+.goals-analysis-2 {
+  padding-bottom: 5%;
+}
+
+.index-hero {
+  background: -webkit-gradient(linear, left top, left bottom, from(#343a40), to(rgba(52, 58, 64, 0.6)));
+  background: -webkit-linear-gradient(#343a40, rgba(52, 58, 64, 0.6));
+  background: -o-linear-gradient(#343a40, rgba(52, 58, 64, 0.6));
+  background: linear-gradient(#343a40, rgba(52, 58, 64, 0.6));
 }
 
 #yearSelector svg {
@@ -6286,51 +6302,137 @@ a:hover {
 
 .points-chart {
   padding: 3%;
-  text-align: center;
-}
-
-.points-chart #pointsChart {
   width: 100%;
 }
 
 .position-chart {
   padding: 3%;
-  text-align: center;
 }
 
-.position-chart #positionChart {
-  width: 100%;
+.manchester-united-hero {
+  border-bottom: 5px solid #ed2d3a;
 }
 
-.man-united-header {
-  background-color: white;
+.manchester-united-hero::after {
+  background: -webkit-gradient(linear, left top, left bottom, from(#343a40), to(rgba(52, 58, 64, 0.6))), url("/static/assets/badges/manchester-united-logo-vector.png");
+  background: -webkit-linear-gradient(#343a40, rgba(52, 58, 64, 0.6)), url("/static/assets/badges/manchester-united-logo-vector.png");
+  background: -o-linear-gradient(#343a40, rgba(52, 58, 64, 0.6)), url("/static/assets/badges/manchester-united-logo-vector.png");
+  background: linear-gradient(#343a40, rgba(52, 58, 64, 0.6)), url("/static/assets/badges/manchester-united-logo-vector.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;
 }
 
-.man-united-title::after {
-  background-color: #ed2d3a;
+@media (min-width: 768px) {
+  .manchester-united-hero::after {
+    background-position: center right;
+    top: 4%;
+  }
 }
 
-.team-badge {
-  width: 150px;
-  height: auto;
+.manchester-city-hero {
+  border-bottom: 5px solid #83b4dd;
 }
 
-.man-city-title::after {
-  background-color: #83b4dd;
+.manchester-city-hero::after {
+  background: -webkit-gradient(linear, left top, left bottom, from(#343a40), to(rgba(52, 58, 64, 0.6))), url("/static/assets/badges/manchester-city-logo.png");
+  background: -webkit-linear-gradient(#343a40, rgba(52, 58, 64, 0.6)), url("/static/assets/badges/manchester-city-logo.png");
+  background: -o-linear-gradient(#343a40, rgba(52, 58, 64, 0.6)), url("/static/assets/badges/manchester-city-logo.png");
+  background: linear-gradient(#343a40, rgba(52, 58, 64, 0.6)), url("/static/assets/badges/manchester-city-logo.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;
 }
 
-.chelsea-title::after {
-  background-color: #0f2c56;
+@media (min-width: 768px) {
+  .manchester-city-hero::after {
+    background-position: center right;
+    top: 4%;
+  }
 }
 
-.arsenal-title::after {
-  background-color: #f8d33a;
+.chelsea-hero {
+  border-bottom: 5px solid #0f2c56;
 }
 
-.spurs-title::after {
-  background-color: #431c77;
+.chelsea-hero::after {
+  background: -webkit-gradient(linear, left top, left bottom, from(#343a40), to(rgba(52, 58, 64, 0.6))), url("/static/assets/badges/chelsea-logo-vector.png");
+  background: -webkit-linear-gradient(#343a40, rgba(52, 58, 64, 0.6)), url("/static/assets/badges/chelsea-logo-vector.png");
+  background: -o-linear-gradient(#343a40, rgba(52, 58, 64, 0.6)), url("/static/assets/badges/chelsea-logo-vector.png");
+  background: linear-gradient(#343a40, rgba(52, 58, 64, 0.6)), url("/static/assets/badges/chelsea-logo-vector.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;
 }
 
-.liverpool-title::after {
-  background-color: #007430;
+@media (min-width: 768px) {
+  .chelsea-hero::after {
+    background-position: center right;
+    top: 4%;
+  }
+}
+
+.arsenal-hero {
+  border-bottom: 5px solid #f8d33a;
+}
+
+.arsenal-hero::after {
+  background: -webkit-gradient(linear, left top, left bottom, from(#343a40), to(rgba(52, 58, 64, 0.6))), url("/static/assets/badges/arsenal-logo-vector.png");
+  background: -webkit-linear-gradient(#343a40, rgba(52, 58, 64, 0.6)), url("/static/assets/badges/arsenal-logo-vector.png");
+  background: -o-linear-gradient(#343a40, rgba(52, 58, 64, 0.6)), url("/static/assets/badges/arsenal-logo-vector.png");
+  background: linear-gradient(#343a40, rgba(52, 58, 64, 0.6)), url("/static/assets/badges/arsenal-logo-vector.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;
+}
+
+@media (min-width: 768px) {
+  .arsenal-hero::after {
+    background-position: center right;
+    top: 4%;
+  }
+}
+
+.tottenham-hotspur-hero {
+  border-bottom: 5px solid #431c77;
+}
+
+.tottenham-hotspur-hero::after {
+  background: -webkit-gradient(linear, left top, left bottom, from(#343a40), to(rgba(52, 58, 64, 0.6))), url("/static/assets/badges/Tottenham_Hotspur_FC.png");
+  background: -webkit-linear-gradient(#343a40, rgba(52, 58, 64, 0.6)), url("/static/assets/badges/Tottenham_Hotspur_FC.png");
+  background: -o-linear-gradient(#343a40, rgba(52, 58, 64, 0.6)), url("/static/assets/badges/Tottenham_Hotspur_FC.png");
+  background: linear-gradient(#343a40, rgba(52, 58, 64, 0.6)), url("/static/assets/badges/Tottenham_Hotspur_FC.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;
+  top: 0;
+  bottom: 35vh;
+}
+
+@media (min-width: 768px) {
+  .tottenham-hotspur-hero::after {
+    background-position: center right;
+    top: 10%;
+  }
+}
+
+.liverpool-hero {
+  border-bottom: 5px solid #007430;
+}
+
+.liverpool-hero::after {
+  background: -webkit-gradient(linear, left top, left bottom, from(#343a40), to(rgba(52, 58, 64, 0.6))), url("/static/assets/badges/liverpool-logo-vector.png");
+  background: -webkit-linear-gradient(#343a40, rgba(52, 58, 64, 0.6)), url("/static/assets/badges/liverpool-logo-vector.png");
+  background: -o-linear-gradient(#343a40, rgba(52, 58, 64, 0.6)), url("/static/assets/badges/liverpool-logo-vector.png");
+  background: linear-gradient(#343a40, rgba(52, 58, 64, 0.6)), url("/static/assets/badges/liverpool-logo-vector.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;
+}
+
+@media (min-width: 768px) {
+  .liverpool-hero::after {
+    background-position: center right;
+    top: 4%;
+  }
 }
