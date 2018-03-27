@@ -5,13 +5,13 @@
   padding-top: 0
   padding-bottom: 0
   padding-right: 1em
-  transition: background-color 350ms ease-in-out
+  transition: color 350ms ease-in-out
   letter-spacing: 1.5px
   text-transform: uppercase
 
 .navbar-brand:hover
-  background-color: $purple
-  transition: background-color 350ms ease-in-out
+  color: $purple !important
+  transition: color 350ms ease-in-out
 
 .navbar-brand img
   height: 56px
@@ -100,18 +100,40 @@
 .teams-list
   list-style: none
 
-//.teams-list-container .teams-list-item:hover
-//  color: $purple
+.manunited-link:hover
+  background: url("/static/assets/badges/manchester-united-logo-vector.png")
+
+.mancity-link:hover
+  background: url("/static/assets/badges/manchester-city-logo.png")
+
+.chelsea-link:hover
+  background: url("/static/assets/badges/chelsea-logo-vector.png")
+
+.arsenal-link:hover
+  background: url("/static/assets/badges/arsenal-logo-vector.png")
+
+.spurs-link:hover
+  background: url("/static/assets/badges/Tottenham_Hotspur_FC.png")
+
+.liverpool-link:hover
+  background: url("/static/assets/badges/liverpool-logo-vector.png")
 
 .dropdown-item:hover
-  background: url("/static/assets/badges/manchester-united-logo-vector.png")
+  //  background: url("/static/assets/badges/manchester-united-logo-vector.png")
   box-shadow: inset 0 0 0 2000px rgba(0,0,0,0.8)
   background-position: center
-  //background-repeat: no-repeat
   background-size: cover
 
-
 // MEDIA QUERIES
+
+@media (max-width: 400px)
+  .navbar-brand
+    letter-spacing: 0
+    font-size: 1rem
+
+  .hero-title-container
+    h1
+      font-size: 1.5em
 
 @media (min-width: 768px)
   #navbarMenu
@@ -119,25 +141,6 @@
 
   .navbar-team-list
     background-color: $purple
-
-  //.teams-list-container
-  //  width: 100%
-  //  //position: fixed !important
-  //  position: absolute
-  //  //left: 0
-  //  top: 56px
-  //  //padding: 0
-  //  //margin: 0
-  //  //border: none
-  //  //border-radius: 0
-  //
-  //.teams-list
-  //  display: flex
-  //  justify-content: center
-  //
-  //.teams-list-item
-  //  display: inline-block
-  //  height: 20px
 
   .desktop-teams-list-container
     width: 100%
@@ -151,7 +154,6 @@
 
   .desktop-teams-list-item
     display: inline-block
-
     text-transform: uppercase
     letter-spacing: 1.5px
     height: 100%
@@ -181,32 +183,9 @@
   .liverpool-link:hover
     background: url("/static/assets/badges/liverpool-logo-vector.png")
 
-
   .desktop-team-links:hover
-    //background: url("/static/assets/badges/manchester-united-logo-vector.png")
-    box-shadow: inset 0 0 0 2000px rgba(0,0,0,0.5)
+    box-shadow: inset 0 0 0 2000px rgba(0,0,0,0.8)
     background-position: center
     background-repeat: no-repeat
-    background-size: contain
+    background-size: cover
     transition: all 350ms ease-in-out
-
-
-
-
-
-
-// TEAM LIST TEST
-
-//.teams-list-div
-//  position: absolute
-//  width: 100%
-//  top: 60px
-//  left: 0
-//
-//.teams-list
-//  list-style: none
-//
-//.teams-list-elem
-//  //display: inline-block
-//  display: none
-//  opacity: 0

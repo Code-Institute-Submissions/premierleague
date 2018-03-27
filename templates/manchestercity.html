@@ -12,15 +12,19 @@
     <section class="main-selectors">
         <div class="row no-gutters">
             <div class="col-sm-12 col-md-4">
-                <div class="selector text-center shadow-box">
-                    <div class="chart-title"><h4>Position Selector</h4></div>
-                    <div id="positionSelectorManCity" class="custom-chart"></div>
+                 <div class="selector text-center shadow-box">
+                     <div class="position-selector">
+                        <div class="chart-title"><h4>Position Selector</h4></div>
+                        <div id="positionSelectorManCity" class="custom-chart"></div>
+                     </div>
                 </div>
             </div>
             <div class="col-sm-12 col-md-8">
                 <div class="selector text-center shadow-box">
-                    <div class="chart-title"><h4>Year Selector</h4></div>
-                    <div id="yearSelectorManCity" class="custom-chart"></div>
+                    <div class="year-selector">
+                        <div class="chart-title"><h4>Year Selector</h4></div>
+                        <div id="yearSelectorManCity" class="custom-chart"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -28,9 +32,11 @@
     <section class="form-guide">
         <div class="row no-gutters">
             <div class="col-12">
-                <div class="form-chart text-center">
-                    <div class="chart-title"><h4>Form Guide</h4></div>
-                    <div id="" class="custom-chart"></div>
+                <div class="chart-container-form-guide text-center">
+                    <div class="form-chart">
+                        <div class="chart-title"><h4>Form Guide</h4></div>
+                        <div id="formGuideManCity" class="custom-chart"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -38,23 +44,31 @@
     <section class="goals-analysis">
         <div class="row no-gutters">
             <div class="col-sm-12 col-md-6">
-                <div class="goals-chart text-center">
-                    <div class="chart-title"><h4>Goals scored per season</h4></div>
-                    <div id="goalsChartManCity" class="custom-chart"></div>
+                <div class="chart-container-goals-analysis text-center">
+                    <div class="goals-chart">
+                        <div class="chart-title"><h4>Goals scored per season</h4></div>
+                        <div id="goalsChartManCity" class="custom-chart"></div>
+                    </div>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-6">
-                <div class="goals-conc-chart text-center">
-                    <div class="chart-title"><h4>Goals conceded per season</h4></div>
-                    <div id="goalsConcChartManCity" class="custom-chart"></div>
+            <div class="col-sm-12 col-md-6 padding-top-5-sm">
+                <div class="chart-container-goals-analysis text-center">
+                    <div class="goals-conc-chart">
+                        <div class="chart-title"><h4>Goals conceded per season</h4></div>
+                        <div id="goalsConcChartManCity" class="custom-chart"></div>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
-    <section class="goals-analysis-2">
-        <div class="goals-diff-chart text-center">
-            <div class="chart-title"><h4>Goal Difference</h4></div>
-            <div id="goalDifferenceChartManCity" class="custom-chart"></div>
+        <div class="row no-gutters padding-top-5">
+            <div class="col-12">
+                <div class="chart-container-goals-analysis text-center">
+                    <div class="goals-diff-chart">
+                        <div class="chart-title"><h4>Goal Difference</h4></div>
+                        <div id="goalDifferenceChartManCity" class="custom-chart"></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 {% endblock %}

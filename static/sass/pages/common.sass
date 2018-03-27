@@ -10,9 +10,6 @@
   &::after
     content: ''
     background: linear-gradient(rgba(52,58,64,1),rgba(52,58,64,0.6))
-    //background-repeat: no-repeat
-    //background-position: center top
-    //background-size: contain
     position: absolute
     top: -4%
     bottom: 35vh
@@ -22,31 +19,62 @@
     min-height: 35vh
 
 .hero-title-container
-  padding: 0 16px
+  padding: 2em 1em
 
+.shadow-box
+  border: 0.5px solid rgba(0,0,0,0.05)
+  transition: all 350ms ease-in-out
+  &.shadow-box:hover
+    box-shadow: 0 30px 80px rgba(0,0,0,0.14), 0 20px 70px rgba(0,0,0,0.12)
+    background-color: #f2f2f2
+    transition: all 350ms ease-in-out
+
+.padding-top-5
+  padding-top: 5%
+
+
+
+
+
+// CHART STYLES
 .custom-chart
   width: 100%
 
 .chart-title
   text-transform: uppercase
+  display: inline-block
+  & ::after
+    margin-top: 5%
+    content: ''
+    display: block
+    height: 2.5px
+    width: 100%
+    background-color: $purple
 
 .main-selectors
   background-color: ghostwhite
 
 .selector
-  padding: 3%
+  padding: 3em 0
   height: 350px
 
-.shadow-box
-  border: 0.5px solid rgba(0,0,0,0.05)
-  transition: box-shadow 350ms ease-in-out
-  &.shadow-box:hover
-    box-shadow: 0 30px 80px rgba(0,0,0,0.14), 0 20px 70px rgba(0,0,0,0.12)
-    transition: box-shadow 350ms ease-in-out
+//.chart-container
+//  border: 0.5px solid rgba(0,0,0,0.5)
 
-.form-guide
-  padding-top: 5%
-  height: 500px //to remove once content exists
+.year-selector
+  max-width: 500px
+  margin: auto
+
+//.form-guide
+//  margin: auto
+//  max-width: 960px
+//  padding: 2em
+  //height: 500px //to remove once content exists
+
+.form-chart
+  max-width: 960px
+  margin: auto
+  padding: 2em .5em
 
 .goals-analysis, .goals-analysis-2
   background-color: ghostwhite
@@ -54,5 +82,22 @@
 .goals-analysis
   padding: 5% 0
 
-.goals-analysis-2
-  padding-bottom: 5%
+.chart-container-goals-analysis
+  max-width: 600px
+  margin: auto
+
+.dc-chart
+  float: none !important
+
+
+
+
+
+// MEDIA QUERIES
+@media (max-width: 768px)
+  .padding-top-5-sm
+    padding-top: 5%
+
+@media (min-width: 768px)
+  .form-chart
+    padding: 2em

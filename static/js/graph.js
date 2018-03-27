@@ -31,9 +31,6 @@ function makeGraphs(error, premierleagueData) {
 
     // CALCULATE METRICS
     var groupYear = yearDim.group();
-    var groupTeam = teamDim.group();
-    // var groupPosition = positionDim.group();
-
     var totalTeamsGroup = teamAbbrDim.group().reduceCount();
 
     // TEAM POINTS BY YEAR
@@ -52,106 +49,6 @@ function makeGraphs(error, premierleagueData) {
     var spursPositionByYear = createGroup(yearDim, "TOTTENHAM HOTSPUR", "position");
     var liverpoolPositionByYear = createGroup(yearDim, "LIVERPOOL", "position");
 
-    // var manCityPointsByYear = yearDim.group().reduceSum(function (d) {
-    //     if (d['team']=="MANCHESTER CITY"){
-    //         return d['points'];
-    //     } else {
-    //         return 0;
-    //     }
-    // });
-    //
-    // var chelseaPointsByYear = yearDim.group().reduceSum(function (d) {
-    //     if (d['team']=="CHELSEA"){
-    //         return d['points'];
-    //     } else {
-    //         return 0;
-    //     }
-    // });
-    //
-    // var arsenalPointsByYear = yearDim.group().reduceSum(function (d) {
-    //     if (d['team']=="ARSENAL"){
-    //         return d['points'];
-    //     } else {
-    //         return 0;
-    //     }
-    // });
-    //
-    // var spursPointsByYear = yearDim.group().reduceSum(function (d) {
-    //     if (d['team']=="TOTTENHAM HOTSPUR"){
-    //         return d['points'];
-    //     } else {
-    //         return 0;
-    //     }
-    // });
-    //
-    // var liverpoolPointsByYear = yearDim.group().reduceSum(function (d) {
-    //    if (d['team']=="LIVERPOOL"){
-    //        return d['points'];
-    //    } else {
-    //        return 0;
-    //    }
-    // });
-    //
-    // // TEAM POSITION BY YEAR
-    //
-    // var manUnitedPositionByYear = yearDim.group().reduceSum(function (d) {
-    //     if (d['team']=="MANCHESTER UNITED") {
-    //         return d['position'];
-    //     } else {
-    //         return 0;
-    //     }
-    // });
-    //
-    // var manCityPositionByYear = yearDim.group().reduceSum(function (d) {
-    //     if (d['team']=="MANCHESTER CITY") {
-    //         return d['position'];
-    //     } else {
-    //         return 0;
-    //     }
-    // });
-    //
-    // var chelseaPositionByYear = yearDim.group().reduceSum(function (d) {
-    //     if (d['team']=="CHELSEA") {
-    //         return d['position'];
-    //     } else {
-    //         return 0;
-    //     }
-    // });
-    //
-    // var arsenalPositionByYear = yearDim.group().reduceSum(function (d) {
-    //     if (d['team']=="ARSENAL") {
-    //         return d['position'];
-    //     } else {
-    //         return 0;
-    //     }
-    // });
-    //
-    // var spursPositionByYear = yearDim.group().reduceSum(function (d) {
-    //     if (d['team']=="TOTTENHAM HOTSPUR") {
-    //         return d['position'];
-    //     } else {
-    //         return 0;
-    //     }
-    // });
-    //
-    // var liverpoolPositionByYear = yearDim.group().reduceSum(function (d) {
-    //     if (d['team']=="LIVERPOOL") {
-    //         return d['position'];
-    //     } else {
-    //         return 0;
-    //     }
-    // });
-    //
-    // // TEAM GOALS BY YEAR
-    //
-    // var manUnitedGoalsByYear = yearDim.group().reduceSum(function (d) {
-    //     if (d['team']=="MANCHESTER UNITED") {
-    //         return d['goals_for'];
-    //     } else {
-    //         return 0;
-    //     }
-    // });
-
     //DATE VALUES USED IN CHARTS
     var minYear = new Date(yearDim.bottom(1)[0]["year"], 0,1);
     var maxYear = new Date(yearDim.top(1)[0]["year"], 0,1);
@@ -165,7 +62,6 @@ function makeGraphs(error, premierleagueData) {
     var positionChart = dc.compositeChart("#positionChart");
 
     // AXIS SCALES
-
     var yAxisScale = d3.scale.linear();
 
     var yAxis = d3.svg.axis()
@@ -174,7 +70,6 @@ function makeGraphs(error, premierleagueData) {
         .ticks(20);
 
     // CHART PROPERTIES
-
     teamSelector
         .dimension(teamAbbrDim)
         .group(totalTeamsGroup)
@@ -188,7 +83,7 @@ function makeGraphs(error, premierleagueData) {
     yearSelector
         .dimension(yearDim)
         .group(groupYear)
-        .width(500)
+        .width($(this).parent().parent().width())
         .height(150)
         //.centerBar(true)
         //.gap(10)
@@ -197,7 +92,8 @@ function makeGraphs(error, premierleagueData) {
 
     pointsChart
         .dimension(yearDim)
-        .width($(window).width()*0.9)
+        //.width($(window).width()*0.9)
+        .width($(this).parent().parent().width())
         .height(500)
         .margins({top: 30, right: 50, bottom: 50, left: 50})
         .compose([
@@ -226,13 +122,14 @@ function makeGraphs(error, premierleagueData) {
         .xAxisLabel("Year")
         .yAxisLabel("Points")
         .rangeChart(yearSelector)
-        .legend(dc.legend().x(780).y(300).itemHeight(15).gap(5))
+        //.legend(dc.legend().x($(this).parent().parent().width()*0.80)) testing
+        //.legend(dc.legend().x(780).y(300).itemHeight(15).gap(5))
         .yAxis().ticks(10);
 
     positionChart
         .dimension(yearDim)
         //.width($(window).width()*0.9)
-        .width(900)
+        .width($(this).parent().parent().width())
         .height(500)
         .compose([
             dc.lineChart(positionChart)
@@ -260,19 +157,16 @@ function makeGraphs(error, premierleagueData) {
         .yAxisLabel("Position")
         .brushOn(false)
         .rangeChart(pointsChart)
-        .legend(dc.legend().x($(window).width()*0.7).y(10).itemHeight(15).gap(5))
+        //.legend(dc.legend().x($(window).width()*0.7).y(10).itemHeight(15).gap(5))
+        //.y(d3.scale.linear().domain([1, 20]));
         .yAxis(yAxis);
 
     dc.renderAll();
 
     $(window).resize(function() {
-        pointsChart
-            .width($(window).width()*0.9)
-            .legend(dc.legend().x($(window).width()*0.7).y(10).itemHeight(15).gap(5));
         positionChart
-            .width($(window).width()*0.9)
-            .legend(dc.legend().x($(window).width()*0.7).y(10).itemHeight(15).gap(5));
+            .width($(this).parent().parent().width());
+            //.legend(dc.legend().x($(window).width()*0.7).y(10).itemHeight(15).gap(5));
         dc.renderAll();
     });
 }
-

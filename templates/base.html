@@ -26,12 +26,12 @@
                     <li class="nav-item top-layer-nav-item dropdown navbar-team-list"><a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="false" aria-expanded="true">Teams</a>
                         <div class="teams-list-container dropdown-menu d-md-none d-lg-none d-xl-none" aria-labelledby="navbarDropdownMenuLink">
                             <ul class="teams-list">
-                                <li class="teams-list-item"><a class="dropdown-item" href="/teams/manchesterunited">Man United</a></li>
-                                <li class="teams-list-item"><a class="dropdown-item" href="/teams/manchestercity">Man City</a></li>
-                                <li class="teams-list-item"><a class="dropdown-item" href="/teams/chelsea">Chelsea</a></li>
-                                <li class="teams-list-item"><a class="dropdown-item" href="/teams/arsenal">Arsenal</a></li>
-                                <li class="teams-list-item"><a class="dropdown-item" href="/teams/tottenhamhotspur">Spurs</a></li>
-                                <li class="teams-list-item"><a class="dropdown-item" href="/teams/liverpool">Liverpool</a></li>
+                                <li class="teams-list-item"><a class="dropdown-item manunited-link" href="/teams/manchesterunited">Man United</a></li>
+                                <li class="teams-list-item"><a class="dropdown-item mancity-link" href="/teams/manchestercity">Man City</a></li>
+                                <li class="teams-list-item"><a class="dropdown-item chelsea-link" href="/teams/chelsea">Chelsea</a></li>
+                                <li class="teams-list-item"><a class="dropdown-item arsenal-link" href="/teams/arsenal">Arsenal</a></li>
+                                <li class="teams-list-item"><a class="dropdown-item spurs-link" href="/teams/tottenhamhotspur">Spurs</a></li>
+                                <li class="teams-list-item"><a class="dropdown-item liverpool-link" href="/teams/liverpool">Liverpool</a></li>
                             </ul>
                         </div>
                     </li>
@@ -56,9 +56,11 @@
         {% endblock %}
     </main>
 
-    <footer class="clearfix">
-        <hr />
-        <p class="small text-muted footer-text">Premier League Analysis by Minesh Kothari</p>
+    <footer class="footer clearfix">
+        <div class="container footer-content">
+            <p class="small footer-text">Premier League Analysis by <a href="http://www.mineshkothari.eu5.net/" target="_blank">Minesh Kothari</a></p>
+        </div>
+
     </footer>
 
 
