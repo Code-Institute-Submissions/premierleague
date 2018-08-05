@@ -1,5 +1,5 @@
 queue()
-    .defer(d3.json, "/premierleague/data")
+    .defer(d3.json, "/premierleague/team/CHELSEA")
     .await(makeGraphs);
 
 function makeGraphs(error, premierleagueData) {
@@ -58,6 +58,12 @@ function makeGraphs(error, premierleagueData) {
         .group(positionGroupChelsea)
         .width(250)
         .height(250)
+        .legend(dc.legend().x(10)
+                           .y(235)
+                           .itemHeight(15)
+                           .gap(0)
+                           .horizontal(true)
+                           .itemWidth(30))
         .minAngleForLabel(2)
         .radius(90)
         .innerRadius(40);
@@ -65,57 +71,85 @@ function makeGraphs(error, premierleagueData) {
     yearSelectorChelsea
         .dimension(yearDim)
         .group(chelseaPointsByYear)
-        .width($(this).parent().parent().width())
-        .height(150)
-        //.centerBar(true)
-        //.gap(10)
+        .width($(this).parent().width())
+        .height(250)
+        .margins({top: 50, right: 35, bottom: 50, left: 35})
+        .xAxisLabel("Year")
+        .yAxisLabel("Points")
         .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]))
         .y(d3.scale.linear().domain([45, 100]));
 
     formGuideChelsea
         .dimension(yearDim)
-        .width($(this).parent().parent().width())
+        .width($(this).parent().width())
+        .margins({top: 50, right: 75, bottom: 50, left: 35})
         .height(300)
         .group(chelseaWins, "Wins")
         .stack(chelseaDrawn, "Draws")
         .stack(chelseaLosses, "Losses")
         .brushOn(false)
         .renderArea(true)
+        .rangeChart(yearSelectorChelsea)
         .x(d3.time.scale().domain([minYear, maxYear]))
-        .legend(dc.legend().x(450).y(10).itemHeight(13).gap(5))
+        .y(d3.scale.linear().domain([0, 40]))
+        .legend(dc.legend().x($('#formGuideChelsea').width()-70)
+                           .y(50)
+                           .itemHeight(13)
+                           .gap(5))
+        .xAxisLabel("Year")
         .yAxisLabel("Total");
 
     goalsChartChelsea
         .dimension(yearDim)
         .group(chelseaGoalsByYear)
-        .width($(this).parent().parent().width())
+        .width($(this).parent().width())
         .height(250)
+        .margins({top: 25, right: 35, bottom: 50, left: 35})
+        .brushOn(false)
         .barPadding(0)
+        .rangeChart(formGuideChelsea)
         .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]))
         //.yAxis(yAxis);
-        .y(d3.scale.linear().domain([40, 110]));
+        .y(d3.scale.linear().domain([40, 110]))
+        .yAxisLabel("Scored")
+        .xAxisLabel("Year");
 
     goalsConcChartChelsea
         .dimension(yearDim)
         .group(chelseaGoalsConcByYear)
-        .width($(this).parent().parent().width())
+        .width($(this).parent().width())
         .height(250)
+        .margins({top: 25, right: 35, bottom: 50, left: 35})
+        .brushOn(false)
+        .rangeChart(goalsChartChelsea)
         .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]))
-        .y(d3.scale.linear().domain([10, 60]));
+        .y(d3.scale.linear().domain([10, 60]))
+        .yAxisLabel("Conceded")
+        .xAxisLabel("Year");
 
     goalDifferenceChartChelsea
         .dimension(yearDim)
         .group(chelseaGoalDifference)
-        .width($(this).parent().parent().width())
+        .width($(this).parent().width())
         .height(250)
+        .margins({top: 25, right: 35, bottom: 50, left: 35})
+        .brushOn(false)
+        .rangeChart(goalsConcChartChelsea)
         .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]))
-        .y(d3.scale.linear().domain([0, 80]));
+        .y(d3.scale.linear().domain([0, 80]))
+        .yAxisLabel("Goal Difference")
+        .xAxisLabel("Year");
 
     dc.renderAll();
 
     $(window).resize(function() {
         yearSelectorChelsea
-            .width($(this).parent().parent().width());
+            .width($(this).parent().width());
+        formGuideChelsea
+            .legend(dc.legend().x($('#formGuideChelsea').width()-70)
+                   .y(50)
+                   .itemHeight(13)
+                   .gap(5));
         dc.renderAll();
     });
 }

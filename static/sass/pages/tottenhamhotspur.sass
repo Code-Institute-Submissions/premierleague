@@ -1,15 +1,21 @@
 .tottenham-hotspur-hero
   border-bottom: 5px solid $spurs-accent
-  &::after
-    background: linear-gradient(rgba(52,58,64,1),rgba(52,58,64,0.6)), url("/static/assets/badges/Tottenham_Hotspur_FC.png")
-    background-repeat: no-repeat
-    background-position: center top
-    background-size: contain
-    top: 100px
-    bottom: 35vh
+  background: linear-gradient(rgba(52,58,64,1),rgba(52,58,64,0.6)), url("/static/assets/badges/Tottenham_Hotspur_FC.png")
+  background-repeat: no-repeat
+  background-position: center top
+  background-size: contain
 
 @media (min-width: 768px)
   .tottenham-hotspur-hero
-    &::after
-      background-position: center right
-      //top: 10%
+    background-position: center right
+
+#goalsChartSpurs rect.bar,
+#goalsConcChartSpurs rect.bar,
+#goalDifferenceChartSpurs rect.bar
+   fill: rgba(67,28,119,.3)
+
+#yearSelectorSpurs rect.bar,
+#goalsChartSpurs rect.bar:hover,
+#goalsConcChartSpurs rect.bar:hover,
+#goalDifferenceChartSpurs rect.bar:hover
+   fill: rgba(67,28,119,1)

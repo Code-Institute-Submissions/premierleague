@@ -1,13 +1,23 @@
 .manchester-city-hero
   border-bottom: 5px solid $man-city-accent
-  &::after
-    background: linear-gradient(rgba(52,58,64,1),rgba(52,58,64,0.6)), url("/static/assets/badges/manchester-city-logo.png")
-    background-repeat: no-repeat
-    background-position: center top
-    background-size: contain
+  background: linear-gradient(rgba(52,58,64,1),rgba(52,58,64,0.6)), url("/static/assets/badges/manchester-city-logo.png")
+  background-repeat: no-repeat
+  background-position: center top
+  background-size: contain
 
 @media (min-width: 768px)
   .manchester-city-hero
-    &::after
-      background-position: center right
-      top: 4%
+    background-position: center right
+
+
+
+//rgb(131,180,221)
+
+#goalsChartManCity rect.bar,
+#goalsConcChartManCity rect.bar
+   fill: rgba(131,180,221,.3)
+
+#yearSelectorManCity rect.bar,
+#goalsChartManCity rect.bar:hover,
+#goalsConcChartManCity rect.bar:hover
+   fill: rgba(131,180,221,1)

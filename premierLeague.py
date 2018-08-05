@@ -42,9 +42,14 @@ def liverpool():
 def about():
     return render_template("about.html")
 
-
+@app.route('/premierleague/team/<teamname>')
 @app.route("/premierleague/data")
-def premierleague_data():
+def premierleague_data(teamname=None):
+
+    if teamname:
+        filter = {"team": teamname}
+    else:
+        filter = {}
 
     FIELDS = {
         '_id': False,
@@ -63,8 +68,10 @@ def premierleague_data():
 
     with MongoClient(MONGODB_HOST, MONGODB_PORT) as conn:
         collection = conn[DBS_NAME][COLLECTION_NAME]
-        projects = collection.find(projection=FIELDS)
+        projects = collection.find(filter, projection=FIELDS)
         return json.dumps(list(projects))
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)

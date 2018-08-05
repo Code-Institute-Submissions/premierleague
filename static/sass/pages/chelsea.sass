@@ -1,13 +1,22 @@
 .chelsea-hero
   border-bottom: 5px solid $chelsea-accent
-  &::after
-    background: linear-gradient(rgba(52,58,64,1),rgba(52,58,64,0.6)), url("/static/assets/badges/chelsea-logo-vector.png")
-    background-repeat: no-repeat
-    background-position: center top
-    background-size: contain
+  background: linear-gradient(rgba(52,58,64,1),rgba(52,58,64,0.6)), url("/static/assets/badges/chelsea-logo-vector.png")
+  background-repeat: no-repeat
+  background-position: center top
+  background-size: contain
 
 @media (min-width: 768px)
   .chelsea-hero
-    &::after
-      background-position: center right
-      top: 4%
+    background-position: center right
+
+
+//5,44,86
+
+#goalsChartChelsea rect.bar,
+#goalsConcChartChelsea rect.bar
+   fill: rgba(5,44,86,.3)
+
+#yearSelectorChelsea rect.bar,
+#goalsChartChelsea rect.bar:hover,
+#goalsConcChartChelsea rect.bar:hover
+   fill: rgba(5,44,86,1)

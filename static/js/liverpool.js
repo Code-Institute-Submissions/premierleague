@@ -1,5 +1,5 @@
 queue()
-    .defer(d3.json, "/premierleague/data")
+    .defer(d3.json, "/premierleague/team/LIVERPOOL")
     .await(makeGraphs);
 
 function makeGraphs(error, premierleagueData) {
@@ -58,6 +58,12 @@ function makeGraphs(error, premierleagueData) {
         .group(positionGroupLiverpool)
         .width(250)
         .height(250)
+        .legend(dc.legend().x(10)
+                           .y(235)
+                           .itemHeight(15)
+                           .gap(0)
+                           .horizontal(true)
+                           .itemWidth(30))
         .minAngleForLabel(2)
         .radius(90)
         .innerRadius(40);
@@ -65,57 +71,85 @@ function makeGraphs(error, premierleagueData) {
     yearSelectorLiverpool
         .dimension(yearDim)
         .group(liverpoolPointsByYear)
-        .width($(this).parent().parent().width())
-        .height(150)
-        //.centerBar(true)
-        //.gap(10)
+        .width($(this).parent().width())
+        .height(250)
+        .margins({top: 50, right: 35, bottom: 50, left: 35})
+        .xAxisLabel("Year")
+        .yAxisLabel("Points")
         .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]))
         .y(d3.scale.linear().domain([45, 90]));
 
     formGuideLiverpool
         .dimension(yearDim)
-        .width($(this).parent().parent().width())
+        .width($(this).parent().width())
         .height(300)
+        .margins({top: 50, right: 75, bottom: 50, left: 35})
         .group(liverpoolWins, "Wins")
         .stack(liverpoolDrawn, "Draws")
         .stack(liverpoolLosses, "Losses")
         .brushOn(false)
         .renderArea(true)
+        .rangeChart(yearSelectorLiverpool)
         .x(d3.time.scale().domain([minYear, maxYear]))
-        .legend(dc.legend().x(450).y(10).itemHeight(13).gap(5))
+        .y(d3.scale.linear().domain([0, 40]))
+        .legend(dc.legend().x($('#formGuideLiverpool').width()-70)
+                           .y(50)
+                           .itemHeight(13)
+                           .gap(5))
+        .xAxisLabel("Year")
         .yAxisLabel("Total");
 
     goalsChartLiverpool
         .dimension(yearDim)
         .group(liverpoolGoalsByYear)
-        .width($(this).parent().parent().width())
+        .width($(this).parent().width())
         .height(250)
+        .margins({top: 25, right: 35, bottom: 50, left: 35})
+        .brushOn(false)
         .barPadding(0)
+        .rangeChart(formGuideLiverpool)
         .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]))
         //.yAxis(yAxis);
-        .y(d3.scale.linear().domain([40, 110]));
+        .y(d3.scale.linear().domain([40, 110]))
+        .yAxisLabel("Scored")
+        .xAxisLabel("Year");
 
     goalsConcChartLiverpool
         .dimension(yearDim)
         .group(liverpoolGoalsConcByYear)
-        .width($(this).parent().parent().width())
+        .width($(this).parent().width())
         .height(250)
+        .margins({top: 25, right: 35, bottom: 50, left: 35})
+        .brushOn(false)
+        .rangeChart(goalsChartLiverpool)
         .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]))
-        .y(d3.scale.linear().domain([20, 55]));
+        .y(d3.scale.linear().domain([20, 55]))
+        .yAxisLabel("Conceded")
+        .xAxisLabel("Year");
 
     goalDifferenceChartLiverpool
         .dimension(yearDim)
         .group(liverpoolGoalDifference)
-        .width($(this).parent().parent().width())
+        .width($(this).parent().width())
         .height(250)
+        .margins({top: 25, right: 35, bottom: 50, left: 35})
+        .brushOn(false)
+        .rangeChart(goalsConcChartLiverpool)
         .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]))
-        .y(d3.scale.linear().domain([0, 55]));
+        .y(d3.scale.linear().domain([0, 55]))
+        .yAxisLabel("Goal Difference")
+        .xAxisLabel("Year");
 
     dc.renderAll();
 
     $(window).resize(function() {
         yearSelectorLiverpool
-            .width($(this).parent().parent().width());
+            .width($(this).parent().width());
+        formGuideLiverpool
+            .legend(dc.legend().x($('#formGuideLiverpool').width()-70)
+                   .y(50)
+                   .itemHeight(13)
+                   .gap(5));
         dc.renderAll();
     });
 }

@@ -1,5 +1,5 @@
 queue()
-    .defer(d3.json, "/premierleague/data")
+    .defer(d3.json, "/premierleague/team/TOTTENHAM%20HOTSPUR")
     .await(makeGraphs);
 
 function makeGraphs(error, premierleagueData) {
@@ -58,6 +58,12 @@ function makeGraphs(error, premierleagueData) {
         .group(positionGroupSpurs)
         .width(250)
         .height(250)
+        .legend(dc.legend().x(0)
+                           .y(235)
+                           .itemHeight(15)
+                           .gap(0)
+                           .horizontal(true)
+                           .itemWidth(30))
         .minAngleForLabel(2)
         .radius(90)
         .innerRadius(40);
@@ -65,59 +71,88 @@ function makeGraphs(error, premierleagueData) {
     yearSelectorSpurs
         .dimension(yearDim)
         .group(spursPointsByYear)
-        .width($(this).parent().parent().width())
-        .height(150)
-        //.centerBar(true)
-        //.gap(10)
+        .width($(this).parent().width())
+        .height(250)
+        .margins({top: 50, right: 35, bottom: 50, left: 35})
+        .xAxisLabel("Year")
+        .yAxisLabel("Points")
         .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]))
         .y(d3.scale.linear().domain([40, 90]));
 
     formGuideSpurs
         .dimension(yearDim)
-        .width($(this).parent().parent().width())
+        .width($(this).parent().width())
         .height(300)
+        .margins({top: 50, right: 75, bottom: 50, left: 35})
         .group(spursWins, "Wins")
         .stack(spursDrawn, "Draws")
         .stack(spursLosses, "Losses")
         .brushOn(false)
         .renderArea(true)
+        .rangeChart(yearSelectorSpurs)
         .x(d3.time.scale().domain([minYear, maxYear]))
-        .legend(dc.legend().x(450).y(10).itemHeight(13).gap(5))
+        .y(d3.scale.linear().domain([0, 40]))
+        .legend(dc.legend().x($('#formGuideSpurs').width()-70)
+                           .y(50)
+                           .itemHeight(13)
+                           .gap(5))
+        .xAxisLabel("Year")
         .yAxisLabel("Total");
 
     goalsChartSpurs
         .dimension(yearDim)
         .group(spursGoalsByYear)
-        .width($(this).parent().parent().width())
+        .width($(this).parent().width())
         .height(250)
+        .margins({top: 25, right: 35, bottom: 50, left: 35})
+        .brushOn(false)
         .barPadding(0)
+        .rangeChart(formGuideSpurs)
         .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]))
         //.yAxis(yAxis);
-        .y(d3.scale.linear().domain([30, 90]));
+        .y(d3.scale.linear().domain([30, 90]))
+        .yAxisLabel("Scored")
+        .xAxisLabel("Year");
 
     goalsConcChartSpurs
         .dimension(yearDim)
         .group(spursGoalsConcByYear)
-        .width($(this).parent().parent().width())
+        .width($(this).parent().width())
         .height(250)
+        .margins({top: 25, right: 35, bottom: 50, left: 35})
+        .brushOn(false)
+        .rangeChart(goalsChartSpurs)
         .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]))
-        .y(d3.scale.linear().domain([20, 70]));
+        .y(d3.scale.linear().domain([20, 70]))
+        .yAxisLabel("Conceded")
+        .xAxisLabel("Year");
 
     goalDifferenceChartSpurs
         .dimension(yearDim)
         .group(spursGoalDifference)
-        .width($(this).parent().parent().width())
+        .width($(this).parent().width())
         .height(250)
+        .margins({top: 25, right: 35, bottom: 50, left: 35})
+        .brushOn(false)
+        .rangeChart(goalsConcChartSpurs)
         .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]))
-        .y(d3.scale.linear().domain([-20, 70]));
+        .y(d3.scale.linear().domain([-20, 70]))
+        .yAxisLabel("Goal Difference")
+        .xAxisLabel("Year");
 
     dc.renderAll();
 
-    $("#goalDifferenceChartSpurs .axis.x").attr("transform", "translate(30, 173)");
+    $("#goalDifferenceChartSpurs .axis.x").attr("transform", "translate(47.5, 152)");
 
     $(window).resize(function() {
         yearSelectorSpurs
-            .width($(this).parent().parent().width());
+            .width($(this).parent().width());
+        formGuideSpurs
+            .legend(dc.legend().x($('#formGuideSpurs').width()-70)
+                       .y(50)
+                       .itemHeight(13)
+                       .gap(5));
         dc.renderAll();
+        $("#goalDifferenceChartSpurs .axis.x").attr("transform", "translate(47, 152)");
     });
 }

@@ -1,17 +1,20 @@
 .manchester-united-hero
   border-bottom: 5px solid $man-united-accent
-  &::after
-    background: linear-gradient(rgba(52,58,64,1),rgba(52,58,64,0.6)), url("/static/assets/badges/manchester-united-logo-vector.png")
-    background-repeat: no-repeat
-    background-position: center top
-    background-size: contain
+  background: linear-gradient(rgba(52,58,64,1),rgba(52,58,64,0.6)), url("/static/assets/badges/manchester-united-logo-vector.png")
+  background-repeat: no-repeat
+  background-position: center top
+  background-size: contain
 
 @media (min-width: 768px)
   .manchester-united-hero
-    &::after
       background-position: center right
-      top: 4%
 
 
+#goalsChartManUnited rect.bar,
+#goalsConcChartManUnited rect.bar
+   fill: rgba(237,45,58,.3)
 
-
+#yearSelectorManUnited rect.bar,
+#goalsChartManUnited rect.bar:hover,
+#goalsConcChartManUnited rect.bar:hover
+   fill: rgba(237,45,58,1)

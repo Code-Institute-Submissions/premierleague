@@ -1,3 +1,8 @@
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-bottom: 0 !important;
+}
+
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -42,7 +47,7 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -ms-overflow-style: scrollbar;
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 @-ms-viewport {
@@ -6260,7 +6265,8 @@ a:hover {
 }
 
 .hero {
-  min-height: 35vh;
+  height: 35vh;
+  min-height: 250px;
   text-align: center;
   color: #FFFFFF;
   border-bottom: 5px solid #38003c;
@@ -6271,23 +6277,29 @@ a:hover {
   letter-spacing: 3px;
 }
 
-.team-page-hero::after {
-  content: '';
-  background: -webkit-gradient(linear, left top, left bottom, from(#343a40), to(rgba(52, 58, 64, 0.6)));
-  background: -webkit-linear-gradient(#343a40, rgba(52, 58, 64, 0.6));
-  background: -o-linear-gradient(#343a40, rgba(52, 58, 64, 0.6));
-  background: linear-gradient(#343a40, rgba(52, 58, 64, 0.6));
-  position: absolute;
-  top: -4%;
-  bottom: 35vh;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  min-height: 35vh;
-}
-
 .hero-title-container {
   padding: 2em 1em;
+}
+
+.secondary-info {
+  color: #e2e2e2;
+}
+
+.secondary-info .custom-helper {
+  padding: 1em;
+}
+
+.secondary-info .icon-container {
+  padding: 1em 0 .5em;
+  font-size: 70px;
+}
+
+.test-one {
+  background-color: purple;
+}
+
+.test-two {
+  background-color: #9e9e9e;
 }
 
 .shadow-box {
@@ -6310,22 +6322,23 @@ a:hover {
   padding-top: 5%;
 }
 
-.custom-chart {
-  width: 100%;
+.logo-style {
+  font-weight: 700;
+}
+
+.logo-style span {
+  font-weight: 100;
 }
 
 .chart-title {
   text-transform: uppercase;
   display: inline-block;
-}
-
-.chart-title ::after {
-  margin-top: 5%;
-  content: '';
-  display: block;
-  height: 2.5px;
-  width: 100%;
-  background-color: #38003c;
+  border-left: 15px solid purple;
+  padding: .5em 1em;
+  background: #a9a9a9;
+  color: #e2e2e2;
+  -webkit-box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.25);
 }
 
 .main-selectors {
@@ -6333,8 +6346,12 @@ a:hover {
 }
 
 .selector {
-  padding: 3em 0;
-  height: 350px;
+  padding: 3em .5em;
+  height: 401px;
+}
+
+.chart-container {
+  padding: 3em 1em;
 }
 
 .year-selector {
@@ -6345,19 +6362,15 @@ a:hover {
 .form-chart {
   max-width: 960px;
   margin: auto;
-  padding: 2em .5em;
 }
 
 .goals-analysis, .goals-analysis-2 {
   background-color: ghostwhite;
 }
 
-.goals-analysis {
-  padding: 5% 0;
-}
-
 .chart-container-goals-analysis {
   max-width: 600px;
+  height: 401px;
   margin: auto;
 }
 
@@ -6371,9 +6384,30 @@ a:hover {
   }
 }
 
-@media (min-width: 768px) {
-  .form-chart {
-    padding: 2em;
+#pointsChart .line, #positionChart .line {
+  stroke-width: 0.5px;
+}
+
+.dc-chart .x-axis-label, .dc-chart .y-axis-label {
+  font-size: .8em;
+  font-style: italic;
+}
+
+.dc-chart rect.bar {
+  width: 19px;
+}
+
+@media (max-width: 500px) {
+  .dc-chart rect.bar {
+    width: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dc-chart .axis.x .tick text {
+    -webkit-transform: translate(17px, 13px) rotateZ(60deg);
+    -ms-transform: translate(17px, 13px) rotate(60deg);
+    transform: translate(17px, 13px) rotateZ(60deg);
   }
 }
 
@@ -6388,11 +6422,30 @@ a:hover {
   margin-top: 5%;
 }
 
-.manchester-united-hero {
-  border-bottom: 5px solid #ed2d3a;
+button.intro_button {
+  padding: 1em 3em;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.8);
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-transition: all 350ms ease-in-out;
+  -o-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
+  text-transform: uppercase;
+  margin: 1em auto;
 }
 
-.manchester-united-hero::after {
+button.intro_button:hover {
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  background-color: rgba(52, 58, 64, 0.6);
+}
+
+.hero-title-container h1 {
+  text-transform: uppercase;
+}
+
+.manchester-united-hero {
+  border-bottom: 5px solid #ed2d3a;
   background: -webkit-gradient(linear, left top, left bottom, from(#343a40), to(rgba(52, 58, 64, 0.6))), url("/static/assets/badges/manchester-united-logo-vector.png");
   background: -webkit-linear-gradient(#343a40, rgba(52, 58, 64, 0.6)), url("/static/assets/badges/manchester-united-logo-vector.png");
   background: -o-linear-gradient(#343a40, rgba(52, 58, 64, 0.6)), url("/static/assets/badges/manchester-united-logo-vector.png");
@@ -6403,17 +6456,24 @@ a:hover {
 }
 
 @media (min-width: 768px) {
-  .manchester-united-hero::after {
+  .manchester-united-hero {
     background-position: center right;
-    top: 4%;
   }
+}
+
+#goalsChartManUnited rect.bar,
+#goalsConcChartManUnited rect.bar {
+  fill: rgba(237, 45, 58, 0.3);
+}
+
+#yearSelectorManUnited rect.bar,
+#goalsChartManUnited rect.bar:hover,
+#goalsConcChartManUnited rect.bar:hover {
+  fill: #ed2d3a;
 }
 
 .manchester-city-hero {
   border-bottom: 5px solid #83b4dd;
-}
-
-.manchester-city-hero::after {
   background: -webkit-gradient(linear, left top, left bottom, from(#343a40), to(rgba(52, 58, 64, 0.6))), url("/static/assets/badges/manchester-city-logo.png");
   background: -webkit-linear-gradient(#343a40, rgba(52, 58, 64, 0.6)), url("/static/assets/badges/manchester-city-logo.png");
   background: -o-linear-gradient(#343a40, rgba(52, 58, 64, 0.6)), url("/static/assets/badges/manchester-city-logo.png");
@@ -6424,17 +6484,24 @@ a:hover {
 }
 
 @media (min-width: 768px) {
-  .manchester-city-hero::after {
+  .manchester-city-hero {
     background-position: center right;
-    top: 4%;
   }
+}
+
+#goalsChartManCity rect.bar,
+#goalsConcChartManCity rect.bar {
+  fill: rgba(131, 180, 221, 0.3);
+}
+
+#yearSelectorManCity rect.bar,
+#goalsChartManCity rect.bar:hover,
+#goalsConcChartManCity rect.bar:hover {
+  fill: #83b4dd;
 }
 
 .chelsea-hero {
   border-bottom: 5px solid #0f2c56;
-}
-
-.chelsea-hero::after {
   background: -webkit-gradient(linear, left top, left bottom, from(#343a40), to(rgba(52, 58, 64, 0.6))), url("/static/assets/badges/chelsea-logo-vector.png");
   background: -webkit-linear-gradient(#343a40, rgba(52, 58, 64, 0.6)), url("/static/assets/badges/chelsea-logo-vector.png");
   background: -o-linear-gradient(#343a40, rgba(52, 58, 64, 0.6)), url("/static/assets/badges/chelsea-logo-vector.png");
@@ -6445,17 +6512,24 @@ a:hover {
 }
 
 @media (min-width: 768px) {
-  .chelsea-hero::after {
+  .chelsea-hero {
     background-position: center right;
-    top: 4%;
   }
+}
+
+#goalsChartChelsea rect.bar,
+#goalsConcChartChelsea rect.bar {
+  fill: rgba(5, 44, 86, 0.3);
+}
+
+#yearSelectorChelsea rect.bar,
+#goalsChartChelsea rect.bar:hover,
+#goalsConcChartChelsea rect.bar:hover {
+  fill: #052c56;
 }
 
 .arsenal-hero {
   border-bottom: 5px solid #f8d33a;
-}
-
-.arsenal-hero::after {
   background: -webkit-gradient(linear, left top, left bottom, from(#343a40), to(rgba(52, 58, 64, 0.6))), url("/static/assets/badges/arsenal-logo-vector.png");
   background: -webkit-linear-gradient(#343a40, rgba(52, 58, 64, 0.6)), url("/static/assets/badges/arsenal-logo-vector.png");
   background: -o-linear-gradient(#343a40, rgba(52, 58, 64, 0.6)), url("/static/assets/badges/arsenal-logo-vector.png");
@@ -6466,17 +6540,24 @@ a:hover {
 }
 
 @media (min-width: 768px) {
-  .arsenal-hero::after {
+  .arsenal-hero {
     background-position: center right;
-    top: 4%;
   }
+}
+
+#goalsChartArsenal rect.bar,
+#goalsConcChartArsenal rect.bar {
+  fill: rgba(248, 211, 58, 0.3);
+}
+
+#yearSelectorArsenal rect.bar,
+#goalsChartArsenal rect.bar:hover,
+#goalsConcChartArsenal rect.bar:hover {
+  fill: #f8d33a;
 }
 
 .tottenham-hotspur-hero {
   border-bottom: 5px solid #431c77;
-}
-
-.tottenham-hotspur-hero::after {
   background: -webkit-gradient(linear, left top, left bottom, from(#343a40), to(rgba(52, 58, 64, 0.6))), url("/static/assets/badges/Tottenham_Hotspur_FC.png");
   background: -webkit-linear-gradient(#343a40, rgba(52, 58, 64, 0.6)), url("/static/assets/badges/Tottenham_Hotspur_FC.png");
   background: -o-linear-gradient(#343a40, rgba(52, 58, 64, 0.6)), url("/static/assets/badges/Tottenham_Hotspur_FC.png");
@@ -6484,21 +6565,29 @@ a:hover {
   background-repeat: no-repeat;
   background-position: center top;
   background-size: contain;
-  top: 100px;
-  bottom: 35vh;
 }
 
 @media (min-width: 768px) {
-  .tottenham-hotspur-hero::after {
+  .tottenham-hotspur-hero {
     background-position: center right;
   }
 }
 
-.liverpool-hero {
-  border-bottom: 5px solid #007430;
+#goalsChartSpurs rect.bar,
+#goalsConcChartSpurs rect.bar,
+#goalDifferenceChartSpurs rect.bar {
+  fill: rgba(67, 28, 119, 0.3);
 }
 
-.liverpool-hero::after {
+#yearSelectorSpurs rect.bar,
+#goalsChartSpurs rect.bar:hover,
+#goalsConcChartSpurs rect.bar:hover,
+#goalDifferenceChartSpurs rect.bar:hover {
+  fill: #431c77;
+}
+
+.liverpool-hero {
+  border-bottom: 5px solid #007430;
   background: -webkit-gradient(linear, left top, left bottom, from(#343a40), to(rgba(52, 58, 64, 0.6))), url("/static/assets/badges/liverpool-logo-vector.png");
   background: -webkit-linear-gradient(#343a40, rgba(52, 58, 64, 0.6)), url("/static/assets/badges/liverpool-logo-vector.png");
   background: -o-linear-gradient(#343a40, rgba(52, 58, 64, 0.6)), url("/static/assets/badges/liverpool-logo-vector.png");
@@ -6509,8 +6598,44 @@ a:hover {
 }
 
 @media (min-width: 768px) {
-  .liverpool-hero::after {
+  .liverpool-hero {
     background-position: center right;
-    top: 4%;
   }
+}
+
+#goalsChartLiverpool rect.bar,
+#goalsConcChartLiverpool rect.bar,
+#goalDifferenceChartLiverpool rect.bar {
+  fill: rgba(0, 116, 48, 0.3);
+}
+
+#yearSelectorLiverpool rect.bar,
+#goalsChartLiverpool rect.bar:hover,
+#goalsConcChartLiverpool rect.bar:hover,
+#goalDifferenceChartLiverpool rect.bar:hover {
+  fill: #007430;
+}
+
+.about-hero {
+  background: -webkit-gradient(linear, left top, left bottom, from(#343a40), to(rgba(52, 58, 64, 0.6)));
+  background: -webkit-linear-gradient(#343a40, rgba(52, 58, 64, 0.6));
+  background: -o-linear-gradient(#343a40, rgba(52, 58, 64, 0.6));
+  background: linear-gradient(#343a40, rgba(52, 58, 64, 0.6));
+  text-transform: uppercase;
+}
+
+.about-header {
+  text-transform: uppercase;
+  display: inline-block;
+  border-left: 15px solid purple;
+  padding: .5em 1em;
+  background: #a9a9a9;
+  color: #e2e2e2;
+  -webkit-box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.25);
+  margin-bottom: 5%;
+}
+
+.about-block-container {
+  padding: 3em 1em;
 }

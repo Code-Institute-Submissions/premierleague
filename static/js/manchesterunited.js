@@ -1,5 +1,5 @@
 queue()
-    .defer(d3.json, "/premierleague/data")
+    .defer(d3.json, "/premierleague/team/MANCHESTER%20UNITED")
     .await(makeGraphs);
 
 function makeGraphs(error, premierleagueData) {
@@ -14,13 +14,16 @@ function makeGraphs(error, premierleagueData) {
         return new Date(d["year"], 0, 1);
     });
 
-    var positionDimManUnited = ndx.dimension(function (d) {
-        if (d["team"] == "MANCHESTER UNITED") {
-            return d["position"];
-        } else {
-            return false
-        }
-    });
+    var positionDimManUnited = ndx.dimension(dc.pluck("position"));
+
+    // var positionDimManUnited = ndx.dimension(function (d) {
+    //     return
+    //     // if (d["team"] == "MANCHESTER UNITED") {
+    //     //     return d["position"];
+    //     // } else {
+    //     //     return false
+    //     // }
+    // });
 
     var positionGroupManUnited = positionDimManUnited.group().reduceCount();
 
@@ -58,67 +61,99 @@ function makeGraphs(error, premierleagueData) {
         .group(positionGroupManUnited)
         .width(250)
         .height(250)
-        .minAngleForLabel(2)
+        .legend(dc.legend().x(25)
+                           .y(235)
+                           .itemHeight(15)
+                           .gap(0)
+                           .horizontal(true)
+                           .itemWidth(30))
+        .minAngleForLabel(4)
         .radius(90)
         .innerRadius(40);
-
-    // console.log(positionGroupManUnited.all());
 
     yearSelectorManUnited
         .dimension(yearDim)
         .group(manUnitedPointsByYear)
-        .width($(this).parent().parent().width())
-        .height(150)
-        //.centerBar(true)
-        //.gap(10)
+        .width($(this).parent().width())
+        .height(250)
+        .margins({top: 50, right: 35, bottom: 50, left: 35})
+        .yAxisLabel("Points")
+        .xAxisLabel("Year")
         .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]))
         .y(d3.scale.linear().domain([50, 100]));
 
     formGuideManUnited
         .dimension(yearDim)
-        .width($(this).parent().parent().width())
+        .width($(this).parent().width())
+        .margins({top: 50, right: 75, bottom: 50, left: 35})
         .height(300)
         .group(manUnitedWins, "Wins")
         .stack(manUnitedDrawn, "Draws")
         .stack(manUnitedLosses, "Losses")
         .brushOn(false)
         .renderArea(true)
+        .rangeChart(yearSelectorManUnited)
         .x(d3.time.scale().domain([minYear, maxYear]))
-        .legend(dc.legend().x($(window).width()*.565).y(10).itemHeight(13).gap(5))
+        .y(d3.scale.linear().domain([0, 40]))
+        .legend(dc.legend().x($('#formGuideManUnited').width()-70)
+                           .y(50)
+                           .itemHeight(13)
+                           .gap(5))
+        .xAxisLabel("Year")
         .yAxisLabel("Total");
 
     goalsChartManUnited
         .dimension(yearDim)
         .group(manUnitedGoalsByYear)
-        .width($(this).parent().parent().width())
+        .width($(this).parent().width())
         .height(250)
+        .margins({top: 25, right: 35, bottom: 50, left: 35})
+        .brushOn(false)
         .barPadding(0)
+        .rangeChart(formGuideManUnited)
         .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]))
         //.yAxis(yAxis);
-        .y(d3.scale.linear().domain([45, 100]));
+        .y(d3.scale.linear().domain([45, 100]))
+        .yAxisLabel("Scored")
+        .xAxisLabel("Year");
 
     goalsConcChartManUnited
         .dimension(yearDim)
         .group(manUnitedGoalsConcByYear)
-        .width($(this).parent().parent().width())
+        .width($(this).parent().width())
+        .margins({top: 25, right: 35, bottom: 50, left: 35})
+        .brushOn(false)
         .height(250)
+        .rangeChart(goalsChartManUnited)
         .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]))
-        .y(d3.scale.linear().domain([15, 50]));
+        .y(d3.scale.linear().domain([15, 50]))
+        .yAxisLabel("Conceded")
+        .xAxisLabel("Year");
 
     goalDifferenceChartManUnited
         .dimension(yearDim)
         .group(manUnitedGoalDifference)
-        .width($(this).parent().parent().width())
+        .width($(this).parent().width())
+        .margins({top: 25, right: 35, bottom: 50, left: 35})
+        .brushOn(false)
         .height(250)
-        .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]));
+        .rangeChart(goalsConcChartManUnited)
+        .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]))
+        .yAxisLabel("Goal Difference")
+        .xAxisLabel("Year");
         //.y(d3.scale.linear().domain([-25, 100]));
 
     dc.renderAll();
 
     $(window).resize(function() {
         yearSelectorManUnited
-            .width($(this).parent().parent().width())
-            .legend(dc.legend().x($(window).width()*0.5).y(10).itemHeight(13).gap(5));
+            .width($(this).parent().width());
+
+        formGuideManUnited
+            .legend(dc.legend().x($('#formGuideManUnited').width()-70)
+                   .y(50)
+                   .itemHeight(13)
+                   .gap(5));
         dc.renderAll();
     });
 }

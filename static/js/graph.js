@@ -76,6 +76,13 @@ function makeGraphs(error, premierleagueData) {
         .ordinalColors(['#f8d33a','#0f2c56','#007430','#83b4dd','#ed2d3a','#431c77'])
         .width(250)
         .height(250)
+        .transitionDuration(1500)
+        .legend(dc.legend().x(10)
+                           .y(235)
+                           .itemHeight(15)
+                           .gap(0)
+                           .horizontal(true)
+                           .itemWidth(40))
         .minAngleForLabel(2)
         .radius(90)
         .innerRadius(40);
@@ -84,18 +91,17 @@ function makeGraphs(error, premierleagueData) {
         .dimension(yearDim)
         .group(groupYear)
         .width($(this).parent().parent().width())
+        .margins({top: 40, right: 0, bottom: 40, left: 0})
         .height(150)
-        //.centerBar(true)
-        //.gap(10)
+        .xAxisLabel("Year")
         .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]));
-        //.alwaysUseRounding(true);
 
     pointsChart
         .dimension(yearDim)
-        //.width($(window).width()*0.9)
         .width($(this).parent().parent().width())
         .height(500)
-        .margins({top: 30, right: 50, bottom: 50, left: 50})
+        .margins({top: 50, right: 50, bottom: 50, left: 50})
+        .renderHorizontalGridLines(true)
         .compose([
             dc.lineChart(pointsChart)
                 .colors("#ed2d3a")
@@ -118,19 +124,25 @@ function makeGraphs(error, premierleagueData) {
         ])
         .x(d3.time.scale().domain([minYear, maxYear]))
         .elasticY(true)
+        .elasticX(true)
         .brushOn(false)
         .xAxisLabel("Year")
         .yAxisLabel("Points")
         .rangeChart(yearSelector)
-        //.legend(dc.legend().x($(this).parent().parent().width()*0.80)) testing
+        .legend(dc.legend().x($('#pointsChart').width()*0.80)
+                           .y(300)
+                           .itemHeight(15)
+                           .gap(5))
         //.legend(dc.legend().x(780).y(300).itemHeight(15).gap(5))
         .yAxis().ticks(10);
 
     positionChart
         .dimension(yearDim)
-        //.width($(window).width()*0.9)
         .width($(this).parent().parent().width())
         .height(500)
+        .margins({top: 50, right: 50, bottom: 50, left: 50})
+        .renderHorizontalGridLines(true)
+        .renderVerticalGridLines(true)
         .compose([
             dc.lineChart(positionChart)
                 .colors('#ed2d3a')
@@ -152,21 +164,32 @@ function makeGraphs(error, premierleagueData) {
                 .group(liverpoolPositionByYear, "Liverpool")
         ])
         .x(d3.time.scale().domain([minYear, maxYear]))
-        .elasticY(true)
+        .elasticX(true)
         .xAxisLabel("Year")
         .yAxisLabel("Position")
         .brushOn(false)
         .rangeChart(pointsChart)
-        //.legend(dc.legend().x($(window).width()*0.7).y(10).itemHeight(15).gap(5))
-        //.y(d3.scale.linear().domain([1, 20]));
+        .legend(dc.legend().x($('#positionChart').width()*0.80)
+                   .y(300)
+                   .itemHeight(15)
+                   .gap(5))
+        .y(d3.scale.linear().domain([20, 0.5]))
         .yAxis(yAxis);
 
     dc.renderAll();
 
     $(window).resize(function() {
+        pointsChart
+            .legend(dc.legend().x($('#pointsChart').width()*0.80)
+               .y(300)
+               .itemHeight(15)
+               .gap(5));
         positionChart
-            .width($(this).parent().parent().width());
-            //.legend(dc.legend().x($(window).width()*0.7).y(10).itemHeight(15).gap(5));
+            .width($(this).parent().parent().width())
+            .legend(dc.legend().x($('#positionChart').width()*0.80)
+               .y(300)
+               .itemHeight(15)
+               .gap(5));
         dc.renderAll();
     });
 }

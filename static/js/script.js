@@ -9,4 +9,3 @@ $(document).ready(function() {
        $('.teams-list').toggleClass('team-list-active');
     });
 });
-

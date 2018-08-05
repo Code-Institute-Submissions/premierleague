@@ -1,13 +1,19 @@
 .arsenal-hero
   border-bottom: 5px solid $arsenal-accent
-  &::after
-    background: linear-gradient(rgba(52,58,64,1),rgba(52,58,64,0.6)), url("/static/assets/badges/arsenal-logo-vector.png")
-    background-repeat: no-repeat
-    background-position: center top
-    background-size: contain
+  background: linear-gradient(rgba(52,58,64,1),rgba(52,58,64,0.6)), url("/static/assets/badges/arsenal-logo-vector.png")
+  background-repeat: no-repeat
+  background-position: center top
+  background-size: contain
 
 @media (min-width: 768px)
   .arsenal-hero
-    &::after
-      background-position: center right
-      top: 4%
+    background-position: center right
+
+#goalsChartArsenal rect.bar,
+#goalsConcChartArsenal rect.bar
+   fill: rgba(248,211,58,.3)
+
+#yearSelectorArsenal rect.bar,
+#goalsChartArsenal rect.bar:hover,
+#goalsConcChartArsenal rect.bar:hover
+   fill: rgba(248,211,58,1)

@@ -1,5 +1,5 @@
 queue()
-    .defer(d3.json, "/premierleague/data")
+    .defer(d3.json, "/premierleague/team/MANCHESTER%20CITY")
     .await(makeGraphs);
 
 function makeGraphs(error, premierleagueData) {
@@ -58,6 +58,12 @@ function makeGraphs(error, premierleagueData) {
         .group(positionGroupManCity)
         .width(250)
         .height(250)
+        .legend(dc.legend().x(10)
+                           .y(235)
+                           .itemHeight(15)
+                           .gap(0)
+                           .horizontal(true)
+                           .itemWidth(30))
         .minAngleForLabel(2)
         .radius(90)
         .innerRadius(40);
@@ -65,60 +71,90 @@ function makeGraphs(error, premierleagueData) {
     yearSelectorManCity
         .dimension(yearDim)
         .group(manCityPointsByYear)
-        .width($(this).parent().parent().width())
-        .height(150)
-        //.centerBar(true)
-        //.gap(10)
+        .width($(this).parent().width())
+        .height(250)
+        .margins({top: 50, right: 35, bottom: 50, left: 35})
+        .xAxisLabel("Year")
+        .yAxisLabel("Points")
         .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]))
         .y(d3.scale.linear().domain([30, 100]));
 
     formGuideManCity
         .dimension(yearDim)
-        .width($(this).parent().parent().width())
+        .width($(this).parent().width())
+        .margins({top: 50, right: 75, bottom: 50, left: 35})
         .height(300)
         .group(manCityWins, "Wins")
         .stack(manCityDrawn, "Draws")
         .stack(manCityLosses, "Losses")
         .brushOn(false)
         .renderArea(true)
+        .rangeChart(yearSelectorManCity)
         .x(d3.time.scale().domain([minYear, maxYear]))
-        .legend(dc.legend().x(450).y(10).itemHeight(13).gap(5))
+        .y(d3.scale.linear().domain([0, 40]))
+        .legend(dc.legend().x($('#formGuideManCity').width()-70)
+                           .y(50)
+                           .itemHeight(13)
+                           .gap(5))
+        .xAxisLabel("Year")
         .yAxisLabel("Total");
 
     goalsChartManCity
         .dimension(yearDim)
         .group(manCityGoalsByYear)
-        .width($(this).parent().parent().width())
+        .width($(this).parent().width())
+        .transitionDuration(1500)
         .height(250)
+        .margins({top: 25, right: 35, bottom: 50, left: 35})
+        .brushOn(false)
         .barPadding(0)
+        .rangeChart(formGuideManCity)
         .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]))
         //.yAxis(yAxis);
-        .y(d3.scale.linear().domain([20, 110]));
+        .y(d3.scale.linear().domain([20, 110]))
+        .yAxisLabel("Scored")
+        .xAxisLabel("Year");
 
     goalsConcChartManCity
         .dimension(yearDim)
         .group(manCityGoalsConcByYear)
-        .width($(this).parent().parent().width())
+        .width($(this).parent().width())
         .height(250)
+        .margins({top: 25, right: 35, bottom: 50, left: 35})
+        .brushOn(false)
+        .rangeChart(goalsChartManCity)
         .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]))
-        .y(d3.scale.linear().domain([15, 70]));
+        .y(d3.scale.linear().domain([15, 70]))
+        .yAxisLabel("Conceded")
+        .xAxisLabel("Year");
 
     goalDifferenceChartManCity
         .dimension(yearDim)
         .group(manCityGoalDifference)
-        .width($(this).parent().parent().width())
+        .width($(this).parent().width())
         .height(250)
+        .margins({top: 25, right: 35, bottom: 50, left: 35})
+        .brushOn(false)
+        .rangeChart(goalsConcChartManCity)
         .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]))
-        .y(d3.scale.linear().domain([-30, 80]));
+        .elasticY(true)
+        .yAxisLabel("Goal Difference")
+        .xAxisLabel("Year");
+
 
     dc.renderAll();
 
-    $("#goalDifferenceChartManCity .axis.x").attr("transform", "translate(30, 162.5)");
+    $("#goalDifferenceChartManCity .axis.x").attr("transform", "translate(47, 144)");
 
     $(window).resize(function() {
         yearSelectorManCity
-            .width($(this).parent().parent().width());
+            .width($(this).parent().width());
+        formGuideManCity
+            .legend(dc.legend().x($('#formGuideManCity').width()-70)
+                       .y(50)
+                       .itemHeight(13)
+                       .gap(5));
         dc.renderAll();
-        $("#goalDifferenceChartManCity .axis.x").attr("transform", "translate(30, 162.5)");
+        $("#goalDifferenceChartManCity .axis.x").attr("transform", "translate(47, 144)");
     });
 }

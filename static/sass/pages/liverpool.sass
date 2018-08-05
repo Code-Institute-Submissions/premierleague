@@ -1,13 +1,21 @@
 .liverpool-hero
   border-bottom: 5px solid $liverpool-accent
-  &::after
-    background: linear-gradient(rgba(52,58,64,1),rgba(52,58,64,0.6)), url("/static/assets/badges/liverpool-logo-vector.png")
-    background-repeat: no-repeat
-    background-position: center top
-    background-size: contain
+  background: linear-gradient(rgba(52,58,64,1),rgba(52,58,64,0.6)), url("/static/assets/badges/liverpool-logo-vector.png")
+  background-repeat: no-repeat
+  background-position: center top
+  background-size: contain
 
 @media (min-width: 768px)
   .liverpool-hero
-    &::after
-      background-position: center right
-      top: 4%
+    background-position: center right
+
+#goalsChartLiverpool rect.bar,
+#goalsConcChartLiverpool rect.bar,
+#goalDifferenceChartLiverpool rect.bar
+   fill: rgba(0,116,48,.3)
+
+#yearSelectorLiverpool rect.bar,
+#goalsChartLiverpool rect.bar:hover,
+#goalsConcChartLiverpool rect.bar:hover,
+#goalDifferenceChartLiverpool rect.bar:hover
+   fill: rgba(0,116,48,1)

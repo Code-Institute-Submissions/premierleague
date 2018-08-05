@@ -4,25 +4,46 @@
         <div class="row no-gutters">
             <div class="col">
                 <div class="hero-title-container">
-                    <h1>Welcome to the Premier League 'Top Six' Dashboard!</h1>
+                    <h1 class="logo-style logo-style">Top<span>Six</span>Dashboard</h1>
                     <p>Dive into the statistics of the most illustrious teams in English football.</p>
+
                 </div>
             </div>
         </div>
     </section>
+    <section class="secondary-info">
+        <div class="row no-gutters">
+            <div class="col-lg-3 col-md-5 col-sm-6 test-one">
+                <div class="icon-container d-flex align-items-center justify-content-center">
+                    <i class="fas fa-info"></i>
+                </div>
+                <div class='custom-helper'>
+                    <p class="d-block text-center">Need some help?<br />
+                    Click "START TOUR!" now for a quick tutorial.</p>
+                    <p class="d-block text-center">
+                        <button class="intro_button" type="button" autofocus onclick="javascript:introJs().start();">Start Tour!</button>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-7 col-sm-6 test-two">
+
+            </div>
+        </div>
+
+    </section>
     <section class="main-selectors">
         <div class="row no-gutters">
             <div class="col-sm-12 col-md-4">
-                <div class="selector text-center shadow-box">
-                    <div class="team-selector">
+                <div class="shadow-box">
+                    <div class="selector team-selector text-center" data-step="1" data-intro="Select the teams you want to compare" style="font-weight: normal" data-position="right">
                         <div class="chart-title"><h4>Team Selector</h4></div>
                         <div id="teamSelector" class="custom-chart"></div>
                     </div>
                 </div>
             </div>
             <div class="col-sm-12 col-md-8">
-                <div class="selector text-center shadow-box">
-                    <div class="year-selector">
+                <div class="shadow-box">
+                    <div class="selector year-selector text-center" data-step="2" data-intro="Select the year" style="font-weight: normal" data-position="left">
                         <div class="chart-title"><h4>Year Selector</h4></div>
                         <div id="yearSelector" class="custom-chart"></div>
                     </div>
@@ -30,19 +51,19 @@
             </div>
         </div>
     </section>
-    <section class="main-charts padding-top-5">
+    <section class="main-charts">
         <div class="row no-gutters">
             <div class="col-md-12 col-lg-6">
-                <div class="chart-container text-center">
-                    <div class="points-chart">
+                <div class="shadow-box">
+                    <div class="points-chart chart-container text-center" data-step="3" data-intro="See the results of your selection here..." style="font-weight: normal" data-position="right">
                         <div class="chart-title"><h4>Points Chart</h4></div>
                         <div id="pointsChart" class="custom-chart"></div>
                     </div>
                 </div>
             </div>
             <div class="col-md-12 col-lg-6">
-                <div class="chart-container text-center">
-                    <div class="position-chart">
+                <div class="shadow-box">
+                    <div class="position-chart chart-container text-center" data-step="4" data-intro="...and here" style="font-weight: normal" data-position="left">
                         <div class="chart-title"><h4>Position Chart</h4></div>
                         <div id="positionChart" class="custom-chart"></div>
                     </div>
