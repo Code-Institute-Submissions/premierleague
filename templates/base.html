@@ -5,8 +5,8 @@
     <title>Premier League Dashboard | Premier League Top Six | Minesh Kothari</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700" rel="stylesheet">
-    <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/dc.css')}}">
-    <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/introjs.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for ('static', filename='lib/css/dc.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for ('static', filename='lib/css/introjs.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ url_for ('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 </head>
@@ -42,7 +42,7 @@
             </div>
         </nav>
         <div class="d-none d-md-block d-lg-block d-xl-block desktop-teams-list-container">
-            <ul class="d-flex justify-content-center align-items-center desktop-teams-list" data-step="5" data-intro="You can also check out stats for individual teams by clicking on these links" style="font-weight: normal" data-position="right">
+            <ul class="d-flex justify-content-center align-items-center desktop-teams-list" data-step="5" data-intro="You can also check out stats for individual teams by clicking on the menu" style="font-weight: normal" data-position="right">
                 <li class="desktop-teams-list-item"><a class="desktop-team-links manunited-link d-flex align-items-center" href="/teams/manchesterunited">Man United</a></li>
                 <li class="desktop-teams-list-item"><a class="desktop-team-links mancity-link d-flex align-items-center" href="/teams/manchestercity">Man City</a></li>
                 <li class="desktop-teams-list-item"><a class="desktop-team-links chelsea-link d-flex align-items-center" href="/teams/chelsea">Chelsea</a></li>
@@ -57,8 +57,43 @@
         {% endblock %}
     </main>
     <footer class="footer clearfix">
-        <div class="container footer-content">
-            <p class="small footer-text">Premier League Analysis by <a href="http://www.mineshkothari.eu5.net/" target="_blank">Minesh Kothari</a></p>
+        <div class="container">
+            <div class="row footer-content">
+                <div class="col-sm-12 col-md-6 footer-logo">
+                    <span class="footer-logo-style logo-style">TOP<span>SIX</span>DASHBOARD</span>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <span class="footer-title">Menu</span>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/teams/manchesterunited">Man United</a></li>
+                        <li><a href="/teams/manchestercity">Man City</a></li>
+                        <li><a href="/teams/chelsea">Chelsea</a></li>
+                        <li><a href="/teams/arsenal">Arsenal</a></li>
+                        <li><a href="/teams/tottenhamhotspur">Spurs</a></li>
+                        <li><a href="/teams/liverpool">Liverpool</a></li>
+                        <li><a href="/about">About</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <span class="footer-title">External Links</span>
+                    <ul>
+                        <li><a href="https://www.premierleague.com/" target="_blank">Premier League</a></li>
+                        <li><a href="https://www.manutd.com/" target="_blank">Man United</a></li>
+                        <li><a href="https://www.mancity.com/" target="_blank">Man City</a></li>
+                        <li><a href="https://www.chelseafc.com/" target="_blank">Chelsea</a></li>
+                        <li><a href="https://www.arsenal.com/" target="_blank">Arsenal</a></li>
+                        <li><a href="https://www.tottenhamhotspur.com/" target="_blank">Spurs</a></li>
+                        <li><a href="https://www.liverpoolfc.com/" target="_blank">Liverpool</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row sub-footer-content">
+                <div class="col-12">
+                    <p class="small sub-footer-text"><em>As part of my <a href="https://www.codeinstitute.net/" target="_blank">Code Institute</a> Stream 2 project</em></p>
+                    <p class="small sub-footer-text">&copy; 2018 <span class="logo-style">TOP<span>SIX</span>DASHBOARD</span>, All rights reserved | Premier League Analysis by <a href="http://www.mineshkothari.eu5.net/" target="_blank">Minesh Kothari</a>.</p>
+                </div>
+            </div>
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>

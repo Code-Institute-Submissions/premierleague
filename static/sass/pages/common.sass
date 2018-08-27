@@ -8,6 +8,13 @@
 .team-page-hero
   text-transform: uppercase
   letter-spacing: 3px
+  .hero-title-container
+    h1
+      span
+        display: block
+        font-weight: 100
+        letter-spacing: .5em
+
 
 .hero-title-container
   padding: 2em 1em
@@ -15,17 +22,21 @@
 .secondary-info
   color: #e2e2e2
   .custom-helper
+    background-color: purple
+  .helper-text
     padding: 1em
   .icon-container
     padding: 1em 0 .5em
     //border: 2px solid lightblue
     font-size: 70px
-
-.test-one
-  background-color: purple
-
-.test-two
-  background-color: #9e9e9e
+  .brief-intro-container
+    font-size: 150%
+    font-style: italic
+    background-color: #a9a9a9
+    padding: 5% !important
+    .brief-intro
+      width: 100%
+      max-width: 900px
 
 .shadow-box
   border: 0.5px solid rgba(0,0,0,0.05)
@@ -114,6 +125,16 @@
 @media (max-width: 768px)
   .padding-top-5-sm
     padding-top: 5%
+
+
+@media (min-width: 768px)
+  .team-page-hero
+    text-align: left
+    h1
+      font-size: 4rem
+      letter-spacing: .5em
+      span
+        letter-spacing: 1.5em
 
 //@media (min-width: 768px)
 //  .form-chart

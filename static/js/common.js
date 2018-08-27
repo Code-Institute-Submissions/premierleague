@@ -3,7 +3,7 @@ function createGroup(dimension, teamName, attribute) {
         if (d["team"]== teamName){
             return d[attribute];
         } else {
-            return 0
+            return 0;
         }
     });
 }
