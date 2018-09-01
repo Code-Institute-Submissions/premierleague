@@ -5,19 +5,80 @@
 .about-header
   text-transform: uppercase
   display: inline-block
+  letter-spacing: 3px
   border-left: 15px solid purple
-  padding: .5em 1em
+  padding: 1em 2em
   background: #a9a9a9
   color: #e2e2e2
   box-shadow: 0 5px 30px -5px rgba(0,0,0,0.25)
-  margin-bottom: 5%
-  //& ::after
-  //  margin-top: 5%
-  //  content: ''
-  //  display: block
-  //  height: 2.5px
-  //  width: 100%
-  //  background-color: $purple
+  margin-bottom: 10%
+  h4
+    font-size: 150%
 
-.about-block-container
-  padding: 3em 1em
+.placeholder-image-container
+  min-height: 300px
+  height: 100%
+  width: 100%
+  background-position: center
+  background-size: cover
+  background-repeat: no-repeat
+  &.intro-image
+    background-image: url("http://127.0.0.1:5000/static/assets/footballs.jpg")
+  &.tech-image
+    background-image: url("http://127.0.0.1:5000/static/assets/footballs.jpg")
+  &.author-image
+    background-image: url("http://127.0.0.1:5000/static/assets/code-image.png")
+    background-position: left center
+
+.about-tech
+  background-color: #d7ccd8
+
+.custom-padding
+  padding: 7.5% !important
+
+.custom-tech-header-padding
+  padding: 7.5% 7.5% 0 7.5% !important
+
+.custom-tech-padding
+  padding: 0 7.5% 7.5% !important
+
+.inline-tech-logos
+  padding-bottom: 7.5%
+
+.tech-logo-container
+  overflow: hidden
+
+.tech-logo
+  height: 150px
+  width: 150px
+  background-size: contain
+  background-position: center
+  background-repeat: no-repeat
+  transition: all 2000ms ease-in-out
+  -webkit-filter: grayscale(100%) opacity(30%) // Safari 6.0 - 9.0
+    filter: grayscale(100%) opacity(30%)
+  &:hover
+    transform: scale(1.15)
+    overflow: hidden
+    -webkit-filter: none // Safari 6.0 - 9.0
+    filter: none
+  &.html-logo
+    background-image: url("http://127.0.0.1:5000/static/assets/html5-logo.png")
+  &.css-logo
+    background-image: url("http://127.0.0.1:5000/static/assets/css3-logo.png")
+  &.sass-logo
+    background-image: url("http://127.0.0.1:5000/static/assets/sass-logo.png")
+  &.bootstrap-logo
+    background-image: url("http://127.0.0.1:5000/static/assets/bootstrap-logo.png")
+  &.javascript-logo
+    background-image: url("http://127.0.0.1:5000/static/assets/js-logo.png")
+  &.d3-logo
+    background-image: url("http://127.0.0.1:5000/static/assets/d3-logo.png")
+  &.dc-logo
+    background-image: url("http://127.0.0.1:5000/static/assets/dc-logo.png")
+  &.python-logo
+    background-image: url("http://127.0.0.1:5000/static/assets/python-logo.png")
+  &.flask-logo
+    background-image: url("http://127.0.0.1:5000/static/assets/flask-logo.png")
+  &.mongodb-logo
+    background-image: url("http://127.0.0.1:5000/static/assets/mongodb-logo.png")

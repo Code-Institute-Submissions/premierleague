@@ -6256,13 +6256,58 @@ footer .container .footer-content ul li {
 }
 
 footer .container .footer-content ul li a {
+  color: #BEBEBE;
+  font-weight: 100;
+  padding: .125em 0;
+  position: relative;
+  display: inline-block;
+  -webkit-transition: color .350s ease-in-out;
+  -o-transition: color .350s ease-in-out;
+  transition: color .350s ease-in-out;
+}
+
+footer .container .footer-content ul li a::after, footer .container .footer-content ul li a::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  width: 0;
+  right: 0;
+  height: .5px;
+}
+
+footer .container .footer-content ul li a::before {
+  background: #38003c;
+  -webkit-transition: width 350ms ease-in-out 150ms;
+  -o-transition: width 350ms ease-in-out 150ms;
+  transition: width 350ms ease-in-out 150ms;
+}
+
+footer .container .footer-content ul li a::after {
+  background: #FFFFFF;
+  -webkit-transition: width 350ms ease-in-out;
+  -o-transition: width 350ms ease-in-out;
+  transition: width 350ms ease-in-out;
+}
+
+footer .container .footer-content ul li a:hover {
   color: #FFFFFF;
+}
+
+footer .container .footer-content ul li a:hover::after, footer .container .footer-content ul li a:hover::before {
+  width: 100%;
+  left: 0;
 }
 
 footer .container .footer-content .footer-title {
   font-weight: 100;
   text-transform: uppercase;
   letter-spacing: 2px;
+}
+
+footer .container .sub-footer-content {
+  border-top: 0.5px solid rgba(255, 255, 255, 0.25);
+  padding-top: 3em;
+  color: #BEBEBE;
 }
 
 footer .container p {
@@ -6276,8 +6321,19 @@ footer .container .sub-footer-text {
 }
 
 footer .container .sub-footer-text a {
-  color: #FFFFFF;
+  color: #BEBEBE;
   font-weight: 700;
+  -webkit-transition: color 350ms ease-in-out;
+  -o-transition: color 350ms ease-in-out;
+  transition: color 350ms ease-in-out;
+}
+
+footer .container .sub-footer-text a:hover {
+  color: #FFFFFF;
+}
+
+html {
+  min-width: 320px;
 }
 
 * {
@@ -6727,15 +6783,124 @@ button.intro_button:focus {
 .about-header {
   text-transform: uppercase;
   display: inline-block;
+  letter-spacing: 3px;
   border-left: 15px solid purple;
-  padding: .5em 1em;
+  padding: 1em 2em;
   background: #a9a9a9;
   color: #e2e2e2;
   -webkit-box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.25);
   box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.25);
-  margin-bottom: 5%;
+  margin-bottom: 10%;
 }
 
-.about-block-container {
-  padding: 3em 1em;
+.about-header h4 {
+  font-size: 150%;
+}
+
+.placeholder-image-container {
+  min-height: 300px;
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.placeholder-image-container.intro-image {
+  background-image: url("http://127.0.0.1:5000/static/assets/footballs.jpg");
+}
+
+.placeholder-image-container.tech-image {
+  background-image: url("http://127.0.0.1:5000/static/assets/footballs.jpg");
+}
+
+.placeholder-image-container.author-image {
+  background-image: url("http://127.0.0.1:5000/static/assets/code-image.png");
+  background-position: left center;
+}
+
+.about-tech {
+  background-color: #d7ccd8;
+}
+
+.custom-padding {
+  padding: 7.5% !important;
+}
+
+.custom-tech-header-padding {
+  padding: 7.5% 7.5% 0 7.5% !important;
+}
+
+.custom-tech-padding {
+  padding: 0 7.5% 7.5% !important;
+}
+
+.inline-tech-logos {
+  padding-bottom: 7.5%;
+}
+
+.tech-logo-container {
+  overflow: hidden;
+}
+
+.tech-logo {
+  height: 150px;
+  width: 150px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-transition: all 2000ms ease-in-out;
+  -o-transition: all 2000ms ease-in-out;
+  transition: all 2000ms ease-in-out;
+  -webkit-filter: grayscale(100%) opacity(30%);
+  -webkit-filter-filter: grayscale(100%) opacity(30%);
+}
+
+.tech-logo:hover {
+  -webkit-transform: scale(1.15);
+  -ms-transform: scale(1.15);
+  transform: scale(1.15);
+  overflow: hidden;
+  -webkit-filter: none;
+  filter: none;
+}
+
+.tech-logo.html-logo {
+  background-image: url("http://127.0.0.1:5000/static/assets/html5-logo.png");
+}
+
+.tech-logo.css-logo {
+  background-image: url("http://127.0.0.1:5000/static/assets/css3-logo.png");
+}
+
+.tech-logo.sass-logo {
+  background-image: url("http://127.0.0.1:5000/static/assets/sass-logo.png");
+}
+
+.tech-logo.bootstrap-logo {
+  background-image: url("http://127.0.0.1:5000/static/assets/bootstrap-logo.png");
+}
+
+.tech-logo.javascript-logo {
+  background-image: url("http://127.0.0.1:5000/static/assets/js-logo.png");
+}
+
+.tech-logo.d3-logo {
+  background-image: url("http://127.0.0.1:5000/static/assets/d3-logo.png");
+}
+
+.tech-logo.dc-logo {
+  background-image: url("http://127.0.0.1:5000/static/assets/dc-logo.png");
+}
+
+.tech-logo.python-logo {
+  background-image: url("http://127.0.0.1:5000/static/assets/python-logo.png");
+}
+
+.tech-logo.flask-logo {
+  background-image: url("http://127.0.0.1:5000/static/assets/flask-logo.png");
+}
+
+.tech-logo.mongodb-logo {
+  background-image: url("http://127.0.0.1:5000/static/assets/mongodb-logo.png");
 }
