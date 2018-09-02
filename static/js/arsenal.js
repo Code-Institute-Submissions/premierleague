@@ -49,7 +49,7 @@ function makeGraphs(error, premierleagueData) {
     var yearSelectorArsenal = dc.barChart("#yearSelectorArsenal");
     var goalsChartArsenal = dc.barChart("#goalsChartArsenal");
     var goalsConcChartArsenal = dc.barChart("#goalsConcChartArsenal");
-    var goalDifferenceChartArsenal = dc.lineChart("#goalDifferenceChartArsenal");
+    var goalDifferenceChartArsenal = dc.barChart("#goalDifferenceChartArsenal");
     var formGuideArsenal = dc.lineChart("#formGuideArsenal");
 
     // CHART PROPERTIES

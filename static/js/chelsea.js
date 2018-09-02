@@ -49,7 +49,7 @@ function makeGraphs(error, premierleagueData) {
     var yearSelectorChelsea = dc.barChart("#yearSelectorChelsea");
     var goalsChartChelsea = dc.barChart("#goalsChartChelsea");
     var goalsConcChartChelsea = dc.barChart("#goalsConcChartChelsea");
-    var goalDifferenceChartChelsea = dc.lineChart("#goalDifferenceChartChelsea");
+    var goalDifferenceChartChelsea = dc.barChart("#goalDifferenceChartChelsea");
     var formGuideChelsea = dc.lineChart("#formGuideChelsea");
 
     // CHART PROPERTIES

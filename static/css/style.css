@@ -6390,35 +6390,6 @@ a:hover {
   padding: 2em 1em;
 }
 
-.secondary-info {
-  color: #e2e2e2;
-}
-
-.secondary-info .custom-helper {
-  background-color: purple;
-}
-
-.secondary-info .helper-text {
-  padding: 1em;
-}
-
-.secondary-info .icon-container {
-  padding: 1em 0 .5em;
-  font-size: 70px;
-}
-
-.secondary-info .brief-intro-container {
-  font-size: 150%;
-  font-style: italic;
-  background-color: #a9a9a9;
-  padding: 5% !important;
-}
-
-.secondary-info .brief-intro-container .brief-intro {
-  width: 100%;
-  max-width: 900px;
-}
-
 .shadow-box {
   border: 0.5px solid rgba(0, 0, 0, 0.05);
   -webkit-transition: all 350ms ease-in-out;
@@ -6493,6 +6464,12 @@ a:hover {
 
 .dc-chart {
   float: none !important;
+}
+
+#tooltip {
+  position: absolute;
+  padding: 5px 10px;
+  background: #007bff;
 }
 
 @media (max-width: 768px) {
@@ -6582,6 +6559,35 @@ button.intro_button:focus {
   left: 25px;
 }
 
+.secondary-info {
+  color: #e2e2e2;
+}
+
+.secondary-info .custom-helper {
+  background-color: purple;
+}
+
+.secondary-info .helper-text {
+  padding: 1em;
+}
+
+.secondary-info .icon-container {
+  padding: 1em 0 .5em;
+  font-size: 70px;
+}
+
+.secondary-info .brief-intro-container {
+  font-size: 150%;
+  font-style: italic;
+  background-color: #a9a9a9;
+  padding: 5% !important;
+}
+
+.secondary-info .brief-intro-container .brief-intro {
+  width: 100%;
+  max-width: 900px;
+}
+
 @media (min-width: 768px) {
   .hero-title-container h1 {
     font-size: 4rem;
@@ -6610,13 +6616,15 @@ button.intro_button:focus {
 }
 
 #goalsChartManUnited rect.bar,
-#goalsConcChartManUnited rect.bar {
+#goalsConcChartManUnited rect.bar,
+#goalDifferenceChartManUnited rect.bar {
   fill: rgba(237, 45, 58, 0.3);
 }
 
 #yearSelectorManUnited rect.bar,
 #goalsChartManUnited rect.bar:hover,
-#goalsConcChartManUnited rect.bar:hover {
+#goalsConcChartManUnited rect.bar:hover,
+#goalDifferenceChartManUnited rect.bar:hover {
   fill: #ed2d3a;
 }
 
@@ -6642,13 +6650,15 @@ button.intro_button:focus {
 }
 
 #goalsChartManCity rect.bar,
-#goalsConcChartManCity rect.bar {
+#goalsConcChartManCity rect.bar,
+#goalDifferenceChartManCity rect.bar {
   fill: rgba(131, 180, 221, 0.3);
 }
 
 #yearSelectorManCity rect.bar,
 #goalsChartManCity rect.bar:hover,
-#goalsConcChartManCity rect.bar:hover {
+#goalsConcChartManCity rect.bar:hover,
+#goalDifferenceChartManCity rect.bar:hover {
   fill: #83b4dd;
 }
 
@@ -6670,13 +6680,15 @@ button.intro_button:focus {
 }
 
 #goalsChartChelsea rect.bar,
-#goalsConcChartChelsea rect.bar {
+#goalsConcChartChelsea rect.bar,
+#goalDifferenceChartChelsea rect.bar {
   fill: rgba(5, 44, 86, 0.3);
 }
 
 #yearSelectorChelsea rect.bar,
 #goalsChartChelsea rect.bar:hover,
-#goalsConcChartChelsea rect.bar:hover {
+#goalsConcChartChelsea rect.bar:hover,
+#goalDifferenceChartChelsea rect.bar:hover {
   fill: #052c56;
 }
 
@@ -6698,13 +6710,15 @@ button.intro_button:focus {
 }
 
 #goalsChartArsenal rect.bar,
-#goalsConcChartArsenal rect.bar {
+#goalsConcChartArsenal rect.bar,
+#goalDifferenceChartArsenal rect.bar {
   fill: rgba(248, 211, 58, 0.3);
 }
 
 #yearSelectorArsenal rect.bar,
 #goalsChartArsenal rect.bar:hover,
-#goalsConcChartArsenal rect.bar:hover {
+#goalsConcChartArsenal rect.bar:hover,
+#goalDifferenceChartArsenal rect.bar:hover {
   fill: #f8d33a;
 }
 

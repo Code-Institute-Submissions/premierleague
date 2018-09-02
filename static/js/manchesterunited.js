@@ -52,8 +52,13 @@ function makeGraphs(error, premierleagueData) {
     var yearSelectorManUnited = dc.barChart("#yearSelectorManUnited");
     var goalsChartManUnited = dc.barChart("#goalsChartManUnited");
     var goalsConcChartManUnited = dc.barChart("#goalsConcChartManUnited");
-    var goalDifferenceChartManUnited = dc.lineChart("#goalDifferenceChartManUnited");
+    var goalDifferenceChartManUnited = dc.barChart("#goalDifferenceChartManUnited");
     var formGuideManUnited = dc.lineChart("#formGuideManUnited");
+
+    // TOOLTIPS
+    var tooltip = d3.select("body")
+                    .append("div")
+                    .attr("id","tooltip");
 
     // CHART PROPERTIES
     positionSelectorManUnited
@@ -93,7 +98,7 @@ function makeGraphs(error, premierleagueData) {
         .brushOn(false)
         .renderArea(true)
         .rangeChart(yearSelectorManUnited)
-        .x(d3.time.scale().domain([minYear, maxYear]))
+        .x(d3.time.scale().domain([minYear, maxYearBoundary]))
         .y(d3.scale.linear().domain([0, 40]))
         .legend(dc.legend().x($('#formGuideManUnited').width()-70)
                            .y(50)
@@ -139,9 +144,9 @@ function makeGraphs(error, premierleagueData) {
         .height(250)
         .rangeChart(goalsConcChartManUnited)
         .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]))
+        .elasticY(true)
         .yAxisLabel("Goal Difference")
         .xAxisLabel("Year");
-        //.y(d3.scale.linear().domain([-25, 100]));
 
     dc.renderAll();
 

@@ -32,7 +32,7 @@ function makeGraphs(error, premierleagueData) {
     //DATE VALUES USED IN CHARTS
     var minYear = new Date(yearDim.bottom(1)[0]["year"], 0,1);
     var maxYear = new Date(yearDim.top(1)[0]["year"], 0,1);
-    var minYearBoundary = new Date(yearDim.bottom(1)[0]["year"]-1, 0,1);
+    var minYearBoundary = new Date(yearDim.bottom(1)[0]["year"]-2, 0,1);
     var maxYearBoundary = new Date(yearDim.top(1)[0]["year"]+1, 0,1);
 
     // GROUPS
@@ -49,7 +49,7 @@ function makeGraphs(error, premierleagueData) {
     var yearSelectorManCity = dc.barChart("#yearSelectorManCity");
     var goalsChartManCity = dc.barChart("#goalsChartManCity");
     var goalsConcChartManCity = dc.barChart("#goalsConcChartManCity");
-    var goalDifferenceChartManCity = dc.lineChart("#goalDifferenceChartManCity");
+    var goalDifferenceChartManCity = dc.barChart("#goalDifferenceChartManCity");
     var formGuideManCity = dc.lineChart("#formGuideManCity");
 
     // CHART PROPERTIES
@@ -137,14 +137,13 @@ function makeGraphs(error, premierleagueData) {
         .brushOn(false)
         .rangeChart(goalsConcChartManCity)
         .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]))
-        .elasticY(true)
+        .y(d3.scale.linear().domain([-30, 90]))
         .yAxisLabel("Goal Difference")
         .xAxisLabel("Year");
 
-
     dc.renderAll();
 
-    $("#goalDifferenceChartManCity .axis.x").attr("transform", "translate(47, 144)");
+    $("#goalDifferenceChartManCity .axis.x").attr("transform", "translate(47, 147)");
 
     $(window).resize(function() {
         yearSelectorManCity
@@ -155,6 +154,6 @@ function makeGraphs(error, premierleagueData) {
                        .itemHeight(13)
                        .gap(5));
         dc.renderAll();
-        $("#goalDifferenceChartManCity .axis.x").attr("transform", "translate(47, 144)");
+        $("#goalDifferenceChartManCity .axis.x").attr("transform", "translate(47, 147)");
     });
 }
