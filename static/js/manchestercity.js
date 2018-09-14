@@ -65,6 +65,9 @@ function makeGraphs(error, premierleagueData) {
                            .horizontal(true)
                            .itemWidth(30))
         .minAngleForLabel(2)
+        .title(function(d) {
+            return 'Position ' + d.key + ': ' + d.value;
+        })
         .radius(90)
         .innerRadius(40);
 
@@ -90,12 +93,15 @@ function makeGraphs(error, premierleagueData) {
         .brushOn(false)
         .renderArea(true)
         .rangeChart(yearSelectorManCity)
-        .x(d3.time.scale().domain([minYear, maxYear]))
+        .x(d3.time.scale().domain([minYear, maxYearBoundary]))
         .y(d3.scale.linear().domain([0, 40]))
         .legend(dc.legend().x($('#formGuideManCity').width()-70)
                            .y(50)
                            .itemHeight(13)
                            .gap(5))
+        .title(function(d) {
+            return d.key.getFullYear() + ': ' + d.value;
+        })
         .xAxisLabel("Year")
         .yAxisLabel("Total");
 
@@ -112,6 +118,9 @@ function makeGraphs(error, premierleagueData) {
         .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]))
         //.yAxis(yAxis);
         .y(d3.scale.linear().domain([20, 110]))
+        .title(function(d) {
+            return d.key.getFullYear() + ': ' + d.value;
+        })
         .yAxisLabel("Scored")
         .xAxisLabel("Year");
 
@@ -125,6 +134,9 @@ function makeGraphs(error, premierleagueData) {
         .rangeChart(goalsChartManCity)
         .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]))
         .y(d3.scale.linear().domain([15, 70]))
+        .title(function(d) {
+            return d.key.getFullYear() + ': ' + d.value;
+        })
         .yAxisLabel("Conceded")
         .xAxisLabel("Year");
 
@@ -138,6 +150,9 @@ function makeGraphs(error, premierleagueData) {
         .rangeChart(goalsConcChartManCity)
         .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]))
         .y(d3.scale.linear().domain([-30, 90]))
+        .title(function(d) {
+            return d.key.getFullYear() + ': ' + d.value;
+        })
         .yAxisLabel("Goal Difference")
         .xAxisLabel("Year");
 

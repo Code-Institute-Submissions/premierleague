@@ -65,6 +65,9 @@ function makeGraphs(error, premierleagueData) {
                            .horizontal(true)
                            .itemWidth(30))
         .minAngleForLabel(2)
+        .title(function(d) {
+            return 'Position ' + d.key + ': ' + d.value;
+        })
         .radius(90)
         .innerRadius(40);
 
@@ -96,6 +99,9 @@ function makeGraphs(error, premierleagueData) {
                            .y(50)
                            .itemHeight(13)
                            .gap(5))
+        .title(function(d) {
+            return d.key.getFullYear() + ': ' + d.value;
+        })
         .xAxisLabel("Year")
         .yAxisLabel("Total");
 
@@ -111,6 +117,9 @@ function makeGraphs(error, premierleagueData) {
         .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]))
         //.yAxis(yAxis);
         .y(d3.scale.linear().domain([40, 110]))
+        .title(function(d) {
+            return d.key.getFullYear() + ': ' + d.value;
+        })
         .yAxisLabel("Scored")
         .xAxisLabel("Year");
 
@@ -124,6 +133,9 @@ function makeGraphs(error, premierleagueData) {
         .rangeChart(goalsChartChelsea)
         .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]))
         .y(d3.scale.linear().domain([10, 60]))
+        .title(function(d) {
+            return d.key.getFullYear() + ': ' + d.value;
+        })
         .yAxisLabel("Conceded")
         .xAxisLabel("Year");
 
@@ -137,6 +149,9 @@ function makeGraphs(error, premierleagueData) {
         .rangeChart(goalsConcChartChelsea)
         .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]))
         .y(d3.scale.linear().domain([0, 80]))
+        .title(function(d) {
+            return d.key.getFullYear() + ': ' + d.value;
+        })
         .yAxisLabel("Goal Difference")
         .xAxisLabel("Year");
 

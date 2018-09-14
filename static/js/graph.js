@@ -85,7 +85,10 @@ function makeGraphs(error, premierleagueData) {
                            .itemWidth(40))
         .minAngleForLabel(2)
         .radius(90)
-        .innerRadius(40);
+        .innerRadius(40)
+        .title(function(d) {
+            return d.key;
+        });
 
     yearSelector
         .dimension(yearDim)
@@ -99,6 +102,9 @@ function makeGraphs(error, premierleagueData) {
     pointsChart
         .dimension(yearDim)
         .width($(this).parent().parent().width())
+        .title(function(d) {
+            return d.key.getFullYear() + ': ' + d.value;
+        })
         .height(500)
         .margins({top: 50, right: 50, bottom: 50, left: 50})
         .renderHorizontalGridLines(true)
@@ -122,9 +128,8 @@ function makeGraphs(error, premierleagueData) {
                 .colors('#007430')
                 .group(liverpoolPointsByYear, "Liverpool")
         ])
-        .x(d3.time.scale().domain([minYear, maxYear]))
-        .elasticY(true)
-        .elasticX(true)
+        .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]))
+        .y(d3.scale.linear().domain([0, 110]))
         .brushOn(false)
         .xAxisLabel("Year")
         .yAxisLabel("Points")
@@ -141,8 +146,10 @@ function makeGraphs(error, premierleagueData) {
         .width($(this).parent().parent().width())
         .height(500)
         .margins({top: 50, right: 50, bottom: 50, left: 50})
+        .title(function(d) {
+            return d.key.getFullYear() + ': ' + d.value;
+        })
         .renderHorizontalGridLines(true)
-        .renderVerticalGridLines(true)
         .compose([
             dc.lineChart(positionChart)
                 .colors('#ed2d3a')
@@ -163,8 +170,8 @@ function makeGraphs(error, premierleagueData) {
                 .colors('#007430')
                 .group(liverpoolPositionByYear, "Liverpool")
         ])
-        .x(d3.time.scale().domain([minYear, maxYear]))
-        .elasticX(true)
+        .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]))
+        // .elasticX(true)
         .xAxisLabel("Year")
         .yAxisLabel("Position")
         .brushOn(false)
@@ -174,7 +181,10 @@ function makeGraphs(error, premierleagueData) {
                    .itemHeight(15)
                    .gap(5))
         .y(d3.scale.linear().domain([20, 0.5]))
-        .yAxis(yAxis);
+        .yAxis(yAxis)
+        .title(function(d) {
+            return d.value;
+        });
 
     dc.renderAll();
 

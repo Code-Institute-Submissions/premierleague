@@ -55,11 +55,6 @@ function makeGraphs(error, premierleagueData) {
     var goalDifferenceChartManUnited = dc.barChart("#goalDifferenceChartManUnited");
     var formGuideManUnited = dc.lineChart("#formGuideManUnited");
 
-    // TOOLTIPS
-    var tooltip = d3.select("body")
-                    .append("div")
-                    .attr("id","tooltip");
-
     // CHART PROPERTIES
     positionSelectorManUnited
         .dimension(positionDimManUnited)
@@ -74,6 +69,9 @@ function makeGraphs(error, premierleagueData) {
                            .itemWidth(30))
         .minAngleForLabel(4)
         .radius(90)
+        .title(function(d) {
+            return 'Position ' + d.key + ': ' + d.value;
+        })
         .innerRadius(40);
 
     yearSelectorManUnited
@@ -104,6 +102,9 @@ function makeGraphs(error, premierleagueData) {
                            .y(50)
                            .itemHeight(13)
                            .gap(5))
+        .title(function(d) {
+            return d.key.getFullYear() + ': ' + d.value;
+        })
         .xAxisLabel("Year")
         .yAxisLabel("Total");
 
@@ -117,8 +118,10 @@ function makeGraphs(error, premierleagueData) {
         .barPadding(0)
         .rangeChart(formGuideManUnited)
         .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]))
-        //.yAxis(yAxis);
         .y(d3.scale.linear().domain([45, 100]))
+        .title(function(d) {
+            return d.key.getFullYear() + ': ' + d.value;
+        })
         .yAxisLabel("Scored")
         .xAxisLabel("Year");
 
@@ -132,6 +135,9 @@ function makeGraphs(error, premierleagueData) {
         .rangeChart(goalsChartManUnited)
         .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]))
         .y(d3.scale.linear().domain([15, 50]))
+        .title(function(d) {
+            return d.key.getFullYear() + ': ' + d.value;
+        })
         .yAxisLabel("Conceded")
         .xAxisLabel("Year");
 
@@ -144,6 +150,9 @@ function makeGraphs(error, premierleagueData) {
         .height(250)
         .rangeChart(goalsConcChartManUnited)
         .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]))
+        .title(function(d) {
+            return d.key.getFullYear() + ': ' + d.value;
+        })
         .elasticY(true)
         .yAxisLabel("Goal Difference")
         .xAxisLabel("Year");
@@ -162,3 +171,4 @@ function makeGraphs(error, premierleagueData) {
         dc.renderAll();
     });
 }
+

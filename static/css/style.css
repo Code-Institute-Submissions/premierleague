@@ -6367,6 +6367,17 @@ a:hover {
   color: initial;
 }
 
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .index-hero,
+  .about-hero {
+    display: block !important;
+  }
+  .index-hero .hero-title-container,
+  .about-hero .hero-title-container {
+    padding-top: 7em;
+  }
+}
+
 .hero {
   height: 35vh;
   min-height: 250px;
@@ -6553,6 +6564,7 @@ button.intro_button:focus {
 
 .hero-title-container h1 {
   text-transform: uppercase;
+  margin-bottom: 1rem !important;
 }
 
 .introjs-helperNumberLayer {
@@ -6577,8 +6589,8 @@ button.intro_button:focus {
 }
 
 .secondary-info .brief-intro-container {
-  font-size: 150%;
   font-style: italic;
+  text-align: center;
   background-color: #a9a9a9;
   padding: 5% !important;
 }
@@ -6591,6 +6603,9 @@ button.intro_button:focus {
 @media (min-width: 768px) {
   .hero-title-container h1 {
     font-size: 4rem;
+  }
+  .brief-intro-container {
+    font-size: 125%;
   }
 }
 
