@@ -6837,15 +6837,15 @@ button.intro_button:focus {
 }
 
 .placeholder-image-container.intro-image {
-  background-image: url("http://127.0.0.1:5000/static/assets/footballs.jpg");
+  background-image: url("/static/assets/footballs.jpg");
 }
 
 .placeholder-image-container.tech-image {
-  background-image: url("http://127.0.0.1:5000/static/assets/footballs.jpg");
+  background-image: url("/static/assets/footballs.jpg");
 }
 
 .placeholder-image-container.author-image {
-  background-image: url("http://127.0.0.1:5000/static/assets/code-image.png");
+  background-image: url("/static/assets/code-image.png");
   background-position: left center;
 }
 
@@ -6896,41 +6896,41 @@ button.intro_button:focus {
 }
 
 .tech-logo.html-logo {
-  background-image: url("http://127.0.0.1:5000/static/assets/html5-logo.png");
+  background-image: url("/static/assets/html5-logo.png");
 }
 
 .tech-logo.css-logo {
-  background-image: url("http://127.0.0.1:5000/static/assets/css3-logo.png");
+  background-image: url("/static/assets/css3-logo.png");
 }
 
 .tech-logo.sass-logo {
-  background-image: url("http://127.0.0.1:5000/static/assets/sass-logo.png");
+  background-image: url("/static/assets/sass-logo.png");
 }
 
 .tech-logo.bootstrap-logo {
-  background-image: url("http://127.0.0.1:5000/static/assets/bootstrap-logo.png");
+  background-image: url("/static/assets/bootstrap-logo.png");
 }
 
 .tech-logo.javascript-logo {
-  background-image: url("http://127.0.0.1:5000/static/assets/js-logo.png");
+  background-image: url("/static/assets/js-logo.png");
 }
 
 .tech-logo.d3-logo {
-  background-image: url("http://127.0.0.1:5000/static/assets/d3-logo.png");
+  background-image: url("/static/assets/d3-logo.png");
 }
 
 .tech-logo.dc-logo {
-  background-image: url("http://127.0.0.1:5000/static/assets/dc-logo.png");
+  background-image: url("/static/assets/dc-logo.png");
 }
 
 .tech-logo.python-logo {
-  background-image: url("http://127.0.0.1:5000/static/assets/python-logo.png");
+  background-image: url("/static/assets/python-logo.png");
 }
 
 .tech-logo.flask-logo {
-  background-image: url("http://127.0.0.1:5000/static/assets/flask-logo.png");
+  background-image: url("/static/assets/flask-logo.png");
 }
 
 .tech-logo.mongodb-logo {
-  background-image: url("http://127.0.0.1:5000/static/assets/mongodb-logo.png");
+  background-image: url("/static/assets/mongodb-logo.png");
 }
