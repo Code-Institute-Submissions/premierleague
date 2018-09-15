@@ -32,7 +32,7 @@ function makeGraphs(error, premierleagueData) {
     //DATE VALUES USED IN CHARTS
     var minYear = new Date(yearDim.bottom(1)[0]["year"], 0,1);
     var maxYear = new Date(yearDim.top(1)[0]["year"], 0,1);
-    var minYearBoundary = new Date(yearDim.bottom(1)[0]["year"]-2, 0,1);
+    var minYearBoundary = new Date(yearDim.bottom(1)[0]["year"]-1, 0,1);
     var maxYearBoundary = new Date(yearDim.top(1)[0]["year"]+1, 0,1);
 
     // GROUPS
@@ -58,12 +58,12 @@ function makeGraphs(error, premierleagueData) {
         .group(positionGroupManCity)
         .width(250)
         .height(250)
-        .legend(dc.legend().x(10)
-                           .y(235)
-                           .itemHeight(15)
-                           .gap(0)
-                           .horizontal(true)
-                           .itemWidth(30))
+        // .legend(dc.legend().x(0)
+        //                    .y(220)
+        //                    .itemHeight(15)
+        //                    .gap(0)
+        //                    .horizontal(true)
+        //                    .itemWidth(30))
         .minAngleForLabel(2)
         .title(function(d) {
             return 'Position ' + d.key + ': ' + d.value;
@@ -77,6 +77,9 @@ function makeGraphs(error, premierleagueData) {
         .width($(this).parent().width())
         .height(250)
         .margins({top: 50, right: 35, bottom: 50, left: 35})
+        .xUnits(function(){return 19;}) // SET BAR WIDTH
+        .centerBar(true)
+        .barPadding(0.25) // SET PADDING BETWEEN BARS
         .xAxisLabel("Year")
         .yAxisLabel("Points")
         .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]))
@@ -109,14 +112,14 @@ function makeGraphs(error, premierleagueData) {
         .dimension(yearDim)
         .group(manCityGoalsByYear)
         .width($(this).parent().width())
-        .transitionDuration(1500)
         .height(250)
         .margins({top: 25, right: 35, bottom: 50, left: 35})
         .brushOn(false)
-        .barPadding(0)
+        .xUnits(function(){return 19;}) // SET BAR WIDTH
+        .centerBar(true)
+        .barPadding(0.25) // SET PADDING BETWEEN BARS
         .rangeChart(formGuideManCity)
         .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]))
-        //.yAxis(yAxis);
         .y(d3.scale.linear().domain([20, 110]))
         .title(function(d) {
             return d.key.getFullYear() + ': ' + d.value;
@@ -131,6 +134,9 @@ function makeGraphs(error, premierleagueData) {
         .height(250)
         .margins({top: 25, right: 35, bottom: 50, left: 35})
         .brushOn(false)
+        .xUnits(function(){return 19;}) // SET BAR WIDTH
+        .centerBar(true)
+        .barPadding(0.25) // SET PADDING BETWEEN BARS
         .rangeChart(goalsChartManCity)
         .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]))
         .y(d3.scale.linear().domain([15, 70]))
@@ -147,6 +153,9 @@ function makeGraphs(error, premierleagueData) {
         .height(250)
         .margins({top: 25, right: 35, bottom: 50, left: 35})
         .brushOn(false)
+        .xUnits(function(){return 19;}) // SET BAR WIDTH
+        .centerBar(true)
+        .barPadding(0.25) // SET PADDING BETWEEN BARS
         .rangeChart(goalsConcChartManCity)
         .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]))
         .y(d3.scale.linear().domain([-30, 90]))

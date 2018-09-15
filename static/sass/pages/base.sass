@@ -28,14 +28,19 @@ a:hover
   text-decoration: none
   color: initial
 
-//.navbar-brand
-//  font-weight: 700
-//  span
-//    font-weight: 100
 
+// CROSS BROWSER MEDIA QUERIES
+// IE10 + IE11
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
   .index-hero,
   .about-hero
     display: block !important
     .hero-title-container
       padding-top: 7em
+
+// MS EDGE 13/14
+@supports (-ms-ime-align: auto)
+  .hero
+      display: block !important
+  .hero-title-container
+      padding-top: 7em !important

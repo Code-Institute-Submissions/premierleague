@@ -95,6 +95,9 @@ function makeGraphs(error, premierleagueData) {
         .group(groupYear)
         .width($(this).parent().parent().width())
         .margins({top: 40, right: 0, bottom: 40, left: 0})
+        .xUnits(function(){return 19;})
+        .centerBar(true)
+        .barPadding(1)
         .height(150)
         .xAxisLabel("Year")
         .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]));

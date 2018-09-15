@@ -58,12 +58,12 @@ function makeGraphs(error, premierleagueData) {
         .group(positionGroupSpurs)
         .width(250)
         .height(250)
-        .legend(dc.legend().x(0)
-                           .y(235)
-                           .itemHeight(15)
-                           .gap(0)
-                           .horizontal(true)
-                           .itemWidth(30))
+        // .legend(dc.legend().x(220)
+        //                    .y(20)
+        //                    .itemHeight(15)
+        //                    .gap(3)
+        //                    .horizontal(false)
+        //                    .itemWidth(30))
         .minAngleForLabel(2)
         .title(function(d) {
             return 'Position ' + d.key + ': ' + d.value;
@@ -77,6 +77,9 @@ function makeGraphs(error, premierleagueData) {
         .width($(this).parent().width())
         .height(250)
         .margins({top: 50, right: 35, bottom: 50, left: 35})
+        .xUnits(function(){return 19;}) // SET BAR WIDTH
+        .centerBar(true)
+        .barPadding(0.25) // SET PADDING BETWEEN BARS
         .xAxisLabel("Year")
         .yAxisLabel("Points")
         .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]))
@@ -93,7 +96,7 @@ function makeGraphs(error, premierleagueData) {
         .brushOn(false)
         .renderArea(true)
         .rangeChart(yearSelectorSpurs)
-        .x(d3.time.scale().domain([minYear, maxYear]))
+        .x(d3.time.scale().domain([minYear, maxYearBoundary]))
         .y(d3.scale.linear().domain([0, 40]))
         .legend(dc.legend().x($('#formGuideSpurs').width()-70)
                            .y(50)
@@ -112,7 +115,9 @@ function makeGraphs(error, premierleagueData) {
         .height(250)
         .margins({top: 25, right: 35, bottom: 50, left: 35})
         .brushOn(false)
-        .barPadding(0)
+        .xUnits(function(){return 19;}) // SET BAR WIDTH
+        .centerBar(true)
+        .barPadding(0.25) // SET PADDING BETWEEN BARS
         .rangeChart(formGuideSpurs)
         .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]))
         //.yAxis(yAxis);
@@ -130,6 +135,9 @@ function makeGraphs(error, premierleagueData) {
         .height(250)
         .margins({top: 25, right: 35, bottom: 50, left: 35})
         .brushOn(false)
+        .xUnits(function(){return 19;}) // SET BAR WIDTH
+        .centerBar(true)
+        .barPadding(0.25) // SET PADDING BETWEEN BARS
         .rangeChart(goalsChartSpurs)
         .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]))
         .y(d3.scale.linear().domain([20, 70]))
@@ -146,6 +154,9 @@ function makeGraphs(error, premierleagueData) {
         .height(250)
         .margins({top: 25, right: 35, bottom: 50, left: 35})
         .brushOn(false)
+        .xUnits(function(){return 19;}) // SET BAR WIDTH
+        .centerBar(true)
+        .barPadding(0.25) // SET PADDING BETWEEN BARS
         .rangeChart(goalsConcChartSpurs)
         .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]))
         .y(d3.scale.linear().domain([-20, 70]))

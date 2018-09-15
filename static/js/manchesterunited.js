@@ -14,17 +14,8 @@ function makeGraphs(error, premierleagueData) {
         return new Date(d["year"], 0, 1);
     });
 
+    // DIMENSIONS
     var positionDimManUnited = ndx.dimension(dc.pluck("position"));
-
-    // var positionDimManUnited = ndx.dimension(function (d) {
-    //     return
-    //     // if (d["team"] == "MANCHESTER UNITED") {
-    //     //     return d["position"];
-    //     // } else {
-    //     //     return false
-    //     // }
-    // });
-
     var positionGroupManUnited = positionDimManUnited.group().reduceCount();
 
     var yAxis = d3.svg.axis()
@@ -80,6 +71,9 @@ function makeGraphs(error, premierleagueData) {
         .width($(this).parent().width())
         .height(250)
         .margins({top: 50, right: 35, bottom: 50, left: 35})
+        .xUnits(function(){return 19;}) // SET BAR WIDTH
+        .centerBar(true)
+        .barPadding(0.25) // SET PADDING BETWEEN BARS
         .yAxisLabel("Points")
         .xAxisLabel("Year")
         .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]))
@@ -115,7 +109,9 @@ function makeGraphs(error, premierleagueData) {
         .height(250)
         .margins({top: 25, right: 35, bottom: 50, left: 35})
         .brushOn(false)
-        .barPadding(0)
+        .xUnits(function(){return 19;}) // SET BAR WIDTH
+        .centerBar(true)
+        .barPadding(0.25) // SET PADDING BETWEEN BARS
         .rangeChart(formGuideManUnited)
         .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]))
         .y(d3.scale.linear().domain([45, 100]))
@@ -131,6 +127,9 @@ function makeGraphs(error, premierleagueData) {
         .width($(this).parent().width())
         .margins({top: 25, right: 35, bottom: 50, left: 35})
         .brushOn(false)
+        .xUnits(function(){return 19;}) // SET BAR WIDTH
+        .centerBar(true)
+        .barPadding(0.25) // SET PADDING BETWEEN BARS
         .height(250)
         .rangeChart(goalsChartManUnited)
         .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]))
@@ -147,6 +146,9 @@ function makeGraphs(error, premierleagueData) {
         .width($(this).parent().width())
         .margins({top: 25, right: 35, bottom: 50, left: 35})
         .brushOn(false)
+        .xUnits(function(){return 19;}) // SET BAR WIDTH
+        .centerBar(true)
+        .barPadding(0.25) // SET PADDING BETWEEN BARS
         .height(250)
         .rangeChart(goalsConcChartManUnited)
         .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]))
