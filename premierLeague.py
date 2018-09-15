@@ -1,12 +1,14 @@
 from flask import Flask, render_template
 from pymongo import MongoClient
-import json
+import json, os
 
 app = Flask(__name__)
 
-MONGODB_HOST = 'localhost'
-MONGODB_PORT = 27017
-DBS_NAME = 'premierLeague'
+# MONGODB_HOST = 'localhost'
+# MONGODB_PORT = 27017
+# DBS_NAME = 'premierLeague'
+MONGO_URI = os.getenv('MONGODB_URI', 'mongodb://localhost:27017')
+DBS_NAME = os.getenv('MONGO_DB_NAME', 'premierLeague')
 COLLECTION_NAME = 'projects'
 
 
@@ -66,11 +68,10 @@ def premierleague_data(teamname=None):
         'year': True
     }
 
-    with MongoClient(MONGODB_HOST, MONGODB_PORT) as conn:
+    with MongoClient(MONGO_URI) as conn:
         collection = conn[DBS_NAME][COLLECTION_NAME]
         projects = collection.find(filter, projection=FIELDS)
         return json.dumps(list(projects))
-
 
 
 if __name__ == '__main__':

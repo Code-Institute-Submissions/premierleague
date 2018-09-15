@@ -2,26 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf0811f3-d483-4b04-bb87-f7b531d5b8e0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/premier_league.csv" beforeDir="false" afterPath="$PROJECT_DIR$/premier_league.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/arsenal.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/arsenal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/chelsea.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/chelsea.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/graph.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/liverpool.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/liverpool.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/manchestercity.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/manchestercity.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/manchesterunited.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/manchesterunited.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/spurs.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/spurs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/sass/navigation/_navbar.sass" beforeDir="false" afterPath="$PROJECT_DIR$/static/sass/navigation/_navbar.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/sass/pages/base.sass" beforeDir="false" afterPath="$PROJECT_DIR$/static/sass/pages/base.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/sass/pages/common.sass" beforeDir="false" afterPath="$PROJECT_DIR$/static/sass/pages/common.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/arsenal.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/arsenal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/chelsea.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/chelsea.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/liverpool.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/liverpool.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/manchestercity.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/manchestercity.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/manchesterunited.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/manchesterunited.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tottenhamhotspur.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tottenhamhotspur.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/premierLeague.py" beforeDir="false" afterPath="$PROJECT_DIR$/premierLeague.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,7 +12,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/premierLeague$premierLeague.coverage" NAME="premierLeague Coverage Results" MODIFIED="1537026378707" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/premierLeague$premierLeague.coverage" NAME="premierLeague Coverage Results" MODIFIED="1537030167271" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
   <component name="FavoritesManager">
     <favorites_list name="premierLeague" />
@@ -59,8 +40,8 @@
       <file leaf-file-name="premierLeague.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/premierLeague.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="2" column="11" lean-forward="true" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+            <state relative-caret-position="159">
+              <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -110,7 +91,6 @@
         <option value="$PROJECT_DIR$/static/js/manchesterunited_graphs.js" />
         <option value="$PROJECT_DIR$/static/js/tottenham_graphs.js" />
         <option value="$PROJECT_DIR$/static/sass/pages/teams.sass" />
-        <option value="$PROJECT_DIR$/premierLeague.py" />
         <option value="$PROJECT_DIR$/static/sass/pages/charts.sass" />
         <option value="$PROJECT_DIR$/static/sass/pages/liverpool.sass" />
         <option value="$PROJECT_DIR$/static/sass/abstracts/_variables.sass" />
@@ -148,6 +128,7 @@
         <option value="$PROJECT_DIR$/static/js/spurs.js" />
         <option value="$PROJECT_DIR$/static/js/manchesterunited.js" />
         <option value="$PROJECT_DIR$/static/js/manchestercity.js" />
+        <option value="$PROJECT_DIR$/premierLeague.py" />
       </list>
     </option>
   </component>
@@ -300,16 +281,16 @@
     <frame x="-6" y="0" width="1110" height="1201" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49682036" visible="true" weight="0.23859316" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49682036" visible="true" weight="0.23859316" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32960597" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.26425856" side_tool="true" weight="0.2056338" />
       <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49953488" weight="0.32929105" />
       <window_info anchor="bottom" id="Python Console" order="8" sideWeight="0.5683721" weight="0.26547843" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.73574144" visible="true" weight="0.24131456" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.73574144" weight="0.24131456" />
       <window_info anchor="right" id="SciView" order="4" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49953488" weight="0.27981222" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49953488" visible="true" weight="0.27981222" />
       <window_info id="Favorites" order="2" sideWeight="0.50317967" side_tool="true" weight="0.14433812" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -680,8 +661,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/premierLeague.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="11" lean-forward="true" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+        <state relative-caret-position="159">
+          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
