@@ -10,7 +10,6 @@ $(document).ready(function() {
        $('.teams-list').toggleClass('team-list-active');
     });
 
-
 // Change width value on user resize, after DOM
     $(window).resize(function(){
          responsive_resize();
