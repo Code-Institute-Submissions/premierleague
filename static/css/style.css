@@ -6375,9 +6375,8 @@ a:hover {
   .about-hero {
     display: block !important;
   }
-  .index-hero .hero-title-container,
-  .about-hero .hero-title-container {
-    padding-top: 7em;
+  .hero-title-container {
+    padding: 7em 1em !important;
   }
 }
 

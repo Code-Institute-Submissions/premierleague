@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf0811f3-d483-4b04-bb87-f7b531d5b8e0" name="Default" comment="" />
+    <list default="true" id="cf0811f3-d483-4b04-bb87-f7b531d5b8e0" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/sass/pages/base.sass" beforeDir="false" afterPath="$PROJECT_DIR$/static/sass/pages/base.sass" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,11 +30,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="manchesterunited.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="manchesterunited.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/manchesterunited.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="620">
-              <caret line="91" column="42" lean-forward="true" selection-start-line="91" selection-start-column="42" selection-end-line="91" selection-end-column="42" />
+            <state>
+              <caret line="60" column="28" lean-forward="true" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -38,8 +42,17 @@
       <file leaf-file-name="manchesterunited.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/manchesterunited.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="426">
-              <caret line="41" column="14" lean-forward="true" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
+            <state relative-caret-position="100">
+              <caret line="5" column="29" lean-forward="true" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.sass" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/sass/pages/base.sass">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="517">
+              <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
             </state>
           </provider>
         </entry>
@@ -56,8 +69,8 @@
       <file leaf-file-name="common.sass" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/sass/pages/common.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="71" column="1" selection-start-line="71" selection-start-column="1" selection-end-line="71" selection-end-column="17" />
+            <state relative-caret-position="380">
+              <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
             </state>
           </provider>
         </entry>
@@ -82,7 +95,7 @@
       <find>component</find>
       <find>time.F</find>
       <find>time</find>
-      <find />
+      <find>\/\/ function responsive_resize\(\) \{\n    \/\/     var current_width \= \$\(\'\.dc\-chart\'\)\.width\(\)\;\n    \/\/\n    \/\/     if \(current_width \&lt; 500\) \{\n    \/\/         \$\(\'rect \.bar\'\)\.css\(\'width\'\, 8 \+ \'px\'\)\;\n    \/\/     \} else if \(current_width \&gt;\= 500\) \{\n    \/\/         \$\(\'rect \.bar\'\)\.css\(\'width\'\, 19 \+ \'px\'\)\;\n    \/\/     \}\n    \/\/ \}</find>
       <find>form</find>
     </findStrings>
     <replaceStrings>
@@ -122,7 +135,6 @@
         <option value="$PROJECT_DIR$/static/sass/style.sass" />
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/static/sass/bootstrap/bootstrap.sass" />
-        <option value="$PROJECT_DIR$/static/sass/pages/base.sass" />
         <option value="$PROJECT_DIR$/static/sass/pages/index.sass" />
         <option value="$PROJECT_DIR$/static/sass/navigation/_navbar.sass" />
         <option value="$PROJECT_DIR$/premierLeague.py" />
@@ -137,13 +149,14 @@
         <option value="$PROJECT_DIR$/static/js/arsenal.js" />
         <option value="$PROJECT_DIR$/static/js/spurs.js" />
         <option value="$PROJECT_DIR$/static/js/liverpool.js" />
-        <option value="$PROJECT_DIR$/static/sass/pages/common.sass" />
         <option value="$PROJECT_DIR$/templates/manchesterunited.html" />
         <option value="$PROJECT_DIR$/templates/arsenal.html" />
         <option value="$PROJECT_DIR$/templates/chelsea.html" />
         <option value="$PROJECT_DIR$/templates/liverpool.html" />
         <option value="$PROJECT_DIR$/templates/manchestercity.html" />
         <option value="$PROJECT_DIR$/templates/tottenhamhotspur.html" />
+        <option value="$PROJECT_DIR$/static/sass/pages/common.sass" />
+        <option value="$PROJECT_DIR$/static/sass/pages/base.sass" />
       </list>
     </option>
   </component>
@@ -185,6 +198,40 @@
               <item name="premierLeague" type="b2602c69:ProjectViewProjectNode" />
               <item name="premierLeague" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="premierLeague" type="b2602c69:ProjectViewProjectNode" />
+              <item name="premierLeague" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="sass" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="premierLeague" type="b2602c69:ProjectViewProjectNode" />
+              <item name="premierLeague" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="sass" type="462c0819:PsiDirectoryNode" />
+              <item name="abstracts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="premierLeague" type="b2602c69:ProjectViewProjectNode" />
+              <item name="premierLeague" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="sass" type="462c0819:PsiDirectoryNode" />
+              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="premierLeague" type="b2602c69:ProjectViewProjectNode" />
+              <item name="premierLeague" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="sass" type="462c0819:PsiDirectoryNode" />
+              <item name="navigation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="premierLeague" type="b2602c69:ProjectViewProjectNode" />
+              <item name="premierLeague" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="sass" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="premierLeague" type="b2602c69:ProjectViewProjectNode" />
@@ -270,7 +317,7 @@
     <frame x="-6" y="0" width="1366" height="1201" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49682036" visible="true" weight="0.20259939" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49682036" visible="true" weight="0.20259939" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32960597" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.26425856" side_tool="true" weight="0.2056338" />
@@ -279,7 +326,7 @@
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.73574144" weight="0.23943663" />
       <window_info anchor="right" id="SciView" order="4" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49953488" visible="true" weight="0.2" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49953488" visible="true" weight="0.2" />
       <window_info id="Favorites" order="2" sideWeight="0.50317967" side_tool="true" weight="0.14433812" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -533,13 +580,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/sass/pages/base.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="920">
-          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/graph.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="404">
@@ -599,13 +639,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/sass/pages/common.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="71" column="1" selection-start-line="71" selection-start-column="1" selection-end-line="71" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/arsenal.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
@@ -641,17 +674,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/manchesterunited.html">
+    <entry file="file://$PROJECT_DIR$/static/js/manchesterunited.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="41" column="14" lean-forward="true" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
+        <state>
+          <caret line="60" column="28" lean-forward="true" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/manchesterunited.js">
+    <entry file="file://$PROJECT_DIR$/static/sass/pages/common.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="91" column="42" lean-forward="true" selection-start-line="91" selection-start-column="42" selection-end-line="91" selection-end-column="42" />
+        <state relative-caret-position="380">
+          <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/manchesterunited.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="29" lean-forward="true" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/sass/pages/base.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
         </state>
       </provider>
     </entry>
