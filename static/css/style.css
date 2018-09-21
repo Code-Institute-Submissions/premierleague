@@ -6469,9 +6469,17 @@ a:hover {
   margin: auto;
 }
 
-.form-chart {
-  max-width: 960px;
-  margin: auto;
+.form-guide-chart path.area {
+  -webkit-transition: all 350ms ease-in-out;
+  -o-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
+}
+
+.form-guide-chart path.area:hover {
+  fill-opacity: 1;
+  -webkit-transition: all 350ms ease-in-out;
+  -o-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
 }
 
 .goals-analysis, .goals-analysis-2 {
