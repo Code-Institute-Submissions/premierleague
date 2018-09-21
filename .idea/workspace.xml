@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf0811f3-d483-4b04-bb87-f7b531d5b8e0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/manchesterunited.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/manchesterunited.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/manchestercity.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/manchestercity.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,11 +28,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="manchesterunited.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="manchesterunited.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/manchesterunited.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1036">
-              <caret line="84" column="58" lean-forward="true" selection-start-line="84" selection-start-column="58" selection-end-line="84" selection-end-column="58" />
+            <state relative-caret-position="1564">
+              <caret line="160" lean-forward="true" selection-start-line="160" selection-end-line="160" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="manchestercity.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/js/manchestercity.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="364">
+              <caret line="101" column="32" selection-start-line="101" selection-start-column="32" selection-end-line="101" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -119,7 +127,6 @@
         <option value="$PROJECT_DIR$/static/js/chelsea.js" />
         <option value="$PROJECT_DIR$/static/js/liverpool.js" />
         <option value="$PROJECT_DIR$/static/js/spurs.js" />
-        <option value="$PROJECT_DIR$/static/js/manchestercity.js" />
         <option value="$PROJECT_DIR$/premierLeague.py" />
         <option value="$PROJECT_DIR$/static/sass/pages/about.sass" />
         <option value="$PROJECT_DIR$/static/js/script.js" />
@@ -128,6 +135,7 @@
         <option value="$PROJECT_DIR$/static/sass/pages/common.sass" />
         <option value="$PROJECT_DIR$/static/js/graph.js" />
         <option value="$PROJECT_DIR$/static/js/manchesterunited.js" />
+        <option value="$PROJECT_DIR$/static/js/manchestercity.js" />
       </list>
     </option>
   </component>
@@ -508,13 +516,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/manchestercity.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3360">
-          <caret line="168" selection-start-line="168" selection-end-line="168" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/premierLeague.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -635,8 +636,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/manchesterunited.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1036">
-          <caret line="84" column="58" lean-forward="true" selection-start-line="84" selection-start-column="58" selection-end-line="84" selection-end-column="58" />
+        <state relative-caret-position="1564">
+          <caret line="160" lean-forward="true" selection-start-line="160" selection-end-line="160" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/manchestercity.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="101" column="32" selection-start-line="101" selection-start-column="32" selection-end-line="101" selection-end-column="32" />
         </state>
       </provider>
     </entry>

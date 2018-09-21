@@ -88,7 +88,7 @@ function makeGraphs(error, premierleagueData) {
     formGuideManCity
         .dimension(yearDim)
         .width($(this).parent().width())
-        .margins({top: 50, right: 75, bottom: 50, left: 35})
+        .margins({top: 50, right: 60, bottom: 50, left: 35})
         .height(300)
         .group(manCityWins, "Wins")
         .stack(manCityDrawn, "Draws")
@@ -98,8 +98,8 @@ function makeGraphs(error, premierleagueData) {
         .rangeChart(yearSelectorManCity)
         .x(d3.time.scale().domain([minYear, maxYearBoundary]))
         .y(d3.scale.linear().domain([0, 40]))
-        .legend(dc.legend().x($('#formGuideManCity').width()-70)
-                           .y(50)
+        .legend(dc.legend().x($('#formGuideManCity').width()-65)
+                           .y(58)
                            .itemHeight(13)
                            .gap(5))
         .title(function(d) {
@@ -173,8 +173,8 @@ function makeGraphs(error, premierleagueData) {
         yearSelectorManCity
             .width($(this).parent().width());
         formGuideManCity
-            .legend(dc.legend().x($('#formGuideManCity').width()-70)
-                       .y(50)
+            .legend(dc.legend().x($('#formGuideManCity').width()-65)
+                       .y(58)
                        .itemHeight(13)
                        .gap(5));
         dc.renderAll();
