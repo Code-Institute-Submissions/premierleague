@@ -6511,6 +6511,9 @@ a:hover {
   .team-page-hero h1 span {
     letter-spacing: 1.5em;
   }
+  .dropdown-toggle::after {
+    display: none;
+  }
 }
 
 #pointsChart .line, #positionChart .line {
