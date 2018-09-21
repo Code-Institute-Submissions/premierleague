@@ -82,7 +82,7 @@ function makeGraphs(error, premierleagueData) {
     formGuideManUnited
         .dimension(yearDim)
         .width($(this).parent().width())
-        .margins({top: 50, right: 75, bottom: 50, left: 35})
+        .margins({top: 50, right: 60, bottom: 50, left: 35})
         .height(300)
         .group(manUnitedWins, "Wins")
         .stack(manUnitedDrawn, "Draws")
@@ -92,8 +92,8 @@ function makeGraphs(error, premierleagueData) {
         .rangeChart(yearSelectorManUnited)
         .x(d3.time.scale().domain([minYear, maxYearBoundary]))
         .y(d3.scale.linear().domain([0, 40]))
-        .legend(dc.legend().x($('#formGuideManUnited').width()-70)
-                           .y(50)
+        .legend(dc.legend().x($('#formGuideManUnited').width()-65)
+                           .y(58)
                            .itemHeight(13)
                            .gap(5))
         .title(function(d) {
@@ -166,8 +166,8 @@ function makeGraphs(error, premierleagueData) {
             .width($(this).parent().width());
 
         formGuideManUnited
-            .legend(dc.legend().x($('#formGuideManUnited').width()-70)
-                   .y(50)
+            .legend(dc.legend().x($('#formGuideManUnited').width()-65)
+                   .y(58)
                    .itemHeight(13)
                    .gap(5));
         dc.renderAll();
