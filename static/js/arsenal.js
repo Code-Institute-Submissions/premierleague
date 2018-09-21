@@ -87,7 +87,7 @@ function makeGraphs(error, premierleagueData) {
 
     formGuideArsenal
         .dimension(yearDim)
-        .margins({top: 50, right: 75, bottom: 50, left: 35})
+        .margins({top: 50, right: 60, bottom: 50, left: 35})
         .width($(this).parent().width())
         .height(300)
         .group(arsenalWins, "Wins")
@@ -98,8 +98,8 @@ function makeGraphs(error, premierleagueData) {
         .rangeChart(yearSelectorArsenal)
         .x(d3.time.scale().domain([minYear, maxYearBoundary]))
         .y(d3.scale.linear().domain([0, 40]))
-        .legend(dc.legend().x($('#formGuideArsenal').width()-70)
-                           .y(50)
+        .legend(dc.legend().x($('#formGuideArsenal').width()-65)
+                           .y(58)
                            .itemHeight(13)
                            .gap(5))
         .title(function(d) {
@@ -172,8 +172,8 @@ function makeGraphs(error, premierleagueData) {
         yearSelectorArsenal
             .width($(this).parent().width());
         formGuideArsenal
-            .legend(dc.legend().x($('#formGuideArsenal').width()-70)
-                               .y(50)
+            .legend(dc.legend().x($('#formGuideArsenal').width()-65)
+                               .y(58)
                                .itemHeight(13)
                                .gap(5));
         dc.renderAll();

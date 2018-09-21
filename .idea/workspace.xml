@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf0811f3-d483-4b04-bb87-f7b531d5b8e0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/static/js/manchestercity.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/manchestercity.js" afterDir="false" />
-    </list>
+    <list default="true" id="cf0811f3-d483-4b04-bb87-f7b531d5b8e0" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,11 +35,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="manchestercity.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="manchestercity.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/manchestercity.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="364">
               <caret line="101" column="32" selection-start-line="101" selection-start-column="32" selection-end-line="101" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chelsea.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/js/chelsea.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="89" column="40" lean-forward="true" selection-start-line="89" selection-start-column="40" selection-end-line="89" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -124,7 +131,6 @@
         <option value="$PROJECT_DIR$/static/sass/pages/index.sass" />
         <option value="$PROJECT_DIR$/static/sass/navigation/_navbar.sass" />
         <option value="$PROJECT_DIR$/static/js/arsenal.js" />
-        <option value="$PROJECT_DIR$/static/js/chelsea.js" />
         <option value="$PROJECT_DIR$/static/js/liverpool.js" />
         <option value="$PROJECT_DIR$/static/js/spurs.js" />
         <option value="$PROJECT_DIR$/premierLeague.py" />
@@ -136,6 +142,7 @@
         <option value="$PROJECT_DIR$/static/js/graph.js" />
         <option value="$PROJECT_DIR$/static/js/manchesterunited.js" />
         <option value="$PROJECT_DIR$/static/js/manchestercity.js" />
+        <option value="$PROJECT_DIR$/static/js/chelsea.js" />
       </list>
     </option>
   </component>
@@ -263,7 +270,7 @@
     <frame x="-6" y="0" width="1366" height="1201" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49682036" visible="true" weight="0.20259939" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49682036" visible="true" weight="0.20259939" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32960597" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.26425856" side_tool="true" weight="0.2056338" />
@@ -272,7 +279,7 @@
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.73574144" weight="0.23943663" />
       <window_info anchor="right" id="SciView" order="4" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49953488" visible="true" weight="0.2" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49953488" visible="true" weight="0.2" />
       <window_info id="Favorites" order="2" sideWeight="0.50317967" side_tool="true" weight="0.14433812" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -495,13 +502,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/chelsea.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="158" column="53" selection-start-line="158" selection-start-column="53" selection-end-line="158" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/liverpool.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -645,6 +645,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
           <caret line="101" column="32" selection-start-line="101" selection-start-column="32" selection-end-line="101" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/chelsea.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="89" column="40" lean-forward="true" selection-start-line="89" selection-start-column="40" selection-end-line="89" selection-end-column="40" />
         </state>
       </provider>
     </entry>
