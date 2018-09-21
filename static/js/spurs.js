@@ -89,7 +89,7 @@ function makeGraphs(error, premierleagueData) {
         .dimension(yearDim)
         .width($(this).parent().width())
         .height(300)
-        .margins({top: 50, right: 75, bottom: 50, left: 35})
+        .margins({top: 50, right: 60, bottom: 50, left: 35})
         .group(spursWins, "Wins")
         .stack(spursDrawn, "Draws")
         .stack(spursLosses, "Losses")
@@ -98,8 +98,8 @@ function makeGraphs(error, premierleagueData) {
         .rangeChart(yearSelectorSpurs)
         .x(d3.time.scale().domain([minYear, maxYearBoundary]))
         .y(d3.scale.linear().domain([0, 40]))
-        .legend(dc.legend().x($('#formGuideSpurs').width()-70)
-                           .y(50)
+        .legend(dc.legend().x($('#formGuideSpurs').width()-65)
+                           .y(58)
                            .itemHeight(13)
                            .gap(5))
         .title(function(d) {
@@ -174,8 +174,8 @@ function makeGraphs(error, premierleagueData) {
         yearSelectorSpurs
             .width($(this).parent().width());
         formGuideSpurs
-            .legend(dc.legend().x($('#formGuideSpurs').width()-70)
-                       .y(50)
+            .legend(dc.legend().x($('#formGuideSpurs').width()-65)
+                       .y(58)
                        .itemHeight(13)
                        .gap(5));
         dc.renderAll();
