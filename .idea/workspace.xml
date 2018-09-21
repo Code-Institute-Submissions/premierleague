@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf0811f3-d483-4b04-bb87-f7b531d5b8e0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/sass/pages/common.sass" beforeDir="false" afterPath="$PROJECT_DIR$/static/sass/pages/common.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/arsenal.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/arsenal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/chelsea.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/chelsea.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/liverpool.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/liverpool.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/manchestercity.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/manchestercity.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/manchesterunited.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/manchesterunited.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tottenhamhotspur.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tottenhamhotspur.html" afterDir="false" />
-    </list>
+    <list default="true" id="cf0811f3-d483-4b04-bb87-f7b531d5b8e0" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,11 +26,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="manchesterunited.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="manchesterunited.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/js/manchesterunited.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="141" lean-forward="true" selection-start-line="141" selection-end-line="141" />
+            <state relative-caret-position="620">
+              <caret line="91" column="42" lean-forward="true" selection-start-line="91" selection-start-column="42" selection-end-line="91" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -54,7 +44,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tottenhamhotspur.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tottenhamhotspur.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/tottenhamhotspur.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="380">
@@ -92,7 +82,7 @@
       <find>component</find>
       <find>time.F</find>
       <find>time</find>
-      <find>\/\/ function responsive_resize\(\) \{\n    \/\/     var current_width \= \$\(\'\.dc\-chart\'\)\.width\(\)\;\n    \/\/\n    \/\/     if \(current_width \&lt; 500\) \{\n    \/\/         \$\(\'rect \.bar\'\)\.css\(\'width\'\, 8 \+ \'px\'\)\;\n    \/\/     \} else if \(current_width \&gt;\= 500\) \{\n    \/\/         \$\(\'rect \.bar\'\)\.css\(\'width\'\, 19 \+ \'px\'\)\;\n    \/\/     \}\n    \/\/ \}</find>
+      <find />
       <find>form</find>
     </findStrings>
     <replaceStrings>
@@ -280,7 +270,7 @@
     <frame x="-6" y="0" width="1366" height="1201" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49682036" visible="true" weight="0.20259939" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49682036" visible="true" weight="0.20259939" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32960597" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.26425856" side_tool="true" weight="0.2056338" />
@@ -289,7 +279,7 @@
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.73574144" weight="0.23943663" />
       <window_info anchor="right" id="SciView" order="4" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49953488" visible="true" weight="0.2" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49953488" visible="true" weight="0.2" />
       <window_info id="Favorites" order="2" sideWeight="0.50317967" side_tool="true" weight="0.14433812" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -609,13 +599,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/manchesterunited.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="141" lean-forward="true" selection-start-line="141" selection-end-line="141" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/sass/pages/common.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -651,6 +634,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/tottenhamhotspur.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="37" column="85" selection-start-line="37" selection-start-column="85" selection-end-line="37" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/manchesterunited.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="426">
@@ -658,10 +648,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/tottenhamhotspur.html">
+    <entry file="file://$PROJECT_DIR$/static/js/manchesterunited.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="37" column="85" selection-start-line="37" selection-start-column="85" selection-end-line="37" selection-end-column="85" />
+        <state relative-caret-position="620">
+          <caret line="91" column="42" lean-forward="true" selection-start-line="91" selection-start-column="42" selection-end-line="91" selection-end-column="42" />
         </state>
       </provider>
     </entry>

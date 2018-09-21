@@ -6482,6 +6482,11 @@ a:hover {
   transition: all 350ms ease-in-out;
 }
 
+.form-chart {
+  max-width: 960px;
+  margin: auto;
+}
+
 .goals-analysis, .goals-analysis-2 {
   background-color: ghostwhite;
 }
