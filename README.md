@@ -1,8 +1,11 @@
-# [TOP-SIX-DASHBOARD](https://top-six-dashboard.herokuapp.com/) | developed by Minesh Kothari
+# [TOP*SIX*DASHBOARD](https://top-six-dashboard.herokuapp.com/) | developed by Minesh Kothari
+
+<br />
+<br />
 
 ## Overview
 
-### What is TOP-SIX-DASHBOARD?
+### What is TOP*SIX*DASHBOARD?
 
 Essentially, the **TOP**SIX**DASHBOARD** is a data-rich dashboard allowing you to compare the statistics for the big six teams in English football. 
 
@@ -14,6 +17,9 @@ The **TOP**SIX**DASHBOARD** enables you to dive into the stats of your favourite
 
 The **TOP**SIX**DASHBOARD** uses a collection of tools to present data in intuitive visualisations. MongoDB is used to store the data, whilst Flask, a Python microframework, is used to retrieve data from MongoDB and presenting this on the browser. JavaScript libraries such as D3.js, DC.js and Crossfilter.js is used to achieve beautiful data visualisation techniques.
 
+<br />
+<br />
+
 ## Features
 
 - Comparing the 'Big Six' Teams:
@@ -22,6 +28,9 @@ The **TOP**SIX**DASHBOARD** uses a collection of tools to present data in intuit
 - Analysing Individual Teams:	
 	- Position Selector - Filter results based on the position the teams finished in
 	- Year Selector - Filter results of individual teams based on the period selected
+
+<br />
+<br />
 
 ## Technology Implemented
 
@@ -53,9 +62,12 @@ The **TOP**SIX**DASHBOARD** uses a collection of tools to present data in intuit
 - [MongoDB](https://www.mongodb.com/)
 	- The Premier League data used for this project is being stored on MongoDB.
 
+<br />
+<br />
+
 ## Contributing
 
-The **TOP**SIX**DASHBOARD** is a personal project created as part of my Full Stack Web Development course for my Code Institute diploma. Having said this, it would be amazing to see the community getting involved by forking the repo, making improvements and submitting pull requests.
+The **TOP**SIX**DASHBOARD** is a personal project created as part of my Full Stack Web Development course for my Code Institute diploma. Having said this, it would be amazing to see the community getting involved by forking the repo, making interesting changes and submitting pull requests.
 
 **Instructions:**
 
@@ -64,8 +76,12 @@ The **TOP**SIX**DASHBOARD** is a personal project created as part of my Full Sta
 	- Click on the Clone or download button
 	- Copy the clone URL for the repository
 	- Open your Git terminal
-	- Type ```git clone``` followed by the URL copied in the second step. This should look something like the following:
+	- Type ```git clone``` followed by the URL copied in the second step. This should look something like the following:<br />
 	```$ git clone https://github.com/YOUR-USERNAME/premierleague.git```
 	- Lastly, you will need to hit Enter on your keyboard to request your clone.
+<br />
+<br />
 And we’re done! Well almost.
+
+
 
