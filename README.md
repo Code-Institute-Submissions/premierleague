@@ -1,8 +1,8 @@
-# **TOP**SIX**DASHBOARD** | developed by Minesh Kothari
+# [TOP-SIX-DASHBOARD](https://top-six-dashboard.herokuapp.com/) | developed by Minesh Kothari
 
 ## Overview
 
-### What is **TOP**SIX**DASHBOARD**?
+### What is TOP-SIX-DASHBOARD?
 
 Essentially, the **TOP**SIX**DASHBOARD** is a data-rich dashboard allowing you to compare the statistics for the big six teams in English football. 
 
@@ -54,3 +54,18 @@ The **TOP**SIX**DASHBOARD** uses a collection of tools to present data in intuit
 	- The Premier League data used for this project is being stored on MongoDB.
 
 ## Contributing
+
+The **TOP**SIX**DASHBOARD** is a personal project created as part of my Full Stack Web Development course for my Code Institute diploma. Having said this, it would be amazing to see the community getting involved by forking the repo, making improvements and submitting pull requests.
+
+**Instructions:**
+
+- Firstly, you will need to Fork the repository. Click on the **Fork** button in the top-right corner of this page
+- You will now need a copy of these files on your computer to make changes. To do this, you will need to clone or download the repo you forked in the previous step onto your local computer.
+	- Click on the Clone or download button
+	- Copy the clone URL for the repository
+	- Open your Git terminal
+	- Type ```git clone``` followed by the URL copied in the second step. This should look something like the following:
+	```$ git clone https://github.com/YOUR-USERNAME/premierleague.git```
+	- Lastly, you will need to hit Enter on your keyboard to request your clone.
+And we’re done! Well almost.
+
