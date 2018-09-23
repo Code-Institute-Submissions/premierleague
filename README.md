@@ -130,7 +130,19 @@ $ C:\Users\YourName\YourFolder\premierLeague\env\Scripts\activate
 
 Alternatively, you can create your own virtual environment and install the dependencies using **_pip_** by running the following command from the root folder in your terminal: (please note - you will need to have *pip* installed as a Python package for this to work)
 ```console
-pip install -r requirements.txt
+$ pip install -r requirements.txt
+```
+
+You will also need to configure MongoDB locally to render the charts properly and see how your changes will affect them. The dashboard is pulling in data from the NoSQL database and it is recommended to have MongoDB 3.6.2 or later installed on your PC.
+
+Once MongoDB is installed, go ahead and complete the following steps to import the data to the NoSQL database. 
+1. Run MongoDB by running the ```mongod``` command in your terminal.
+2. Once this is all up set up, leave the prompt running as it is and open another terminal.
+3. ```cd``` into where the *premier_league.csv* file from the repo is kept.
+4. Import the *csv* file to MongoDB by running the following command on the new open terminal:
+
+```console
+$ mongoimport -d premierLeague -c projects --type csv --file premier_league.csv --headerline
 ```
 
 **Creating pull requests:**
@@ -139,11 +151,12 @@ Now that you've made changes to the dashboard, you can submit a pull request to 
 1. Navigate to the [origianl repository](https://github.com/mineshkothari/premierleague "https://github.com/mineshkothari/premierleague")
 2. Click on **New pull request** on the right of the Branch menu
 3. On the compare page, click **compare across forks**
-4. Confirm that the *base fork* is the repository you'd like to merge into.
-5. Use the *head fork* drop-down menu to select your fork, then use the compare branch drop-down menu to select the branch you made your changes in.
-6. Type a little description for your pull request.
-7. If you do not want to allow anyone with push access to the upstream repository to make changes to your PR, unselect **Allow edits from maintainers**.
-8. Click **Create pull request**.
+4. Confirm that the *base fork* is the repository you'd like to merge into
+5. Use the *head fork* drop-down menu to select your fork, then use the compare branch drop-down menu to select the branch you made your changes in
+6. Type a little description for your pull request
+7. If you do not want to allow anyone with push access to the upstream repository to make changes to your PR, unselect **Allow edits from maintainers**
+8. Click **Create pull request**
 
 For further information about forking a repository, please click [here](https://help.github.com/articles/fork-a-repo/).
+
 For further information about creating pull requests, please click [here](https://help.github.com/articles/creating-a-pull-request-from-a-fork/).
