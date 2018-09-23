@@ -188,7 +188,7 @@ Want to learn about some of the known issues/bugs/limitations with this project.
 Ensuring the dashboard maintained a responsive design was of paramount importance. This proved particularly tricky when setting the ```.width``` property of each chart in JavaScript.
 
 Using absolute width values in my *graph.js* file meant that regardless of the screen size, the width of each chart would remain the same causing unwanted side scrolling the smaller the screen size became.
-```java
+```javascript
 .width(450)
 ```
 
@@ -210,6 +210,23 @@ In order to combat the new issue, the use of JavaScript's ```$(window).resize(fu
     });
 ```
 
+### DC Charts
+
+DC did not come without its flaws. Although DC is an excellent charting library delivering great functionality, *dc.css* includes a ```float: left;``` rule to all *divs* with the class of *dc-chart*:
+
+```css
+div.dc-chart {
+    float: left;
+}
+```
+
+When using floats in CSS, this will break the DOM element from its parent container causing it to collapse. This caused adverse effects to the charts as you could no longer interact with, and created further issues with the hover effects. One eventual fix was to override the rule by adding a custom CSS rule as seen below: 
+
+```css
+.dc-chart {
+    float: none !important;
+}
+```
 
 
 
