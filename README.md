@@ -170,14 +170,30 @@ For further information about creating pull requests, please click [here](https:
 
 The **TOP**SIX**DASHBOARD** has undergone rigorous testing with each new implementation to ensure every aspect of this dashboard is working robustly.
 
+### UX/UI Testing
+
+### Responsive Design
+
+### Cross-Browser Testing
+
+<br />
+<br />
+
+## Report
+
+Want to learn about some of the known issues/bugs/limitations with this project. Continue reading to find out more. Perhaps, you will find a solution, or a better solution and if so - feel free to create a pull request with your changes.
+
 ### Responsive Design
 
 Ensuring the dashboard maintained a responsive design was of paramount importance. This proved particularly tricky when setting the ```.width``` property of each chart in JavaScript.
 
 Using absolute width values in my *graph.js* file meant that regardless of the screen size, the width of each chart would remain the same causing unwanted side scrolling the smaller the screen size became.
+```java
+.width(450)
+```
 
 This was remedied by using a bit of JavaScript magic setting the width of the chart to be the same as the width of the parent container by using:
-```console
+```javascript
 .width($(this).parent().width())
 ```
 
@@ -185,7 +201,7 @@ However, this approach did not come without its drawbacks and led to further com
 
 In order to combat the new issue, the use of JavaScript's ```$(window).resize(function()``` followed by another instance of ```dc.renderAll(); ``` proved to be the smoking gun so solve chart responsiveness. See the code example below:
 
-```console
+```javascript
     $(window).resize(function() {
         yearSelectorManUnited
             .width($(this).parent().width());
@@ -193,5 +209,7 @@ In order to combat the new issue, the use of JavaScript's ```$(window).resize(fu
     dc.renderAll();
     });
 ```
+
+
 
 
