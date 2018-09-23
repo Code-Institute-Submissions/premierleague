@@ -9,11 +9,11 @@
 
 Essentially, the **TOP**SIX**DASHBOARD** is a data-rich dashboard allowing you to compare the statistics of six of the biggest teams in English football.
 
-### What does it do?
+### What Does It Do?
 
 This dashboard enables you to dive into the stats of your favourite Premier League teams and compare them with other title contenders over the years. You can now visualise the journey of your favourite teams in this data rich dashboard analysing their end of season results and comparing them with the remaining title rivals.
 
-### How does it work?
+### How Does It Work?
 
 **TOP**SIX**DASHBOARD** uses a collection of tools to present data in intuitive visualisations. MongoDB is used to store the data, whilst Flask, a Python microframework, is used to retrieve data from MongoDB and present this on the browser. JavaScript libraries such as D3.js, DC.js and Crossfilter.js is used to achieve beautiful data visualisation techniques.
 
@@ -100,7 +100,7 @@ Python 2.7.14
 MongoDB 3.6.2
 ```
 
-### Forking the repo
+### Forking The Repo
 
 1. Firstly, you will need to fork the repository. To do this, you will need to click on the **Fork** button in the top-right corner of this page.
 2. You will now need a copy of these files on your computer to make changes. To do this, you will need to clone or download the repo you forked in the previous step onto your local computer:
@@ -115,7 +115,7 @@ $ git clone https://github.com/YOUR-USERNAME/premierleague.git
 
 And we’re done! Well almost.
 
-### Making changes
+### Making Changes
 
 Amongst many of the tech, the **TOP**SIX**DASHBOARD** uses Python 2.7 to power the dashboard. You will need to ensure you have this version of Python installed on your PC for optimal usability. This project uses several Python packages and it is recommended having these installed on your local machine using **virtualenv** for the project to function and run properly. 
 
@@ -147,7 +147,7 @@ $ mongoimport -d premierLeague -c projects --type csv --file premier_league.csv 
 
 Now you're all set to make changes.
 
-### Creating pull requests
+### Creating Pull Requests
 
 Now that you've made changes to the dashboard, you can submit a pull request to the master branch to await approval. To do this:
 1. Navigate to the [origianl repository](https://github.com/mineshkothari/premierleague "https://github.com/mineshkothari/premierleague")
@@ -181,7 +181,7 @@ The **TOP**SIX**DASHBOARD** has undergone rigorous testing with each new impleme
 
 ## Report
 
-Want to learn about some of the known issues/bugs/limitations with this project. Continue reading to find out more. Perhaps, you will find a solution, or a better solution and if so - feel free to create a pull request with your changes.
+Want to learn about some of the known issues/bugs/limitations with this project? Continue reading to find out more. Perhaps, you will find a solution, or a better solution and if so - feel free to create a pull request with your changes.
 
 ### Responsive Design
 
@@ -202,12 +202,12 @@ However, this approach did not come without its drawbacks and led to further com
 In order to combat the new issue, the use of JavaScript's ```$(window).resize(function()``` followed by another instance of ```dc.renderAll(); ``` proved to be the smoking gun so solve chart responsiveness. See the code example below:
 
 ```javascript
-    $(window).resize(function() {
-        yearSelectorManUnited
-            .width($(this).parent().width());
+$(window).resize(function() {
+    yearSelectorManUnited
+        .width($(this).parent().width());
 
-    dc.renderAll();
-    });
+dc.renderAll();
+});
 ```
 
 ### DC Charts
@@ -228,5 +228,25 @@ When using floats in CSS, this will break the DOM element from its parent contai
 }
 ```
 
+### Erroneous Values in Dataset
 
+Manchester City did not participate in the Premier League during the 1999/00 (2000) and 2001/02 (2002) seasons, where they played in the lower division of English football. Representing this information on the dashboard didn't prove as straightforward. Although this did not pose a problem for many of the charts, it did however cause a great deal of concern with the **Position Chart**.
+
+Entering '0' as **all** of the values for the effected years when generating the data meant their position for those years would also be set at '0'. This gave a false illusion on the **Position Chart** where their *line* was even higher than those teams who not only participated in the Premier League, but those who won the competition, finished runners-up and so forth.
+
+In order to solve this problem, a custom JavaScript function was created in an attempt to omit any values not in between '1' and '20' and return *false*, however this method proved fruitless and did not change the chart properties:
+
+```javacript
+function createPosGroup(dimension, teamName, attribute) {
+    return dimension.group().reduceSum(function (d) {
+        if ((d["team"]== teamName) && (d["position"] >= 1) && (d["position"] <= 20)) {
+            return d[attribute];
+        } else {
+            return false;
+        }
+    });
+}
+```
+
+After a lenghty period of time trying to find a solution, I eventually resorted to using the value '20' for their position during the affected years to portray their struggling start, even though they did not take part in the Premier League.
 
