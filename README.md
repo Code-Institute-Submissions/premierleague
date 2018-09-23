@@ -100,7 +100,7 @@ Python 2.7.14
 MongoDB 3.6.2
 ```
 
-**Forking the repo:**
+### Forking the repo
 
 1. Firstly, you will need to fork the repository. To do this, you will need to click on the **Fork** button in the top-right corner of this page.
 2. You will now need a copy of these files on your computer to make changes. To do this, you will need to clone or download the repo you forked in the previous step onto your local computer:
@@ -115,7 +115,7 @@ $ git clone https://github.com/YOUR-USERNAME/premierleague.git
 
 And we’re done! Well almost.
 
-**Making changes:**
+### Making changes
 
 Amongst many of the tech, the **TOP**SIX**DASHBOARD** uses Python 2.7 to power the dashboard. You will need to ensure you have this version of Python installed on your PC for optimal usability. This project uses several Python packages and it is recommended having these installed on your local machine using **virtualenv** for the project to function and run properly. 
 
@@ -145,7 +145,9 @@ Once MongoDB is installed, go ahead and complete the following steps to import t
 $ mongoimport -d premierLeague -c projects --type csv --file premier_league.csv --headerline
 ```
 
-**Creating pull requests:**
+Now you're all set to make changes.
+
+### Creating pull requests
 
 Now that you've made changes to the dashboard, you can submit a pull request to the master branch to await approval. To do this:
 1. Navigate to the [origianl repository](https://github.com/mineshkothari/premierleague "https://github.com/mineshkothari/premierleague")
@@ -160,3 +162,36 @@ Now that you've made changes to the dashboard, you can submit a pull request to 
 For further information about forking a repository, please click [here](https://help.github.com/articles/fork-a-repo/).
 
 For further information about creating pull requests, please click [here](https://help.github.com/articles/creating-a-pull-request-from-a-fork/).
+
+<br />
+<br />
+
+## Testing
+
+The **TOP**SIX**DASHBOARD** has undergone rigorous testing with each new implementation to ensure every aspect of this dashboard is working robustly.
+
+### Responsive Design
+
+Ensuring the dashboard maintained a responsive design was of paramount importance. This proved particularly tricky when setting the ```.width``` property of each chart in JavaScript.
+
+Using absolute width values in my *graph.js* file meant that regardless of the screen size, the width of each chart would remain the same causing unwanted side scrolling the smaller the screen size became.
+
+This was remedied by using a bit of JavaScript magic setting the width of the chart to be the same as the width of the parent container by using:
+```console
+.width($(this).parent().width())
+```
+
+However, this approach did not come without its drawbacks and led to further complications. Although the charts would take up 100% of the parent container width on page load, when resizing the screen, they would maintain their inital width, thus making it non-responsive once again. 
+
+In order to combat the new issue, the use of JavaScript's ```$(window).resize(function()``` followed by another instance of ```dc.renderAll(); ``` proved to be the smoking gun so solve chart responsiveness. See the code example below:
+
+```console
+    $(window).resize(function() {
+        yearSelectorManUnited
+            .width($(this).parent().width());
+
+    dc.renderAll();
+    });
+```
+
+
