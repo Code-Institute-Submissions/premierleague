@@ -125,8 +125,25 @@ To do this:
 1. You will first need to locate the path of the project's root folder on your computer.
 2. Then, you will need to open up your terminal and activate the virtualenv by typing the file path to the root folder followed by ```\env\Scripts\activate```. This should look something like:
 ```console
-C:\Users\YourName\YourFolder\premierLeague\env\Scripts\activate
+$ C:\Users\YourName\YourFolder\premierLeague\env\Scripts\activate
 ```
 
-Alternatively, you can create your own virtual environment and install the dependencies using **_pip_** by running the ```pip install -r requirements.txt``` from the project's root folder in your terminal.
+Alternatively, you can create your own virtual environment and install the dependencies using **_pip_** by running the following command from the root folder in your terminal: (please note - you will need to have *pip* installed as a Python package for this to work)
+```console
+pip install -r requirements.txt
+```
 
+**Creating pull requests:**
+
+Now that you've made changes to the dashboard, you can submit a pull request to the master branch to await approval. To do this:
+1. Navigate to the [origianl repository](https://github.com/mineshkothari/premierleague "https://github.com/mineshkothari/premierleague")
+2. Click on **New pull request** on the right of the Branch menu
+3. On the compare page, click **compare across forks**
+4. Confirm that the *base fork* is the repository you'd like to merge into.
+5. Use the *head fork* drop-down menu to select your fork, then use the compare branch drop-down menu to select the branch you made your changes in.
+6. Type a little description for your pull request.
+7. If you do not want to allow anyone with push access to the upstream repository to make changes to your PR, unselect **Allow edits from maintainers**.
+8. Click **Create pull request**.
+
+For further information about forking a repository, please click [here](https://help.github.com/articles/fork-a-repo/).
+For further information about creating pull requests, please click [here](https://help.github.com/articles/creating-a-pull-request-from-a-fork/).
