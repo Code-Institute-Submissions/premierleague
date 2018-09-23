@@ -236,7 +236,7 @@ Entering '0' as **all** of the values for the effected years when generating the
 
 In order to solve this problem, a custom JavaScript function was created in an attempt to omit any values not in between '1' and '20' and return *false*, however this method proved fruitless and did not change the chart properties:
 
-```javacript
+```javascript
 function createPosGroup(dimension, teamName, attribute) {
     return dimension.group().reduceSum(function (d) {
         if ((d["team"]== teamName) && (d["position"] >= 1) && (d["position"] <= 20)) {
@@ -249,4 +249,12 @@ function createPosGroup(dimension, teamName, attribute) {
 ```
 
 After a lenghty period of time trying to find a solution, I eventually resorted to using the value '20' for their position during the affected years to portray their struggling start, even though they did not take part in the Premier League.
+
+### PieChart Legends
+
+DC comes equipped with a feature to add legends to your charts, and for the most part, this proved to be a great addition imporving the UX/UI of the data dashboard. However, this came with its own challenges.
+
+Teams such as Manchester City and Tottenham Hotspur had 13 and 11 different position finishes in the Premier League respectively. This meant the *DC Legend* was too wide to fit horizontally and would not fit vertically within the SVG element without causing responsive issues. Attempts were made to split the legend on two lines but  seemed this seems like a limitation in DC.js. 
+
+The legend was subsequently removed for the affected two teams.
 
