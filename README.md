@@ -108,10 +108,25 @@ MongoDB 3.6.2
 	- Under **Clone with HTTPS**, copy the clone URL for the repository
 	- Open your Git terminal
 	- Type ```git clone``` followed by the URL copied in the second step. This should look something like the following:
-	```console
-	$ git clone https://github.com/YOUR-USERNAME/premierleague.git
-	```
+```console
+$ git clone https://github.com/YOUR-USERNAME/premierleague.git
+```
 3. Once you have the file path all written down, go and hit Enter on your keyboard to request the clone.
-<br />
+
 And we’re done! Well almost.
+
+**Making changes:**
+
+Amongst many of the tech, the **TOP**SIX**DASHBOARD** uses Python 2.7 to power the dashboard. You will need to ensure you have this version of Python installed on your PC for optimal usability. This project uses several Python packages and it is recommended having these installed on your local machine using **virtualenv** for the project to function and run properly. 
+
+Included in the repo, you should find a folder called **_env_** which will have all the dependencies pre-installed for you, so all you will need to do is ensure this environment is activated when working on the project.
+
+To do this: 
+1. You will first need to locate the path of the project's root folder on your computer.
+2. Then, you will need to open up your terminal and activate the virtualenv by typing the file path to the root folder followed by ```\env\Scripts\activate```. This should look something like:
+```console
+C:\Users\YourName\YourFolder\premierLeague\env\Scripts\activate
+```
+
+Alternatively, you can create your own virtual environment and install the dependencies using **_pip_** by running the ```pip install -r requirements.txt``` from the project's root folder in your terminal.
 
