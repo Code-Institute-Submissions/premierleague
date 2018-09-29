@@ -391,7 +391,7 @@ function createGroup(dimension, teamName, attribute) {
 }
 ```
 
-Subsequently seven lines on repeated code became one:
+What would have been 49 lines of code per team was eventually condensed down to just 7. That's one line per attribute/group:
 ```javascript
 // GROUPS
 var manUnitedPointsByYear = createGroup(yearDim, "MANCHESTER UNITED", "points");
@@ -401,4 +401,16 @@ var manUnitedGoalDifference = createGroup(yearDim, "MANCHESTER UNITED", "goal_di
 var manUnitedWins = createGroup(yearDim, "MANCHESTER UNITED", "won");
 var manUnitedDrawn = createGroup(yearDim, "MANCHESTER UNITED", "drawn");
 var manUnitedLosses = createGroup(yearDim, "MANCHESTER UNITED", "lost");
+```
+
+### Separate JavaScript Files For Teams
+
+Having all the chart properties on a single *graph.js* file caused issues with rendering them on different pages. The charts would render perfectly well on the index page but failed to load on the individual team pages. It was a paramount to visualise data for individual teams on separate pages and a fix was needed to ensure graphs were being rendered on each page.
+
+A working outcome for this was to create individual JavaScript files for each page and utilise Python's [Jinja](http://jinja.pocoo.org/docs/2.10/) templating to pull only the necessary JavaScript Files for that page.
+
+```python
+{% block page_specific_js %}
+    <script src="{{ url_for ('static', filename='js/manchesterunited.js')}}"></script>
+{% endblock %}
 ```
