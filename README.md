@@ -202,6 +202,8 @@ Want to learn about some of the known issues/bugs/limitations with this project?
 
 ### Responsive Design
 
+**The Graphs**
+
 Ensuring the dashboard maintained a responsive design was of paramount importance. This proved particularly tricky when setting the ```.width``` property of each chart in JavaScript.
 
 Using absolute width values in my *graph.js* file meant that regardless of the screen size, the width of each chart would remain the same causing unwanted side scrolling the smaller the screen size became.
@@ -225,6 +227,20 @@ $(window).resize(function() {
 
 dc.renderAll();
 });
+```
+
+**x Axis Ticks**
+
+Having the ticks horizonatal along the x axis created issues on smaller devices where the text would overlap over another becoming illegible.
+
+This required some CSS manipulation to transform and rotate the text thus solving responsive issues.
+
+```sass
+@media (max-width: 768px)
+  .dc-chart
+    .axis.x
+      .tick text
+        transform: translate(17px,13px) rotateZ(60deg)
 ```
 
 ### DC Charts
