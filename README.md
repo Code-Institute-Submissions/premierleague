@@ -191,7 +191,15 @@ The **TOP**SIX**DASHBOARD** has undergone rigorous testing with each new impleme
 
 ### Prototyping
 
+The initial stages of this project was to ensure the database had been established and configured correctly, ensuring Flask is able to extract the data from MongoDB. The CSV file had data which was up to date for two teams with dummy data entered for the remainder.
+
+This file was then uploaded to MongoDB, with Flask taking care of retrieving the data and returning this back to the browser.
+
+Once I was content the database was configured correctly, I then populated the CSV with real data, updating the collection on MongoDB in the process.
+
 ### Routing
+
+
 
 ### UX/UI Testing
 
