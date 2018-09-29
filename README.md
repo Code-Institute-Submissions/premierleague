@@ -318,3 +318,33 @@ goalsChartManUnited
     .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]))
     ...
 ```
+
+### barChart xUnits
+
+The DC documentation isn't particularly clear on how to set the widths of bar charts, making it difficult to style them to be in-keeping with the rest of the site.   
+
+To partially solve this, CSS was used to manipulate the bar width:
+
+```sass
+.dc-chart rect.bar
+  width: 19px
+
+@media (max-width: 520px)
+  .dc-chart rect.bar
+    width: 8px
+```
+
+Using this approach came with its own drawbacks however: 
+1. These bars were not dynamic requiring constant maintainence - meaning they would overlap on smaller screen sizes, or when more data gets added in the future
+2. The bars were offset to the right and not in the centre
+3. They didn't particularly work on any browser other than Google Chrome
+
+This required urgent attention, and after a bit of [research](https://github.com/dc-js/dc.js/issues/137), the importance of the ```xUnits``` function became apparent.
+
+```javascript
+.xUnits(function(){return 19;}) // SET BAR WIDTH
+.centerBar(true)
+.barPadding(0.25) // SET PADDING BETWEEN BARS
+```
+
+This method ensured the bars were dynamic and fixed the cross-browser issues which came with the CSS manipulation.
