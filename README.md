@@ -414,3 +414,16 @@ A working outcome for this was to create individual JavaScript files for each pa
     <script src="{{ url_for ('static', filename='js/manchesterunited.js')}}"></script>
 {% endblock %}
 ```
+
+### .rangeChart Property
+
+I had issues in rendering certain graphs after the two *selector* charts on any given page.
+
+For instance, where a user would filter the teams from the *Team Selector* and a range from the *Year Selector* on the [homepage](https://top-six-dashboard.herokuapp.com/), the *Points Chart* would update based on the selection, however, the *Position Chart* would not.
+
+A similar issue would occur on any of the team pages. Once the filters are in place, the *Form Chart* will update based on what the user has selected, however, any subsequent charts which follow would not.
+
+With this issue, the ```.rangeChart``` property was used to target the previous chart making each chart dependent on the one before it.
+
+Adding this property on the charts would remedy the issue and all the charts would render as they should dependent on the filter being applied. 
+
