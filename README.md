@@ -199,7 +199,7 @@ Once I was content the database was configured correctly, I then populated the C
 
 ### Routing
 
-
+Once the basic setup for the index page was complete, it was then a good time to configure the remainder of pages needed for the project. This included setting up page templates and routing them with Flask using ```render_template```. 
 
 ### UX/UI Testing
 
@@ -224,7 +224,7 @@ Some of the notable issues included the use of Bootstrap's flexbox on Microsoft'
 
 The dashboard was again tested right before the project was deployed to ensure any issues were rectified or listed before the site went live.
 
-Further tests took place after the site was depployed.
+Further tests took place after the site was deployed.
 
 **Desktop Browsers Tested:**
 ```
