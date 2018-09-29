@@ -348,3 +348,57 @@ This required urgent attention, and after a bit of [research](https://github.com
 ```
 
 This method ensured the bars were dynamic and fixed the cross-browser issues which came with the CSS manipulation.
+
+### Streamline JavaScript code
+
+In Software or Web development, it's always beneficial to write [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) code. Writing DRY code makes it effecient for a computer process the information improving load times.
+
+During the initial testing stages for this project, it became apparent that a more streamlined function would be required in order to prevent hundreds and thousands of repeated lines of code in order to gather all the data required. 
+
+Repeating seven lines of code for six teams and then to repeat them for each attribute would not only became unmanagable, but a very inefficient way of coding.
+
+```javascript
+var manUnitedPointsByYear = yearDim.group().reduceSum(function (d) {
+    if (d["team"]=="MANCHESTER UNITED"){
+        return d["points"];
+    } else {
+        return 0
+    }
+});
+
+var manCityPointsByYear = yearDim.group().reduceSum(function (d) {
+    if (d['team']=="MANCHESTER CITY"){
+        return d['points'];
+    } else {
+        return 0;
+    }
+});
+...
+
+```
+
+A masterful function was written with the help of Yoni Lavi to come up with an effecient way of grouping data based on three parameters.
+
+```javascript
+function createGroup(dimension, teamName, attribute) {
+    return dimension.group().reduceSum(function (d) {
+        if (d["team"]== teamName){
+            return d[attribute];
+        } else {
+            return 0;
+        }
+    });
+}
+```
+
+Subsequently seven lines on repeated code became one:
+```javascript
+// GROUPS
+var manUnitedPointsByYear = createGroup(yearDim, "MANCHESTER UNITED", "points");
+var manUnitedGoalsByYear = createGroup(yearDim, "MANCHESTER UNITED", "goals_for");
+var manUnitedGoalsConcByYear = createGroup(yearDim, "MANCHESTER UNITED", "goals_against");
+var manUnitedGoalDifference = createGroup(yearDim, "MANCHESTER UNITED", "goal_difference");
+var manUnitedWins = createGroup(yearDim, "MANCHESTER UNITED", "won");
+var manUnitedDrawn = createGroup(yearDim, "MANCHESTER UNITED", "drawn");
+var manUnitedLosses = createGroup(yearDim, "MANCHESTER UNITED", "lost");
+```
