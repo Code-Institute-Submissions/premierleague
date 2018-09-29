@@ -105,7 +105,7 @@ The **TOP**SIX**DASHBOARD** is a personal project created as part of my Full Sta
 
 **Things to consider:**
 
-This dashboard relies on many tools and technologies for it to function properly. A large proportion of these have been configured in such a way that you would not be required to make any additional changes to the files for these to work. However, there are some aspects you will need to be taken into consideration if you choose to make changes to the dashboard.
+This dashboard relies on many tools and technologies for it to function properly. A large proportion of these have been configured in such a way that you would not be required to make any additional changes to the files for these to work. However, there are some aspects you will need to be take into consideration when choosing to make changes to the dashboard.
 
 **Prerequisites:**
 ```
@@ -130,7 +130,9 @@ And we’re done! Well almost.
 
 ### Making Changes
 
-Amongst many of the tech, the **TOP**SIX**DASHBOARD** uses Python 2.7 to power the dashboard. You will need to ensure you have this version of Python installed on your PC for optimal usability. This project uses several Python packages and it is recommended having these installed on your local machine using **virtualenv** for the project to function and run properly. 
+Amongst many of the tech, the **TOP**SIX**DASHBOARD** uses Python 2.7 to power the dashboard. You will need to ensure you have this version of Python installed on your PC for optimal usability. This project uses several Python packages and it is recommended having these installed on your local machine using a virtual environment for the project to function and run properly.
+
+**virtualenv:**
 
 Included in the repo, you should find a folder called **_env_** which will have all the dependencies pre-installed for you, so all you will need to do is ensure this environment is activated when working on the project.
 
@@ -145,6 +147,8 @@ Alternatively, you can create your own virtual environment and install the depen
 ```console
 $ pip install -r requirements.txt
 ```
+
+**MongoDB:**
 
 You will also need to configure MongoDB locally to render the charts properly and see how your changes will affect them. The dashboard is pulling in data from the NoSQL database and it is recommended to have MongoDB 3.6.2 or later installed on your PC.
 
@@ -212,7 +216,7 @@ This was remedied by using a bit of JavaScript magic setting the width of the ch
 
 However, this approach did not come without its drawbacks and led to further complications. Although the charts would take up 100% of the parent container width on page load, when resizing the screen, they would maintain their inital width, thus making it non-responsive once again. 
 
-In order to combat the new issue, the use of JavaScript's ```$(window).resize(function()``` followed by another instance of ```dc.renderAll(); ``` proved to be the smoking gun so solve chart responsiveness. See the code example below:
+In order to combat the new issue, the use of JavaScript's ```$(window).resize(function()``` followed by another instance of ```dc.renderAll(); ``` proved to be the smoking gun to solve any chart responsiveness problems. See the code example below:
 
 ```javascript
 $(window).resize(function() {
@@ -233,7 +237,7 @@ div.dc-chart {
 }
 ```
 
-When using floats in CSS, this will break the DOM element from its parent container causing it to collapse. This caused adverse effects to the charts as you could no longer interact with, and created further issues with the hover effects. One eventual fix was to override the rule by adding a custom CSS rule as seen below: 
+When using floats in CSS, this will break the DOM element from its parent container causing the parent to collapse. This caused adverse effects to the charts as you could no longer interact with them. This also caused further issues with the hover effects placed on each graph. One eventual fix was to override the rule by adding custom CSS as seen below: 
 
 ```css
 .dc-chart {
@@ -245,7 +249,7 @@ When using floats in CSS, this will break the DOM element from its parent contai
 
 Manchester City did not participate in the Premier League during the 1999/00 (2000) and 2001/02 (2002) seasons, where they played in the lower division of English football. Representing this information on the dashboard didn't prove as straightforward. Although this did not pose a problem for many of the charts, it did however cause a great deal of concern with the **Position Chart**.
 
-Entering '0' as **all** of the values for the effected years when generating the data meant their position for those years would also be set at '0'. This gave a false illusion on the **Position Chart** where their *line* was even higher than those teams who not only participated in the Premier League, but those who won the competition, finished runners-up and so forth.
+Entering '0' as **all** of the values for the effected years on the csv file when generating the data meant their position for those years would also be set at '0'. This gave a false illusion on the **Position Chart** where their *line* was even higher than those teams who not only participated in the Premier League, but those who won the competition, finished runners-up and so forth.
 
 In order to solve this problem, a custom JavaScript function was created in an attempt to omit any values not in between '1' and '20' and return *false*, however this method proved fruitless and did not change the chart properties:
 
