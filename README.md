@@ -197,6 +197,15 @@ The **TOP**SIX**DASHBOARD** has undergone rigorous testing with each new impleme
 
 ### Responsive Design
 
+Manual testing was conducted to ensure the dashboard was as responsive as possible. This was a recurring testing approach to ensure the dashboard worked well with all screen sizes after every new implementation. 
+
+Some of the use cases includes:
+1. Ensure the navbar was behaving as I envisioned it
+2. Breakpoint for each columns were set correctly for charts
+3. Ensuring the charts were responsive
+
+See the **Report > Responsive Design** section for more details.
+
 ### Cross-Browser Testing
 
 Manual cross-browser testing was undertaken after each major implementation of the project. This included the implmentation of the navbar, inclusion of various charts, and the footer amoungst many others. 
