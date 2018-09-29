@@ -203,6 +203,8 @@ Once the basic setup for the index page was complete, it was then a good time to
 
 ### UX/UI Testing
 
+UX/UI tests were carried out to ensure the dashboard was functional. These test were conducted with every new implementation and every change, no matter how big or small. This proved an excellent way of identifying and thwarting any issues, reducing the time spent on bug fixes to a small fraction.
+
 ### Responsive Design
 
 Manual testing was conducted to ensure the dashboard was as responsive as possible. This was a recurring testing approach to ensure the dashboard worked well with all screen sizes after every new implementation. 
