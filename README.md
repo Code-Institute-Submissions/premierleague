@@ -22,6 +22,8 @@ This dashboard enables you to dive into the stats of your favourite Premier Leag
 
 ## Features
 
+### Features Implemented
+
 Comparing the 'Big Six' Teams (Home page):
 1. Team Selector - Filter results based on the team(s) selected
 2. Year Selector - Filter results based on the period selected
@@ -29,6 +31,17 @@ Comparing the 'Big Six' Teams (Home page):
 Analysing Individual Teams (Team pages):
 1. Position Selector - Filter results based on the position the teams finished in
 2. Year Selector - Filter results of individual teams based on the period selected
+
+### Features yet to be implemented
+
+Reset Filter Buttons
+1. Reset All button on Homepage
+2. Reset All button on Man United Page
+3. Reset All button on Man City Page
+4. Reset All button on Chelsea Page
+5. Reset All button on Arsenal Page
+6. Reset All button on Spurs Page
+7. Reset All button on Liverpool Page
 
 <br />
 <br />
@@ -104,10 +117,10 @@ MongoDB 3.6.2
 
 1. Firstly, you will need to fork the repository. To do this, you will need to click on the **Fork** button in the top-right corner of this page.
 2. You will now need a copy of these files on your computer to make changes. To do this, you will need to clone or download the repo you forked in the previous step onto your local computer:
-	- Click on the green **Clone or download** button
-	- Under **Clone with HTTPS**, copy the clone URL for the repository
-	- Open your Git terminal
-	- Type ```git clone``` followed by the URL copied in the second step. This should look something like the following:
+    - Click on the green **Clone or download** button
+    - Under **Clone with HTTPS**, copy the clone URL for the repository
+    - Open your Git terminal
+    - Type ```git clone``` followed by the URL copied in the second step. This should look something like the following:
 ```console
 $ git clone https://github.com/YOUR-USERNAME/premierleague.git
 ```
@@ -257,4 +270,3 @@ DC comes equipped with a feature to add legends to your charts, and for the most
 Teams such as Manchester City and Tottenham Hotspur had 13 and 11 different position finishes in the Premier League respectively. This meant the *DC Legend* was too wide to fit horizontally and would not fit vertically within the SVG element without causing responsive issues. Attempts were made to split the legend on two lines but  seemed this seems like a limitation in DC.js. 
 
 The legend was subsequently removed for the affected two teams.
-
