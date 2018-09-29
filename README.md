@@ -187,11 +187,43 @@ For further information about creating pull requests, please click [here](https:
 
 The **TOP**SIX**DASHBOARD** has undergone rigorous testing with each new implementation to ensure every aspect of this dashboard is working robustly.
 
+*All tests were done on a Windows 10 64-bit PC unless otherwise stated*
+
+### Prototyping
+
+### Routing
+
 ### UX/UI Testing
 
 ### Responsive Design
 
 ### Cross-Browser Testing
+
+Manual cross-browser testing was undertaken after each major implementation of the project. This included the implmentation of the navbar, inclusion of various charts, and the footer amoungst many others. 
+
+The purpose of conducting these test was to ensure the dashboard functioned well across the most popular browsers for Windows, listing any problems to resolve before deployment.
+
+Some of the notable issues included the use of Bootstrap's flexbox on Microsoft's Internet Explorer and Edge.
+
+The dashboard was again tested right before the project was deployed to ensure any issues were rectified or listed before the site went live.
+
+Further tests took place after the site was depployed.
+
+**Desktop Browsers Tested:**
+```
+Google Chrome 69
+Firefox 62.0.2
+Microsoft Edge 42
+Internet Explorer 11
+```
+
+**Mobile Browsers Tested:**
+```
+Samsung Internet (Samsung S8)
+Chrome (Samsung S8, iPhone 6S)
+Safari (iPhone 6S)
+```
+
 
 <br />
 <br />
