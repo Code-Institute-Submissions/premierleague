@@ -290,3 +290,31 @@ DC comes equipped with a feature to add legends to your charts, and for the most
 Teams such as Manchester City and Tottenham Hotspur had 13 and 11 different position finishes in the Premier League respectively. This meant the *DC Legend* was too wide to fit horizontally and would not fit vertically within the SVG element without causing responsive issues. Attempts were made to split the legend on two lines but  seemed this seems like a limitation in DC.js. 
 
 The legend was subsequently removed for the affected two teams.
+
+### Snag with Crossfilter.js
+
+There were minor rendering issues with the ```.barChart```'s when filtering selections using *Year Selector*. This only occurred when selecting years either starting from the year 2000, ending at the year 2018 or both.
+
+The bar for the year 2000 and/or 2018 would get partially chopped out from view of the ```chart-body``` element inside the SVG.
+
+As the bar charts were using the *Form Guide* for the range, it soon became apparent that an extra year was needed to each end of the *Form Guide*'s .xAxis to allow for extra space around the bar charts.
+
+In order to solve this issue, the following code was added to the *Form Guide*:
+```javascript
+var minYearBoundary = new Date(yearDim.bottom(1)[0]["year"]-1, 0,1);
+var maxYearBoundary = new Date(yearDim.top(1)[0]["year"]+1, 0,1);
+
+formGuideManUnited
+        ...
+        .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]))
+        ...
+```
+
+Subsequently, the ```.barChart```'s were configured as shown below:
+```javascript
+goalsChartManUnited
+    ...
+    .rangeChart(formGuideManUnited)
+    .x(d3.time.scale().domain([minYearBoundary, maxYearBoundary]))
+    ...
+```
