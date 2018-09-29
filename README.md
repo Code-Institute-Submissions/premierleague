@@ -427,3 +427,14 @@ With this issue, the ```.rangeChart``` property was used to target the previous 
 
 Adding this property on the charts would remedy the issue and all the charts would render as they should dependent on the filter being applied. 
 
+### Reset Feature
+
+As with DC, Crossfilter hadn't come without its limitations either. 
+
+If a user was to remove any filter set on the *Year Selector* by deselecting the range applied on that chart, in theory this should reset the filter applied on all other charts on that page after *Crossfilter* has done its magic.
+
+Unfortunately, this didn't quite go according to plan and some of the charts do not reset in occurdance with the filter being deselected. Similar to the issue with the  ```.rangeChart``` above, this only affect the graphs which were dependent on the previous graph.
+
+One way of combatting the issue would be to implement a 'Reset' button on each page. This should clear all existing filters on the page without the need to refresh the browser. 
+
+This feature is yet to be implemented.
