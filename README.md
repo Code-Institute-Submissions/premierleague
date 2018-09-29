@@ -438,3 +438,16 @@ Unfortunately, this didn't quite go according to plan and some of the charts do 
 One way of combatting the issue would be to implement a 'Reset' button on each page. This should clear all existing filters on the page without the need to refresh the browser. 
 
 This feature is yet to be implemented.
+
+### Multiple Menus
+
+The **TOP**SIX**DASHBOARD** uses an elegant menu system making it an effective way to navigate through the various different pages improving the User Experience. 
+
+Bootstrap's *Navbar* and *Dropdown* features came handy when implementing the menu system. Well, for the mobile view at least. There wasn't any additional functionality required and to implement this using Bootstrap was a bonus as it does everything that was required. The only thing I did change was the Hamburger menu which added elegant hover and toggle animations.
+
+For the desktop view, it would have been great to utilise the larger 'real estate' on the screen and have an "always on" dropdown menu with the links to all the different team pages. However, overriding the original Bootstrap navbar made the markup and CSS particularly messy and would not function as intended also causing issues with a perfectly working mobile navigation which was in place.
+
+The best way to circumvent this would be to code two different menus and utilise Bootstrap's ```d-none``` class to hide desktop menu on smaller screens and ```d-md-block d-lg-block d-xl-block``` classes to show the menu on larger screens. 
+
+The opposite was done for the mobile menu, where the DOM element was hidden on larger devices.
+
