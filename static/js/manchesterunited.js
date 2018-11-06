@@ -173,4 +173,3 @@ function makeGraphs(error, premierleagueData) {
         dc.renderAll();
     });
 }
-

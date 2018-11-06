@@ -243,6 +243,43 @@ Chrome (Samsung S8, iPhone 6S)
 Safari (iPhone 6S)
 ```
 
+<br />
+<br />
+
+## Deployment
+
+**TOP**SIX**DASHBOARD** is deployed on [Heroku](https://www.heroku.com/), a cloud platform designed enabling you to build, deliver monitor and scale apps directly on the cloud.
+
+### Heroku
+
+Creating an app on Heroku is relatively easy. Once it has been installed on your computer, you can create your new app from within the terminal in just a few commands.
+
+Heroku servers use Ubuntu Server, which is one of the most popular operating systems for running web servers.
+
+### Gunicorn
+
+One of the many Python packages used for this project is **Gunicorn**. Gunicorn 'Green Unicorn' is a Python WSGI HTTP Server for UNIX. It's a pre-fork worker model. The Gunicorn server is broadly compatible with various web frameworks, simply implemented, light on server resources, and fairly speedy.
+
+In other words, this is exactly what we need as Heroku uses Ubuntu Server.
+
+Gunicorn was installed on the virtualenv using ```pip install gunicorn```. 
+
+### Procfiles
+
+The Procfile is a file that’s used by Heroku to tell it what to do with the application once it’s been deployed.
+
+
+
+Procfile:
+
+```web: gunicorn premierLeague:app```
+
+Using the Windows operating system, as second Procfile was needed called **Procfile.windows**:
+
+```web: python premierLeague.py```
+
+
+### mLab
 
 <br />
 <br />
