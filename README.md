@@ -94,7 +94,7 @@ Flask, a Python microframework is used for this project to route the app to vari
 
 - [MongoDB](https://www.mongodb.com/)
 
-The Premier League data used for this project is being stored on MongoDB.
+The Premier League data used for this project is being stored on MongoDB, a NoSQL database.
 
 <br />
 <br />
@@ -280,6 +280,27 @@ Using the Windows operating system, as second Procfile was needed called **Procf
 
 
 ### mLab
+
+Using MongoDB to store the Premier League data, Heroku makes it really simple to create a database and connecting it with the app using Heroku add-on mLab MongoDB.
+
+Once the Heroku add-on mLab had been installed, I needed to create a new user to the database. This was used to connect to the database using the terminal by entering a command similar to the syntax below in my terminal.
+
+```
+mongo <hostname>/<dbname> -u <dbuser> -p <dbpassword>
+```
+
+The anglular brackets were replaced with the database name and hostname (provided inside the mLab dashboard) along with the new user credentials created.
+
+Once the connection was successfully configured, I then needed to create a new collection, which is where we will be importing the data from the CSV file. This process is similar to how we import data to our MongoDB locally. (See **Contributing > Making Changes > MongoDB** for more information).
+
+The terminal command syntax used to run this step looked like this:
+
+```
+mongoimport -h <hostname> -d <dbname> -c <collectionname> -u <dbuser> -p <dbpassword> \
+  --file premier_league.csv --type csv --headerline
+```
+
+Lastly, once all the data had been successfully uploaded, I created config variables for the Flask application to use the newly created MongoDB instead of the local one.
 
 <br />
 <br />
@@ -539,3 +560,13 @@ The best way to circumvent this would be to code two different menus and utilise
 
 The opposite was done for the mobile menu, where the DOM element was hidden on larger devices.
 
+## Credits
+
+### Media
+- [Premier League Logo](https://www.premierleague.com) - Used as the main logo (Used for demonstration purposes only as part of the Stream 2 project. This logo would not be used for under any other circumstance).
+- [Team Logos](https://logoeps.com/) - Used as part of the main hero section on individual team pages.
+- [Language/Libraries/Frameworks Logo](https://seeklogo.com/) - Used on the 'About Page'.
+
+### Dataset
+
+The dataset for this project was sourced from https://www.premierleague.com. Collecting data from the official Premier League website has given me full confidence obtaining correct and up-to-date data.
