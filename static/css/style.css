@@ -6442,7 +6442,7 @@ a:hover {
 .chart-title {
   text-transform: uppercase;
   display: inline-block;
-  border-left: 15px solid purple;
+  border-left: 15px solid #63636e;
   padding: .5em 1em;
   background: #a9a9a9;
   color: #e2e2e2;
@@ -6592,7 +6592,7 @@ button.intro_button:focus {
 }
 
 .secondary-info .custom-helper {
-  background-color: purple;
+  background-color: #63636e;
 }
 
 .secondary-info .helper-text {
