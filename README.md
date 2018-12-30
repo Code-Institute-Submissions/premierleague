@@ -48,6 +48,8 @@ Reset Filter Buttons
 
 ## Technologies Implemented
 
+### Languages Used
+
 - HTML5
 
 As with every website or web based app, the use of Hypertext Markup Language is paramount. HTML5 has been used as the markup for this project as this would enable use of many of the new semantics to keep the structure of this project clear and in keeping with the latest industry standards.
@@ -56,6 +58,16 @@ As with every website or web based app, the use of Hypertext Markup Language is 
 
 As with markup, Cascading Style Sheets are essential when controlling the layout of the website. Custom CSS was used in this project in conjunction with Bootstrap 4 to style **TOP**SIX**DASHBOARD** enhancing user interaction and delivering exceptional user experience.
 
+- JavaScript
+
+Custom JavaScript was used on this project as well as other JavaScript libraries such as jQuery, dc.js, d3.js and crossfilter.js. Custom JavaScript was used primarily for the mobile toggle menu button and responsive design choices.
+
+- [Python](https://www.python.org/)
+
+Python is the Back-end programming language used for this project, primarily for the functionalities of Flask and its open library of essential packages. 
+
+### Frameworks & Libraries
+
 - [Bootstrap 4](https://getbootstrap.com/docs/4.0/getting-started/introduction)
 
 The Bootstrap framework was used for this project to utilise various components such as Bootstrap's Navbar, Grid, Variables and many other utilities.
@@ -63,14 +75,6 @@ The Bootstrap framework was used for this project to utilise various components 
 - [SASS](https://sass-lang.com)
 
 I used **SASS** as my chosen CSS preprocessor. This is a great way to import custom styles and override the original Bootstrap library. I also have the added benefit of using variables and mixins along with other cool tricks. 
-
-- [NPM](https://www.npmjs.com/)
-
-Node Package Manager was used to install Bootstrap 4 on this project. This approach is ideal as it allows greater flexibility when overriding Bootstrap's original Sass files.
-
-- JavaScript
-
-Custom JavaScript was used on this project as well as other JavaScript libraries such as jQuery, dc.js, d3.js and crossfilter.js. Custom JavaScript was used primarily for the mobile toggle menu button and responsive design choices.
 
 - [DC.js](https://dc-js.github.io/dc.js/)
 
@@ -84,13 +88,17 @@ D3.js is a JavaScript library which can be used to create rich data visualizatio
 
 Crossfilter.js is a JavaScript plugin used to slice and dice JavaScript arrays. This allows Dc.js to easily manipulate the data table that the graphs use, so they can refresh with the filtered data.
 
-- [Python](https://www.python.org/)
-
-Python is the Back-end programming language used for this project, primarily for the functionalities of Flask and its open library of essential packages. 
-
 - Flask
 
 Flask, a Python microframework is used for this project to route the app to various pages and retrieve data stored on MongoDB, returning it back to the browser.
+
+### Tools
+
+- [NPM](https://www.npmjs.com/)
+
+Node Package Manager was used to install Bootstrap 4 on this project. This approach is ideal as it allows greater flexibility when overriding Bootstrap's original Sass files.
+
+### Database
 
 - [MongoDB](https://www.mongodb.com/)
 
