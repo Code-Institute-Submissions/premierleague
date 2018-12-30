@@ -6260,7 +6260,7 @@ footer .container .footer-content ul li {
 
 footer .container .footer-content ul li a {
   color: #BEBEBE;
-  font-weight: 100;
+  font-weight: 400;
   padding: .125em 0;
   position: relative;
   display: inline-block;
@@ -6310,7 +6310,7 @@ footer .container .footer-content .footer-title {
 footer .container .sub-footer-content {
   border-top: 0.5px solid rgba(255, 255, 255, 0.25);
   padding-top: 3em;
-  color: #BEBEBE;
+  color: #fff;
 }
 
 footer .container p {
@@ -6324,7 +6324,7 @@ footer .container .sub-footer-text {
 }
 
 footer .container .sub-footer-text a {
-  color: #BEBEBE;
+  color: #fff;
   font-weight: 700;
   -webkit-transition: color 350ms ease-in-out;
   -o-transition: color 350ms ease-in-out;

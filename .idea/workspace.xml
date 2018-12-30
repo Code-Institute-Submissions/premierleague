@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf0811f3-d483-4b04-bb87-f7b531d5b8e0" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/sass/navigation/_navbar.sass" beforeDir="false" afterPath="$PROJECT_DIR$/static/sass/navigation/_navbar.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/sass/footer/_footer.sass" beforeDir="false" afterPath="$PROJECT_DIR$/static/sass/footer/_footer.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,19 +22,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/js/graph.js">
+        <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="182" selection-start-line="182" selection-end-line="182" />
+            <state relative-caret-position="429">
+              <caret line="94" column="227" selection-start-line="94" selection-start-column="227" selection-end-line="94" selection-end-column="227" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/sass/footer/_footer.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="669">
+              <caret line="87" lean-forward="true" selection-start-line="87" selection-end-line="87" />
             </state>
           </provider>
         </entry>
@@ -44,28 +45,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/sass/pages/base.sass">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="920">
-              <caret line="46" selection-start-line="46" selection-end-line="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/sass/navigation/_navbar.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/sass/pages/index.sass">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-384">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="220">
+              <caret line="74" column="26" lean-forward="true" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -118,7 +101,6 @@
         <option value="$PROJECT_DIR$/static/sass/abstracts/_variables.sass" />
         <option value="$PROJECT_DIR$/static/js/common.js" />
         <option value="$PROJECT_DIR$/static/sass/pages/tottenhamhotspur.sass" />
-        <option value="$PROJECT_DIR$/static/sass/footer/_footer.sass" />
         <option value="$PROJECT_DIR$/static/sass/pages/manchestercity.sass" />
         <option value="$PROJECT_DIR$/static/sass/pages/manchesterunited.sass" />
         <option value="$PROJECT_DIR$/static/sass/pages/chelsea.sass" />
@@ -150,8 +132,9 @@
         <option value="$PROJECT_DIR$/static/js/script.js" />
         <option value="$PROJECT_DIR$/static/sass/pages/index.sass" />
         <option value="$PROJECT_DIR$/static/js/graph.js" />
-        <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/static/sass/navigation/_navbar.sass" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/static/sass/footer/_footer.sass" />
       </list>
     </option>
   </component>
@@ -193,6 +176,13 @@
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="sass" type="462c0819:PsiDirectoryNode" />
               <item name="custom" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="premierLeague" type="b2602c69:ProjectViewProjectNode" />
+              <item name="premierLeague" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="sass" type="462c0819:PsiDirectoryNode" />
+              <item name="footer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="premierLeague" type="b2602c69:ProjectViewProjectNode" />
@@ -276,12 +266,12 @@
       <workItem from="1545591101521" duration="134000" />
       <workItem from="1545591257869" duration="5370000" />
       <workItem from="1545748843956" duration="994000" />
-      <workItem from="1546184373312" duration="2838000" />
+      <workItem from="1546184373312" duration="3645000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9336000" />
+    <option name="totallyTimeSpent" value="10143000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -294,9 +284,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="0" width="1110" height="1201" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49682036" visible="true" weight="0.23098859" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49682036" visible="true" weight="0.23098859" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.50317967" side_tool="true" weight="0.14433812" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -309,7 +298,7 @@
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.26425856" side_tool="true" weight="0.2056338" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" order="9" sideWeight="0.5683721" weight="0.26547843" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49953488" visible="true" weight="0.2046729" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49953488" visible="true" weight="0.2046729" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.49953488" weight="0.32929105" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -591,13 +580,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/sass/footer/_footer.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="32" column="26" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/sass/pages/common.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2740">
@@ -626,13 +608,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/sass/pages/index.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-384">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/graph.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="460">
@@ -640,17 +615,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/sass/pages/base.sass">
+    <entry file="file://$PROJECT_DIR$/static/sass/pages/index.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="920">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        <state relative-caret-position="-20">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
+    <entry file="file://$PROJECT_DIR$/static/sass/pages/base.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="656">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
         </state>
       </provider>
     </entry>
@@ -659,8 +634,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/sass/navigation/_navbar.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+        <state relative-caret-position="220">
+          <caret line="74" column="26" lean-forward="true" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="94" column="227" selection-start-line="94" selection-start-column="227" selection-end-line="94" selection-end-column="227" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/sass/footer/_footer.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="669">
+          <caret line="87" lean-forward="true" selection-start-line="87" selection-end-line="87" />
         </state>
       </provider>
     </entry>
