@@ -6818,10 +6818,10 @@ button.intro_button:focus {
 }
 
 .about-hero {
-  background: -webkit-gradient(linear, left top, left bottom, from(#343a40), to(rgba(52, 58, 64, 0.6)));
-  background: -webkit-linear-gradient(#343a40, rgba(52, 58, 64, 0.6));
-  background: -o-linear-gradient(#343a40, rgba(52, 58, 64, 0.6));
-  background: linear-gradient(#343a40, rgba(52, 58, 64, 0.6));
+  background: -webkit-gradient(linear, left top, left bottom, from(#343a40), to(rgba(52, 58, 64, 0.6))) no-repeat;
+  background: -webkit-linear-gradient(#343a40, rgba(52, 58, 64, 0.6)) no-repeat;
+  background: -o-linear-gradient(#343a40, rgba(52, 58, 64, 0.6)) no-repeat;
+  background: linear-gradient(#343a40, rgba(52, 58, 64, 0.6)) no-repeat;
   text-transform: uppercase;
 }
 
