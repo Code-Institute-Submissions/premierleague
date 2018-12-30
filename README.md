@@ -555,7 +555,7 @@ Now you're all set to make changes.
 ### Creating Pull Requests
 
 Now that you've made changes to the dashboard, you can submit a pull request to the master branch to await approval. To do this:
-1. Navigate to the [origianl repository](https://github.com/mineshkothari/premierleague "https://github.com/mineshkothari/premierleague")
+1. Navigate to the [original repository](https://github.com/mineshkothari/premierleague "https://github.com/mineshkothari/premierleague")
 2. Click on **New pull request** on the right of the Branch menu
 3. On the compare page, click **compare across forks**
 4. Confirm that the *base fork* is the repository you'd like to merge into
