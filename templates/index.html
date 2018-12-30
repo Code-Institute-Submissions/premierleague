@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+    <!-- INDEX HERO -->
     <section class="hero index-hero d-flex align-items-center justify-content-center">
         <div class="row no-gutters">
             <div class="col">
@@ -12,6 +13,7 @@
     </section>
     <section class="secondary-info">
         <div class="row no-gutters">
+            <!-- INTROJS START TOUR SECTION -->
             <div class="col-lg-3 col-md-5 col-sm-6 custom-helper">
                 <div class="icon-container d-flex align-items-center justify-content-center">
                     <i class="fas fa-info"></i>
@@ -32,10 +34,12 @@
             </div>
         </div>
     </section>
+    <!-- MAIN SELECTORS / TEAM AND YEAR RANGE SELECTOR -->
     <section class="main-selectors">
         <div class="row no-gutters">
             <div class="col-sm-12 col-md-4">
                 <div class="shadow-box">
+                    <!-- TEAM SELECTOR -->
                     <div class="selector team-selector text-center" data-step="1" data-intro="Select the teams you want to compare" style="font-weight: normal" data-position="right">
                         <div class="chart-title"><h4>Team Selector</h4></div>
                         <div id="teamSelector" class="custom-chart"></div>
@@ -44,6 +48,7 @@
             </div>
             <div class="col-sm-12 col-md-8">
                 <div class="shadow-box">
+                    <!-- YEAR SELECTOR -->
                     <div class="selector year-selector text-center" data-step="2" data-intro="Select the range of years you want to compare" style="font-weight: normal" data-position="left">
                         <div class="chart-title"><h4>Year Selector</h4></div>
                         <div id="yearSelector" class="custom-chart"></div>
@@ -56,6 +61,7 @@
         <div class="row no-gutters">
             <div class="col-xl-6 col-lg-12">
                 <div class="shadow-box">
+                    <!-- POINTS CHART -->
                     <div class="points-chart chart-container text-center" data-step="3" data-intro="See the results of your selection here..." style="font-weight: normal" data-position="right">
                         <div class="chart-title"><h4>Points Chart</h4></div>
                         <div id="pointsChart" class="custom-chart"></div>
@@ -64,6 +70,7 @@
             </div>
             <div class="col-xl-6 col-lg-12">
                 <div class="shadow-box">
+                    <!-- POSITION CHART -->
                     <div class="position-chart chart-container text-center" data-step="4" data-intro="...and here" style="font-weight: normal" data-position="left">
                         <div class="chart-title"><h4>Position Chart</h4></div>
                         <div id="positionChart" class="custom-chart"></div>
@@ -73,6 +80,7 @@
         </div>
     </section>
 {% endblock %}
+<!-- PAGE SPECIFIC GRAPH -->
 {% block page_specific_js %}
     <script src="{{ url_for ('static', filename='js/graph.js')}}"></script>
 {% endblock %}
