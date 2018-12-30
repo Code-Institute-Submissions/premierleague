@@ -13,11 +13,14 @@
 </head>
 <body>
     <header class="site-header">
+        <!-- NAVBAR -->
         <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+            <!-- LOGO -->
             <a class="navbar-brand logo-style" href="/">
                 <img class="premier_league_logo" src="https://www.premierleague.com/resources/ver/i/elements/premier-league-logo-header.png" alt="Premier League Logo">
                 Top<span>Six</span>Dashboard
             </a>
+            <!-- MOBILE MENU TOGGLE -->
             <button class="navbar-toggler menu-toggle" data-toggle="collapse" data-target="#navbarMenu">
                 <span class="line line01"></span>
                 <span class="line line02"></span>
@@ -27,6 +30,7 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item top-layer-nav-item"><a href="/" class="nav-link">Home</a></li>
                     <li class="nav-item top-layer-nav-item dropdown navbar-team-list"><a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="false" aria-expanded="true">Teams</a>
+                        <!-- MOBILE NAVIGATION SUB-MENU / HIDDEN ON MD SCREENS -->
                         <div class="teams-list-container dropdown-menu d-md-none d-lg-none d-xl-none" aria-labelledby="navbarDropdownMenuLink">
                             <ul class="teams-list">
                                 <li class="teams-list-item"><a class="dropdown-item manunited-link" href="/teams/manchesterunited">Man United</a></li>
@@ -42,6 +46,7 @@
                   </ul>
             </div>
         </nav>
+        <!-- DESKTOP NAVIGATION SUB-MENU / HIDDEN ON SM SCREENS -->
         <div class="d-none d-md-block d-lg-block d-xl-block desktop-teams-list-container">
             <ul class="d-flex justify-content-center align-items-center desktop-teams-list" data-step="5" data-intro="You can also check out stats for individual teams by clicking on the menu" style="font-weight: normal" data-position="right">
                 <li class="desktop-teams-list-item"><a class="desktop-team-links manunited-link d-flex align-items-center" href="/teams/manchesterunited">Man United</a></li>
@@ -53,16 +58,19 @@
             </ul>
         </div>
     </header>
+    <!-- MAIN PAGE CONTENT -->
     <main class="page-content">
         {% block content %}
         {% endblock %}
     </main>
+    <!-- FOOTER START -->
     <footer class="footer clearfix">
         <div class="container">
             <div class="row footer-content">
                 <div class="col-sm-12 col-md-6 footer-logo">
                     <span class="footer-logo-style logo-style">TOP<span>SIX</span>DASHBOARD</span>
                 </div>
+                <!-- INTERNAL PAGE LINKS -->
                 <div class="col-sm-6 col-md-3">
                     <span class="footer-title">Menu</span>
                     <ul>
@@ -76,6 +84,7 @@
                         <li><a href="/about">About</a></li>
                     </ul>
                 </div>
+                <!-- EXTERNAL PAGE LINKS -->
                 <div class="col-sm-6 col-md-3">
                     <span class="footer-title">External Links</span>
                     <ul>
@@ -89,6 +98,7 @@
                     </ul>
                 </div>
             </div>
+            <!-- SUB-FOOTER COPY -->
             <div class="row sub-footer-content">
                 <div class="col-12">
                     <p class="small sub-footer-text"><em>As part of my <a href="https://www.codeinstitute.net/" target="_blank">Code Institute</a> Stream 2 project</em></p>
@@ -97,6 +107,7 @@
             </div>
         </div>
     </footer>
+    <!-- SCRIPTS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
