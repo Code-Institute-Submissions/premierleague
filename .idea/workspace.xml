@@ -3,8 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="cf0811f3-d483-4b04-bb87-f7b531d5b8e0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/footballs.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/footballs.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/sass/pages/manchesterunited.sass" beforeDir="false" afterPath="$PROJECT_DIR$/static/sass/pages/manchesterunited.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/arsenal.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/arsenal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/chelsea.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/chelsea.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/liverpool.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/liverpool.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/manchestercity.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/manchestercity.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/manchesterunited.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/manchesterunited.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/tottenhamhotspur.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tottenhamhotspur.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,29 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/sass/pages/about.sass">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1680">
-              <caret line="84" selection-start-line="84" selection-end-line="84" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/about.html">
+        <entry file="file://$PROJECT_DIR$/templates/manchesterunited.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="67" column="89" lean-forward="true" selection-start-line="67" selection-start-column="89" selection-end-line="67" selection-end-column="89" />
+            <state relative-caret-position="610">
+              <caret line="80" selection-start-line="80" selection-end-line="80" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -96,7 +83,6 @@
         <option value="$PROJECT_DIR$/static/js/common.js" />
         <option value="$PROJECT_DIR$/static/sass/pages/tottenhamhotspur.sass" />
         <option value="$PROJECT_DIR$/static/sass/pages/manchestercity.sass" />
-        <option value="$PROJECT_DIR$/static/sass/pages/manchesterunited.sass" />
         <option value="$PROJECT_DIR$/static/sass/pages/chelsea.sass" />
         <option value="$PROJECT_DIR$/static/sass/pages/arsenal.sass" />
         <option value="$PROJECT_DIR$/Procfile" />
@@ -106,20 +92,13 @@
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/static/sass/bootstrap/bootstrap.sass" />
         <option value="$PROJECT_DIR$/premierLeague.py" />
-        <option value="$PROJECT_DIR$/static/sass/pages/about.sass" />
         <option value="$PROJECT_DIR$/static/sass/abstracts/_dropdown.sass" />
         <option value="$PROJECT_DIR$/static/js/manchestercity.js" />
         <option value="$PROJECT_DIR$/static/js/chelsea.js" />
         <option value="$PROJECT_DIR$/static/js/arsenal.js" />
         <option value="$PROJECT_DIR$/static/js/spurs.js" />
         <option value="$PROJECT_DIR$/static/js/liverpool.js" />
-        <option value="$PROJECT_DIR$/templates/arsenal.html" />
-        <option value="$PROJECT_DIR$/templates/chelsea.html" />
-        <option value="$PROJECT_DIR$/templates/liverpool.html" />
-        <option value="$PROJECT_DIR$/templates/manchestercity.html" />
-        <option value="$PROJECT_DIR$/templates/tottenhamhotspur.html" />
         <option value="$PROJECT_DIR$/static/sass/pages/base.sass" />
-        <option value="$PROJECT_DIR$/templates/manchesterunited.html" />
         <option value="$PROJECT_DIR$/static/js/manchesterunited.js" />
         <option value="$PROJECT_DIR$/static/sass/pages/common.sass" />
         <option value="$PROJECT_DIR$/static/js/script.js" />
@@ -129,6 +108,14 @@
         <option value="$PROJECT_DIR$/static/sass/footer/_footer.sass" />
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/templates/about.html" />
+        <option value="$PROJECT_DIR$/static/sass/pages/about.sass" />
+        <option value="$PROJECT_DIR$/static/sass/pages/manchesterunited.sass" />
+        <option value="$PROJECT_DIR$/templates/manchesterunited.html" />
+        <option value="$PROJECT_DIR$/templates/manchestercity.html" />
+        <option value="$PROJECT_DIR$/templates/tottenhamhotspur.html" />
+        <option value="$PROJECT_DIR$/templates/liverpool.html" />
+        <option value="$PROJECT_DIR$/templates/chelsea.html" />
+        <option value="$PROJECT_DIR$/templates/arsenal.html" />
       </list>
     </option>
   </component>
@@ -157,6 +144,12 @@
               <item name="premierLeague" type="b2602c69:ProjectViewProjectNode" />
               <item name="premierLeague" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="premierLeague" type="b2602c69:ProjectViewProjectNode" />
+              <item name="premierLeague" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="sass" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="premierLeague" type="b2602c69:ProjectViewProjectNode" />
@@ -231,12 +224,12 @@
       <workItem from="1545591101521" duration="134000" />
       <workItem from="1545591257869" duration="5370000" />
       <workItem from="1545748843956" duration="994000" />
-      <workItem from="1546184373312" duration="4904000" />
+      <workItem from="1546184373312" duration="5956000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11402000" />
+    <option name="totallyTimeSpent" value="12454000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -378,13 +371,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/sass/pages/manchesterunited.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/premierLeague.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -448,41 +434,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/arsenal.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="37" column="87" selection-start-line="37" selection-start-column="87" selection-end-line="37" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/chelsea.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="37" column="87" selection-start-line="37" selection-start-column="87" selection-end-line="37" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/liverpool.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="37" column="97" lean-forward="true" selection-start-line="37" selection-start-column="97" selection-end-line="37" selection-end-column="97" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/manchestercity.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="37" column="87" selection-start-line="37" selection-start-column="87" selection-end-line="37" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/tottenhamhotspur.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="37" column="85" selection-start-line="37" selection-start-column="85" selection-end-line="37" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/sass/bootstrap/bootstrap.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -515,13 +466,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3">
           <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/manchesterunited.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1540">
-          <caret line="77" selection-start-line="77" selection-end-line="77" />
         </state>
       </provider>
     </entry>
@@ -598,6 +542,27 @@
     <entry file="file://$PROJECT_DIR$/static/sass/custom/custom.sass">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1340">
+          <caret line="67" column="89" lean-forward="true" selection-start-line="67" selection-start-column="89" selection-end-line="67" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/sass/pages/manchesterunited.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/sass/pages/about.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -605,17 +570,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/sass/pages/about.sass">
+    <entry file="file://$PROJECT_DIR$/templates/tottenhamhotspur.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1680">
-          <caret line="84" selection-start-line="84" selection-end-line="84" />
+        <state relative-caret-position="596">
+          <caret line="80" column="32" selection-start-line="80" selection-start-column="32" selection-end-line="80" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/about.html">
+    <entry file="file://$PROJECT_DIR$/templates/chelsea.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="67" column="89" lean-forward="true" selection-start-line="67" selection-start-column="89" selection-end-line="67" selection-end-column="89" />
+        <state relative-caret-position="516">
+          <caret line="75" column="22" lean-forward="true" selection-start-line="75" selection-start-column="22" selection-end-line="75" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/liverpool.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="80" column="32" selection-start-line="80" selection-start-column="32" selection-end-line="80" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/arsenal.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="636">
+          <caret line="80" column="32" lean-forward="true" selection-start-line="80" selection-start-column="32" selection-end-line="80" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/manchestercity.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="696">
+          <caret line="82" column="1" selection-start-line="82" selection-start-column="1" selection-end-line="82" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/manchesterunited.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="610">
+          <caret line="80" selection-start-line="80" selection-end-line="80" selection-end-column="32" />
         </state>
       </provider>
     </entry>

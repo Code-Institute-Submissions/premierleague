@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+    <!-- TEAM HERO SECTION -->
     <section class="hero team-page-hero manchester-united-hero d-flex align-items-center">
         <div class="row no-gutters">
             <div class="col">
@@ -9,6 +10,7 @@
             </div>
         </div>
     </section>
+    <!-- MAIN SELECTORS / POSITION AND YEAR SELECTORS -->
     <section class="main-selectors">
         <div class="row no-gutters">
             <div class="col-sm-12 col-md-4">
@@ -29,6 +31,7 @@
             </div>
         </div>
     </section>
+    <!-- FORM GUIDE -->
     <section class="form-guide">
         <div class="row no-gutters">
             <div class="col-12">
@@ -45,6 +48,7 @@
         <div class="row no-gutters">
             <div class="col-sm-12 col-xl-6">
                 <div class="shadow-box">
+                    <!-- GOALS SCORED -->
                     <div class="chart-container-goals-analysis chart-container goals-chart text-center">
                         <div class="chart-title"><h4>Goals scored</h4></div>
                         <div id="goalsChartManUnited" class="custom-chart"></div>
@@ -53,6 +57,7 @@
             </div>
             <div class="col-sm-12 col-xl-6">
                 <div class="shadow-box">
+                    <!-- GOALS CONCEDED -->
                     <div class="goals-conc-chart chart-container-goals-analysis chart-container text-center">
                         <div class="chart-title"><h4>Goals conceded</h4></div>
                         <div id="goalsConcChartManUnited" class="custom-chart"></div>
@@ -63,6 +68,7 @@
         <div class="row no-gutters">
             <div class="col-12">
                 <div class="shadow-box">
+                    <!-- GOAL DIFFERENCE -->
                     <div class="chart-container-goals-analysis chart-container text-center goals-diff-chart">
                         <div class="chart-title"><h4>Goal Difference</h4></div>
                         <div id="goalDifferenceChartManUnited" class="custom-chart"></div>
@@ -72,6 +78,7 @@
         </div>
     </section>
 {% endblock %}
+<!-- IMPORT TEAM SPECIFIC JS -->
 {% block page_specific_js %}
     <script src="{{ url_for ('static', filename='js/manchesterunited.js')}}"></script>
 {% endblock %}
