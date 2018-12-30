@@ -180,7 +180,7 @@ function makeGraphs(error, premierleagueData) {
         .xAxisLabel("Year")
         .yAxisLabel("Position")
         .brushOn(false)
-        .rangeChart(yearSelector)
+        .rangeChart(pointsChart)
         .legend(dc.legend().x($('#positionChart').width()*0.80)
                    .y(300)
                    .itemHeight(15)
