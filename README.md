@@ -142,7 +142,7 @@ See the **Report > Responsive Design** section for more details.
 
 ### Cross-Browser Testing
 
-Manual cross-browser testing was undertaken after each major implementation of the project. This included the implmentation of the navbar, inclusion of various charts, and the footer amoungst many others. 
+Manual cross-browser testing was undertaken after each major implementation of the project. This included the implementation of the navbar, inclusion of various charts, and the footer amongst many others. 
 
 The purpose of conducting these test was to ensure the dashboard functioned well across the most popular browsers for Windows, listing any problems to resolve before deployment.
 
@@ -198,7 +198,7 @@ Procfile:
 
 ```web: gunicorn premierLeague:app```
 
-Using the Windows operating system, as second Procfile was needed called **Procfile.windows**:
+Using the Windows operating system, a second Procfile was needed called **Procfile.windows**:
 
 ```web: python premierLeague.py```
 
@@ -264,7 +264,7 @@ dc.renderAll();
 
 **x Axis Ticks**
 
-Having the ticks horizonatal along the x axis created issues on smaller devices where the text would overlap over another becoming illegible.
+Having the ticks horizontal along the x axis created issues on smaller devices where the text would overlap over another becoming illegible.
 
 This required some CSS manipulation to transform and rotate the text thus solving responsive issues.
 
@@ -314,11 +314,11 @@ function createPosGroup(dimension, teamName, attribute) {
 }
 ```
 
-After a lenghty period of time trying to find a solution, I eventually resorted to using the value '20' for their position during the affected years to portray their struggling start, even though they did not take part in the Premier League.
+After a lengthy period of time trying to find a solution, I eventually resorted to using the value '20' for their position during the affected years to portray their struggling start, even though they did not take part in the Premier League.
 
 ### PieChart Legends
 
-DC comes equipped with a feature to add legends to your charts, and for the most part, this proved to be a great addition imporving the UX/UI of the data dashboard. However, this came with its own challenges.
+DC comes equipped with a feature to add legends to your charts, and for the most part, this proved to be a great addition improving the UX/UI of the data dashboard. However, this came with its own challenges.
 
 Teams such as Manchester City and Tottenham Hotspur had 13 and 11 different position finishes in the Premier League respectively. This meant the *DC Legend* was too wide to fit horizontally and would not fit vertically within the SVG element without causing responsive issues. Attempts were made to split the legend on two lines but  seemed this seems like a limitation in DC.js. 
 
@@ -384,11 +384,11 @@ This method ensured the bars were dynamic and fixed the cross-browser issues whi
 
 ### Streamline JavaScript code
 
-In Software or Web development, it's always beneficial to write [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) code. Writing DRY code makes it effecient for a computer process the information improving load times.
+In Software or Web development, it's always beneficial to write [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) code. Writing DRY code makes it efficient for a computer process the information improving load times.
 
 During the initial testing stages for this project, it became apparent that a more streamlined function would be required in order to prevent hundreds and thousands of repeated lines of code in order to gather all the data required. 
 
-Repeating seven lines of code for six teams and then to repeat them for each attribute would not only became unmanagable, but a very inefficient way of coding.
+Repeating seven lines of code for six teams and then to repeat them for each attribute would not only became unmanageable, but a very inefficient way of coding.
 
 ```javascript
 var manUnitedPointsByYear = yearDim.group().reduceSum(function (d) {
@@ -410,7 +410,7 @@ var manCityPointsByYear = yearDim.group().reduceSum(function (d) {
 
 ```
 
-A masterful function was written with the help of Yoni Lavi to come up with an effecient way of grouping data based on three parameters.
+A masterful function was written with the help of Yoni Lavi to come up with an efficient way of grouping data based on three parameters.
 
 ```javascript
 function createGroup(dimension, teamName, attribute) {
@@ -466,7 +466,7 @@ As with DC, Crossfilter hadn't come without its limitations either.
 
 If a user was to remove any filter set on the *Year Selector* by deselecting the range applied on that chart, in theory this should reset the filter applied on all other charts on that page after *Crossfilter* has done its magic.
 
-Unfortunately, this didn't quite go according to plan and some of the charts do not reset in occurdance with the filter being deselected. Similar to the issue with the  ```.rangeChart``` above, this only affect the graphs which were dependent on the previous graph.
+Unfortunately, this didn't quite go according to plan and some of the charts do not reset in accordance with the filter being deselected. Similar to the issue with the  ```.rangeChart``` above, this only affect the graphs which were dependent on the previous graph.
 
 One way of combatting the issue would be to implement a 'Reset' button on each page. This should clear all existing filters on the page without the need to refresh the browser. 
 
