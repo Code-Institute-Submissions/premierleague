@@ -5964,18 +5964,18 @@ a.text-dark:hover, a.text-dark:focus {
   padding-top: 0;
   padding-bottom: 0;
   padding-right: 1em;
-  -webkit-transition: all 0.35s ease-in-out;
-  -o-transition: all 0.35s ease-in-out;
-  transition: all 0.35s ease-in-out;
+  -webkit-transition: all 350s ease-in-out;
+  -o-transition: all 350s ease-in-out;
+  transition: all 350s ease-in-out;
   letter-spacing: 1.5px;
   text-transform: uppercase;
 }
 
 .navbar-brand:hover {
   background: #38003c !important;
-  -webkit-transition: all 0.35s ease-in-out;
-  -o-transition: all 0.35s ease-in-out;
-  transition: all 0.35s ease-in-out;
+  -webkit-transition: all 350ms ease-in-out;
+  -o-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
 }
 
 .navbar-brand img {
